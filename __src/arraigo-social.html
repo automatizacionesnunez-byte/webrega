@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arraigo Social - ExtranjerÃ­a Expertos by Grupo RG Asesores</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E31B23',
+              dark: '#111827',
+              gray: '#f9fafb',
+            }
+          },
+          fontFamily: {
+            sans: ['Public Sans', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    body { font-family: 'Public Sans', sans-serif; }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 2px solid #e5e7eb;
+      background: black;
+      color: white;
+      font-weight: bold;
+      position: relative;
+      z-index: 10;
+    }
+    .step-line::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: #333;
+      z-index: 1;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .accordion-item:focus-within .accordion-content {
+      max-height: 500px;
+    }
+  </style>
+</head>
+<body class="bg-white text-brand-dark">
+<header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+<div class="container mx-auto px-4 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="text-xl font-extrabold uppercase tracking-tighter leading-none">
+<span class="text-brand-dark">ExtranjerÃ­a</span><br/>
+<span class="text-brand-red">Expertos</span>
+</div>
+<div class="hidden md:block h-8 w-px bg-gray-300 mx-2"></div>
+<div class="hidden md:block text-[10px] uppercase text-gray-500 font-semibold">
+          By Grupo RG Asesores
+        </div>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-semibold text-sm uppercase tracking-wide">
+<a class="hover:text-brand-red transition-colors" href="#">Inicio</a>
+<a class="text-brand-red" href="#">Servicios</a>
+<a class="hover:text-brand-red transition-colors" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="bg-brand-red text-white px-6 py-3 rounded-custom text-sm font-bold uppercase hover:bg-red-700 transition-all shadow-lg shadow-red-200" href="tel:+34912345678">
+          LlÃ¡manos sin compromiso
+        </a>
+</div>
+</div>
+</header>
+<main>
+<section class="relative py-16 md:py-24 overflow-hidden">
+<div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+<div class="w-full max-w-4xl mx-auto text-center" data-purpose="hero-content">
+<span class="inline-block bg-red-50 text-brand-red text-xs font-bold px-3 py-1 rounded-full uppercase mb-6 tracking-widest border border-red-100">
+            Servicio Destacado
+          </span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-brand-dark leading-tight mb-6">
+            Arraigo <br/><span class="text-brand-red">Social</span>
+</h1>
+<p class="text-lg text-gray-600 mb-8 leading-relaxed mx-auto">Gestionamos tu solicitud.</p>
+<div class="flex flex-wrap gap-4 justify-center">
+<button class="bg-brand-red text-white px-8 py-4 rounded-custom font-bold text-lg hover:bg-red-700 transition-all">
+              Solicitar Consulta
+            </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 overflow-hidden bg-black">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold mb-4 text-white">Nuestro Proceso</h2>
+<p class="text-gray-400">Simplificamos la burocracia en 5 pasos claros</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between gap-8 md:gap-4 relative">
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block"></div>
+<div class="step-number mx-auto mb-4 border-brand-red text-white">01</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">Estudio de situaciÃ³n</h4>
+<p class="text-sm text-gray-400">Simplificamos la burocracia en 5 pasos claros</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block"></div>
+<div class="step-number mx-auto mb-4 border-gray-700">02</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">PreparaciÃ³n</h4>
+<p class="text-sm text-gray-400">Simplificamos la burocracia en 5 pasos claros</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block"></div>
+<div class="step-number mx-auto mb-4 border-gray-700">03</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">PresentaciÃ³n</h4>
+<p class="text-sm text-gray-400">Simplificamos la burocracia en 5 pasos claros</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block"></div>
+<div class="step-number mx-auto mb-4 border-gray-700">04</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">Seguimiento</h4>
+<p class="text-sm text-gray-400">Simplificamos la burocracia en 5 pasos claros</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-number mx-auto mb-4 bg-brand-red text-white border-brand-red">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">ResoluciÃ³n</h4>
+<p class="text-sm text-gray-400">Simplificamos la burocracia en 5 pasos claros</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-brand-gray">
+<div class="container mx-auto px-4 grid md:grid-cols-2 gap-16">
+<div>
+<h3 class="text-3xl font-extrabold mb-8">Errores Frecuentes que evitamos</h3>
+<div class="space-y-4">
+<div class="bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+<h4 class="font-bold mb-2">Lagunas en el PadrÃ³n</h4>
+<p class="text-sm text-gray-500">Los huecos en el empadronamiento pueden denegar el trÃ¡mite. Usamos pruebas alternativas admitidas en derecho para cubrir esos vacÃ­os de los 2 aÃ±os requeridos.</p>
+</div>
+<div class="bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+<h4 class="font-bold mb-2">Contrato No VÃ¡lido</h4>
+<p class="text-sm text-gray-500">El contrato debe estar condicionado a la aprobaciÃ³n del permiso y garantizar el SMI. Revisamos cada clÃ¡usula.</p>
+</div>
+<div class="bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+<h4 class="font-bold mb-2">Informe de IntegraciÃ³n</h4>
+<p class="text-sm text-gray-500">No solicitarlo o hacerlo incorrectamente es motivo de rechazo. Nosotros gestionamos la cita y te preparamos para la entrevista.</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-3xl font-extrabold mb-8">Â¿QuÃ© incluye nuestro servicio?</h3>
+<div class="bg-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+<ul class="space-y-4 relative z-10">
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">VerificaciÃ³n del padrÃ³n histÃ³rico</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">RedacciÃ³n de contrato laboral</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">PresentaciÃ³n de expediente</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">ContestaciÃ³n a requerimientos</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">VerificaciÃ³n de requisitos</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">TramitaciÃ³n de documentaciÃ³n</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">PresentaciÃ³n de expediente</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">Seguimiento y contestaciÃ³n a requerimientos</span>
+</li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" fill-rule="evenodd"></path></svg>
+<span class="font-medium">Informe arraigo</span>
+</li>
+</ul>
+<div class="mt-8 pt-8 border-t border-gray-100 flex items-center justify-between">
+<a class="text-brand-red font-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="#cta">
+                Consultar precio y disponibilidad 
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<div class="absolute -bottom-8 -right-8 opacity-5 transform rotate-12 scale-150">
+<svg class="w-48 h-48" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2zm4 8h-2V7h2v10z"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white">
+<div class="container mx-auto px-4 max-w-4xl">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold mb-4">Preguntas Frecuentes</h2>
+<p class="text-gray-600">Resolvemos tus dudas sobre el Arraigo Social</p>
+</div>
+<div class="space-y-4">
+<div class="accordion-item border border-gray-200 rounded-lg overflow-hidden" tabindex="0">
+<div class="flex items-center justify-between p-6 cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
+<h4 class="font-bold text-lg">Â¿Puedo salir de EspaÃ±a durante el trÃ¡mite?</h4>
+<svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="accordion-content bg-white">
+<div class="p-6 text-gray-600 border-t border-gray-100">
+No es recomendable. Salir de EspaÃ±a durante la tramitaciÃ³n puede ser causa de denegaciÃ³n por pÃ©rdida de la continuidad en la permanencia necesaria para el arraigo.
+</div>
+</div>
+</div>
+<div class="accordion-item border border-gray-200 rounded-lg overflow-hidden" tabindex="0">
+<div class="flex items-center justify-between p-6 cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
+<h4 class="font-bold text-lg">Â¿Sirve cualquier oferta de trabajo?</h4>
+<svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="accordion-content bg-white">
+<div class="p-6 text-gray-600 border-t border-gray-100">
+Debe ser un contrato de al menos un aÃ±o de duraciÃ³n y garantizar el Salario MÃ­nimo Interprofesional (SMI). La empresa debe estar al corriente con Hacienda y Seguridad Social.
+</div>
+</div>
+</div>
+<div class="accordion-item border border-gray-200 rounded-lg overflow-hidden" tabindex="0">
+<div class="flex items-center justify-between p-6 cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
+<h4 class="font-bold text-lg">Â¿Puedo solicitarlo si tengo familiares en EspaÃ±a?</h4>
+<svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="accordion-content bg-white">
+<div class="p-6 text-gray-600 border-t border-gray-100">
+SÃ­, de hecho, tener vÃ­nculos familiares (cÃ³nyuge, pareja de hecho registrada, ascendientes o descendientes en primer grado) que sean residentes legales puede eximirte de presentar el informe de inserciÃ³n social.
+</div>
+</div>
+</div>
+<div class="accordion-item border border-gray-200 rounded-lg overflow-hidden" tabindex="0">
+<div class="flex items-center justify-between p-6 cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
+<h4 class="font-bold text-lg">Â¿CuÃ¡nto tiempo tarda la resoluciÃ³n?</h4>
+<svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="accordion-content bg-white">
+<div class="p-6 text-gray-600 border-t border-gray-100">
+Legalmente el plazo es de 3 meses, aunque dependiendo de la oficina de extranjerÃ­a este plazo puede variar ligeramente.
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="bg-brand-dark py-24 relative overflow-hidden" id="cta">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-brand-red rounded-full filter blur-[100px] -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-red rounded-full filter blur-[100px] -ml-48 -mb-48"></div>
+</div>
+<div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 text-white">
+<h2 class="text-5xl font-extrabold mb-6 leading-tight text-white">Â¿Listo para regularizar tu situaciÃ³n?</h2>
+<p class="text-xl text-gray-400 mb-8">No dejes pasar mÃ¡s tiempo. Convierte tu estancia en residencia legal hoy mismo con el respaldo de abogados expertos.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+<svg class="w-6 h-6 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 004.812 4.812l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+</div>
+<span class="text-lg">+34 912 345 678</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+<svg class="w-6 h-6 text-brand-red" fill="currentColor" viewbox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+</div>
+<span class="text-lg">info@extranjeriaexpertos.es</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl">
+<h3 class="text-2xl font-bold text-brand-dark mb-6">Solicita tu EvaluaciÃ³n Gratuita</h3>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">Nombre Completo</label>
+<input class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red" placeholder="Tu nombre" type="text"/>
+</div>
+<div class="grid md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">WhatsApp</label>
+<input class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red" placeholder="+34 600..." type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">Email</label>
+<input class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red" placeholder="tu@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">Breve descripciÃ³n de tu situaciÃ³n</label>
+<textarea class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red h-32" placeholder="Ej: Llevo 2 aÃ±os y 1 mes, tengo oferta de empleo..."></textarea>
+</div>
+<button class="w-full bg-brand-red text-white py-4 rounded-custom font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-red-100 flex items-center justify-center gap-2" type="submit">
+                ENVIAR CONSULTA
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<p class="text-[10px] text-center text-gray-400 mt-4 leading-tight">
+                Tus datos estÃ¡n protegidos y serÃ¡n usados solo para contactarte. Al enviar aceptas nuestra polÃ­tica de privacidad.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-brand-gray pt-20 pb-10 border-t border-gray-100">
+<div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-extrabold uppercase tracking-tighter leading-none mb-6">
+<span class="text-brand-dark">ExtranjerÃ­a</span><br/>
+<span class="text-brand-red">Expertos</span>
+</div>
+<p class="text-sm text-gray-500 mb-6 leading-relaxed">
+          Somos un despacho lÃ­der en derecho de extranjerÃ­a, comprometidos con la excelencia y la honestidad. Parte integral del Grupo RG Asesores.
+        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-brand-dark hover:text-brand-red transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"></path></svg>
+</a>
+<a class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-brand-dark hover:text-brand-red transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.012 3.855.06 1.061.048 1.791.222 2.427.471.656.255 1.21.597 1.761 1.149.552.551.894 1.105 1.149 1.761.249.636.423 1.366.471 2.427.048 1.071.06 1.425.06 3.855 0 2.43-.012 2.784-.06 3.855-.048 1.061-.222 1.791-.471 2.427-.255.656-.597 1.21-1.149 1.761-.551.552-1.105.894-1.761 1.149-.636.249-1.366.423-2.427.471-1.071.048-1.425.06-3.855.06-2.43 0-2.784-.012-3.855-.06-1.061-.048-1.791-.222-2.427-.471-.656-.255-1.21-.597-1.761-1.149-.552-.551-.894-1.105-1.149-1.761-.249-.636-.423-1.366-.471-2.427-.048-1.071-.06-1.425-.06-3.855 0-2.43.012-2.784.06-3.855.048-1.061.222-1.791.471-2.427.255-.656.597-1.21 1.149-1.761.551-.552 1.105-.894 1.761-1.149.636-.249 1.366-.423 2.427-.471 1.071-.048 1.425-.06 3.855-.06zm0 2.25c-2.483 0-2.831.011-3.81.055-.971.044-1.5.215-1.851.352-.466.182-.8.398-1.15.748-.35.35-.566.684-.748 1.15-.137.351-.308.88-.352 1.851-.044.979-.055 1.327-.055 3.81s.011 2.831.055 3.81c.044.971.215 1.5.352 1.851.182.466.398.8.748 1.15.35.35.684.566 1.15.748.351.137.88.308 1.851.352.979.044 1.327.055 3.81.055s2.831-.011 3.81-.055c.971-.044 1.5-.215 1.851-.352.466-.182.8-.398 1.15-.748.35-.35.566-.684.748-1.15.137-.351.308-.88.352-1.851.044-.979.055-1.327.055-3.81s-.011-2.831-.055-3.81c-.044-.971-.215-1.5-.352-1.851-.182-.466-.398-.8-.748-1.15-.35-.35-.684-.566-1.15-.748-.351-.137-.88-.308-1.851-.352-.979-.044-1.327-.055-3.81-.055zM12 7.163A4.837 4.837 0 007.163 12 4.837 4.837 0 0012 16.837 4.837 4.837 0 0016.837 12 4.837 4.837 0 0012 7.163zm0 7.425A2.587 2.587 0 1112 9.413a2.587 2.587 0 010 5.174zm5.115-7.462a1.125 1.125 0 11-2.25 0 1.125 1.125 0 012.25 0z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-brand-dark mb-6">OFICINAS</h4>
+<ul class="space-y-4 text-sm text-gray-500">
+<li class="flex items-start gap-3">
+<svg class="w-5 h-5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Calle VelÃ¡zquez 12, CÃ¡ceres<br/>10003, EspaÃ±a
+          </li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            +34 927 123 456
+          </li>
+<li class="flex items-center gap-3">
+<svg class="w-5 h-5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Lunes - Viernes: 9:00 - 19:00
+          </li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-brand-dark mb-6">SERVICIOS DESTACADOS</h4>
+<ul class="space-y-3 text-sm text-gray-500">
+<li><a class="hover:text-brand-red" href="#">Nacionalidad EspaÃ±ola</a></li>
+<li><a class="hover:text-brand-red font-semibold text-brand-red" href="#">Arraigo Social</a></li>
+<li><a class="hover:text-brand-red" href="#">Visados de Estudiante</a></li>
+<li><a class="hover:text-brand-red" href="#">RenovaciÃ³n de Tarjetas</a></li>
+<li><a class="hover:text-brand-red" href="#">Recursos de DenegaciÃ³n</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-brand-dark mb-6">LEGAL &amp; PRIVACIDAD</h4>
+<ul class="space-y-3 text-sm text-gray-500 mb-8">
+<li><a class="hover:text-brand-red" href="#">Aviso Legal</a></li>
+<li><a class="hover:text-brand-red" href="#">PolÃ­tica de Privacidad</a></li>
+<li><a class="hover:text-brand-red" href="#">PolÃ­tica de Cookies</a></li>
+<li><a class="hover:text-brand-red" href="#">TÃ©rminos y Condiciones</a></li>
+</ul>
+<div class="pt-4 border-t border-gray-200">
+<p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Miembros de:</p>
+<div class="flex gap-4 grayscale opacity-50">
+<span class="text-xs font-bold">ICAM</span>
+<span class="text-xs font-bold">AEA</span>
+</div>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-400 uppercase tracking-widest font-semibold">
+<p>Â© 2024 EXTRANJERÃA EXPERTOS by Grupo RG Asesores. Todos los derechos reservados.</p>
+<p class="mt-4 md:mt-0">DiseÃ±ado con precisiÃ³n en Madrid</p>
+</div>
+</footer>
+</body></html>

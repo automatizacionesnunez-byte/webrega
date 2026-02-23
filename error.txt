@@ -1,0 +1,197 @@
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 427 
+Car cter: 23
++     Build-Page $file 
+"$title" "servicios" 
+$root $body
++                      
+ ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~
+Token '$title" 
+"servicios" $root $body
+}
+# อออออออออออออออออออออ
+อออออออออออออออออออออออ
+อออออออออออออออออออออออ
+ออออออออออออ
+# BUILD: index.html 
+(INICIO)
+# อออออออออออออออออออออ
+อออออออออออออออออออออออ
+อออออออออออออออออออออออ
+ออออออออออออ
+$indexBody = @'
+<!-- HERO -->
+<section 
+class="relative' 
+inesperado en la 
+expresiขn o la 
+instrucciขn.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 427 
+Car cter: 29
++     Build-Page $file 
+"$title" "servicios" 
+$root $body
++                      
+       ~~~
+Token '" "' inesperado 
+en la expresiขn o la 
+instrucciขn.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 427 
+Car cter: 32
++     Build-Page $file 
+"$title" "servicios" 
+$root $body
++                      
+          
+~~~~~~~~~~~~~~~~~~~~~~
+Token 'servicios" 
+$root $body
+}
+# อออออออออออออออออออออ
+อออออออออออออออออออออออ
+อออออออออออออออออออออออ
+ออออออออออออ
+# BUILD: index.html 
+(INICIO)
+# อออออออออออออออออออออ
+อออออออออออออออออออออออ
+อออออออออออออออออออออออ
+ออออออออออออ
+$indexBody = @'
+<!-- HERO -->
+<section 
+class="relative' 
+inesperado en la 
+expresiขn o la 
+instrucciขn.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 628 
+Car cter: 159
++ ... ext-xs font-bold 
+tracking-[0.2em] 
+uppercase 
+mb-6">Legalidad & 
+Confian ...
++                      
+                       
+                    ~
+No se permite usar el 
+car cter de Y 
+comercial (&). El 
+operador & est  
+reservado para un uso 
+futuro; encierre un 
+sกmbolo de Y comercial 
+entre comillas dobles 
+("&") para pasarlo 
+como parte de una 
+cadena.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 629 
+Car cter: 113
++ ... ont-display 
+tracking-tight 
+leading-tight 
+mb-8">Servicios de 
+<span cla ...
++                      
+                       
+                    ~
+El operador '<' est  
+reservado para uso 
+futuro.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 796 
+Car cter: 13
++ Build-Page "C:\Users\
+Usuario\.gemini\antigra
+vity\web 
+rega\servicios.h ...
++             ~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~
+Token 'C:\Users\Usuario
+\.gemini\antigravity\we
+b' inesperado en la 
+expresiขn o la 
+instrucciขn.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 812 
+Car cter: 113
++ ... ld font-display 
+text-gray-900 
+leading-tight 
+mb-6">Solicitar 
+<br/><spa ...
++                      
+                       
+                    ~
+El operador '<' est  
+reservado para uso 
+futuro.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 822 
+Car cter: 201
++ ...  nacionalidad 
+cuando otros me decกan 
+que no era posible." - 
+<span cla ...
++                      
+                       
+                    ~
+El operador '<' est  
+reservado para uso 
+futuro.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 852 
+Car cter: 59
++                 
+<option value="turista"
+>Turista 
+(Estancia)</option>
++                      
+                       
+              ~
+El operador '<' est  
+reservado para uso 
+futuro.
+En C:\Users\Usuario\.ge
+mini\antigravity\web 
+rega\__build.ps1: 891 
+Car cter: 147
++ ... ef="https://wa.me
+/34604804380" target="_
+blank">Iniciar chat 
+<span cla ...
++                      
+                       
+                    ~
+El operador '<' est  
+reservado para uso 
+futuro.
+No se notificaron 
+todos los errores de 
+an lisis. Corrija los 
+errores notificados e 
+intntelo de nuevo.
+    + CategoryInfo     
+         : ParserErro  
+  r: (:) [], ParentC   
+ ontainsErrorRecord    
+Exception
+    + FullyQualifiedEr 
+   rorId : Unexpected  
+  Token
+ 

@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nacionalidad EspaÃ±ola - ExtranjerÃ­a Expertos by Grupo RG Asesores</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#E31B23',
+              dark: '#111827',
+              gray: '#f9fafb',
+            }
+          },
+          fontFamily: {
+            sans: ['Public Sans', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    body { font-family: 'Public Sans', sans-serif; }
+    .step-number {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 2px solid #e5e7eb;
+      background: white;
+      font-weight: bold;
+      position: relative;
+      z-index: 10;
+    }
+    .step-line::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: #e5e7eb;
+      z-index: 1;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .accordion-item:focus-within .accordion-content {
+      max-height: 500px;
+    }
+  </style>
+</head>
+<body class="bg-white text-brand-dark">
+<header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+<div class="container mx-auto px-4 h-20 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="text-xl font-extrabold uppercase tracking-tighter leading-none">
+<span class="text-brand-dark">ExtranjerÃ­a</span><br/>
+<span class="text-brand-red">Expertos</span>
+</div>
+<div class="hidden md:block h-8 w-px bg-gray-300 mx-2"></div>
+<div class="hidden md:block text-[10px] uppercase text-gray-500 font-semibold">
+          By Grupo RG Asesores
+        </div>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-semibold text-sm uppercase tracking-wide">
+<a class="hover:text-brand-red transition-colors" href="#">Inicio</a>
+<a class="text-brand-red" href="#">Servicios</a>
+<a class="hover:text-brand-red transition-colors" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="bg-brand-red text-white px-6 py-3 rounded-custom text-sm font-bold uppercase hover:bg-red-700 transition-all shadow-lg shadow-red-200" href="tel:+34912345678">
+          LlÃ¡manos sin compromiso
+        </a>
+</div>
+</div>
+</header>
+<main>
+<section class="relative py-16 md:py-24 overflow-hidden">
+<div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+<div class="w-full text-center flex flex-col items-center" data-purpose="hero-content">
+<span class="inline-block bg-red-50 text-brand-red text-xs font-bold px-3 py-1 rounded-full uppercase mb-6 tracking-widest border border-red-100">
+            TrÃ¡mite MÃ¡s Solicitado
+          </span>
+<h1 class="text-5xl md:text-7xl font-extrabold text-brand-dark leading-tight mb-6">
+            Nacionalidad <br/><span class="text-brand-red">EspaÃ±ola</span>
+</h1>
+<p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+            Consigue tu pasaporte espaÃ±ol y la ciudadanÃ­a europea. Gestionamos tu expediente de nacionalidad por residencia de principio a fin, incluyendo la inscripciÃ³n de exÃ¡menes.
+          </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-brand-red text-white px-8 py-4 rounded-custom font-bold text-lg hover:bg-red-700 transition-all">
+              Solicitar Consulta
+            </button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-black overflow-hidden text-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold mb-4 text-white">Nuestro Proceso de Nacionalidad</h2>
+<p class="text-gray-400">Desde la preparaciÃ³n del expediente hasta tu DNI espaÃ±ol</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between gap-8 md:gap-4 relative">
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block after:!bg-white/20"></div>
+<div class="step-number mx-auto mb-4 !bg-white/10 !text-white !border-white/20">01</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">Estudio y ExÃ¡menes</h4>
+<p class="text-sm text-gray-400">RevisiÃ³n de viabilidad e inscripciÃ³n en pruebas CCSE/DELE si aplica.</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block after:!bg-white/20"></div>
+<div class="step-number mx-auto mb-4 !bg-white/10 !text-white !border-white/20">02</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">Expediente</h4>
+<p class="text-sm text-gray-400">DigitalizaciÃ³n y cotejo de documentos (pasaporte, nacimientos, penales).</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block after:!bg-white/20"></div>
+<div class="step-number mx-auto mb-4 !bg-white/10 !text-white !border-white/20">03</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">PresentaciÃ³n</h4>
+<p class="text-sm text-gray-400">Solicitud telemÃ¡tica con certificado digital para agilizar.</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-line hidden md:block after:!bg-white/20"></div>
+<div class="step-number mx-auto mb-4 !bg-white/10 !text-white !border-white/20">04</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">Jura</h4>
+<p class="text-sm text-gray-400">Tras la concesiÃ³n, coordinamos la Jura de Nacionalidad ante Notario o Registro.</p>
+</div>
+<div class="flex-1 text-center relative px-4" data-purpose="process-step">
+<div class="step-number mx-auto mb-4 !bg-brand-red !text-white !border-brand-red">
+<span class="material-symbols-outlined text-sm">badge</span>
+</div>
+<h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-brand-red">DNI y Pasaporte</h4>
+<p class="text-sm text-gray-400">ObtenciÃ³n de tu partida literal espaÃ±ola y cita para expediciÃ³n de DNI.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-brand-gray">
+<div class="container mx-auto px-4 grid md:grid-cols-2 gap-16">
+<div>
+<h3 class="text-3xl font-extrabold mb-8">Errores Frecuentes que evitamos</h3>
+<div class="space-y-4">
+<div class="bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+<h4 class="font-bold mb-2">Ausencias prolongadas</h4>
+<p class="text-sm text-gray-500">Estar fuera de EspaÃ±a mÃ¡s tiempo del permitido interrumpe la residencia continuada. Calculamos tus salidas con precisiÃ³n.</p>
+</div>
+<div class="bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+<h4 class="font-bold mb-2">Pasaporte caducado</h4>
+<p class="text-sm text-gray-500">Presentar la solicitud con el pasaporte caducado es motivo de archivo. Te avisamos para renovarlo a tiempo.</p>
+</div>
+<div class="bg-white p-6 rounded-lg border-l-4 border-brand-red shadow-sm">
+<h4 class="font-bold mb-2">Penales no vigentes</h4>
+<p class="text-sm text-gray-500">Los certificados de antecedentes tienen caducidad corta. Coordinamos su emisiÃ³n justo antes de presentar.</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-3xl font-extrabold mb-8">Â¿QuÃ© incluye nuestro servicio?</h3>
+<div class="bg-white p-8 rounded-2xl shadow-xl relative overflow-hidden">
+<ul class="space-y-4 relative z-10">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red">check_circle</span>
+<span class="font-medium">Asesoramiento integral y revisiÃ³n de requisitos</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red">check_circle</span>
+<span class="font-medium">Apoyo en inscripciÃ³n exÃ¡menes CCSE/DELE</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red">check_circle</span>
+<span class="font-medium">DigitalizaciÃ³n y metadatos de documentos</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red">check_circle</span>
+<span class="font-medium">PresentaciÃ³n telemÃ¡tica profesional</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red">check_circle</span>
+<span class="font-medium">Seguimiento del expediente y recursos</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red">check_circle</span>
+<span class="font-medium">Asistencia para cita de Jura y DNI</span>
+</li>
+</ul>
+<div class="mt-8 pt-8 border-t border-gray-100 flex items-center justify-between">
+<a class="text-brand-red font-bold flex items-center gap-2 hover:translate-x-1 transition-transform" href="#cta">
+                Consultar honorarios
+                <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="absolute -bottom-8 -right-8 opacity-5 transform rotate-12 scale-150">
+<span class="material-symbols-outlined text-9xl">public</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4 max-w-4xl">
+<h2 class="text-4xl font-extrabold text-center mb-16 tracking-tight">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<div class="accordion-item border-b border-gray-100 last:border-0" tabindex="0">
+<div class="flex items-center justify-between py-6 cursor-pointer group">
+<h4 class="text-lg font-bold group-hover:text-brand-red transition-colors">Â¿Puedo pedir la nacionalidad para mis hijos menores?</h4>
+<span class="material-symbols-outlined text-gray-400">expand_more</span>
+</div>
+<div class="accordion-content">
+<p class="pb-6 text-gray-500 leading-relaxed">SÃ­, una vez obtengas tu nacionalidad, tus hijos menores de edad pueden optar a la nacionalidad espaÃ±ola por opciÃ³n, un trÃ¡mite mucho mÃ¡s sencillo y rÃ¡pido que gestionamos para ti.</p>
+</div>
+</div>
+<div class="accordion-item border-b border-gray-100 last:border-0" tabindex="0">
+<div class="flex items-center justify-between py-6 cursor-pointer group">
+<h4 class="text-lg font-bold group-hover:text-brand-red transition-colors">Â¿CuÃ¡nto tarda en resolverse el expediente?</h4>
+<span class="material-symbols-outlined text-gray-400">expand_more</span>
+</div>
+<div class="accordion-content">
+<p class="pb-6 text-gray-500 leading-relaxed">El Ministerio de Justicia tiene un plazo legal de un aÃ±o. Sin embargo, gracias a la presentaciÃ³n telemÃ¡tica y al Recurso Contencioso (opcional tras el aÃ±o), podemos reducir significativamente los tiempos de espera.</p>
+</div>
+</div>
+<div class="accordion-item border-b border-gray-100 last:border-0" tabindex="0">
+<div class="flex items-center justify-between py-6 cursor-pointer group">
+<h4 class="text-lg font-bold group-hover:text-brand-red transition-colors">Â¿Es obligatorio hacer los exÃ¡menes si estudiÃ© la ESO en EspaÃ±a?</h4>
+<span class="material-symbols-outlined text-gray-400">expand_more</span>
+</div>
+<div class="accordion-content">
+<p class="pb-6 text-gray-500 leading-relaxed">Si has cursado y superado la EducaciÃ³n Secundaria Obligatoria (ESO) en EspaÃ±a, puedes solicitar la dispensa de los exÃ¡menes CCSE y DELE. Nosotros nos encargamos de tramitar esta dispensa.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-brand-dark py-24 relative overflow-hidden" id="cta">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-brand-red rounded-full filter blur-[100px] -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-red rounded-full filter blur-[100px] -ml-48 -mb-48"></div>
+</div>
+<div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 text-white">
+<h2 class="text-5xl font-extrabold mb-6 leading-tight">Â¿Listo para obtener tu DNI espaÃ±ol?</h2>
+<p class="text-xl text-gray-400 mb-8">No te arriesgues con errores burocrÃ¡ticos. ConfÃ­a tu nacionalidad a abogados expertos y asegura tu futuro en Europa.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-brand-red">call</span>
+</div>
+<span class="text-lg">+34 912 345 678</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-brand-red">mail</span>
+</div>
+<span class="text-lg">info@extranjeriaexpertos.es</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl">
+<h3 class="text-2xl font-bold text-brand-dark mb-6">Solicita tu EvaluaciÃ³n Gratuita</h3>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">Nombre Completo</label>
+<input class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red" placeholder="Tu nombre" type="text"/>
+</div>
+<div class="grid md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">WhatsApp</label>
+<input class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red" placeholder="+34 600..." type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">Email</label>
+<input class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red" placeholder="tu@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-bold text-gray-700 mb-1">Breve descripciÃ³n de tu situaciÃ³n</label>
+<textarea class="w-full border-gray-200 rounded-custom p-3 focus:ring-brand-red focus:border-brand-red h-32" placeholder="Ej: Llevo 5 aÃ±os de residencia legal, soy de Colombia..."></textarea>
+</div>
+<button class="w-full bg-brand-red text-white py-4 rounded-custom font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-red-100 flex items-center justify-center gap-2" type="submit">
+                SOLICITAR CONSULTA
+                <span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-[10px] text-center text-gray-400 mt-4 leading-tight">
+                Tus datos estÃ¡n protegidos y serÃ¡n usados solo para contactarte. Al enviar aceptas nuestra polÃ­tica de privacidad.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-brand-gray pt-20 pb-10 border-t border-gray-100">
+<div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-extrabold uppercase tracking-tighter leading-none mb-6">
+<span class="text-brand-dark">ExtranjerÃ­a</span><br/>
+<span class="text-brand-red">Expertos</span>
+</div>
+<p class="text-sm text-gray-500 mb-6 leading-relaxed">
+          Somos un despacho lÃ­der en derecho de extranjerÃ­a, comprometidos con la excelencia y la honestidad. Parte integral del Grupo RG Asesores.
+        </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-brand-dark hover:text-brand-red transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-brand-dark hover:text-brand-red transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-brand-dark mb-6">OFICINAS</h4>
+<ul class="space-y-4 text-sm text-gray-500">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-red flex-shrink-0 text-sm">location_on</span>
+            Calle VelÃ¡zquez 12, CÃ¡ceres<br/>10003, EspaÃ±a
+          </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red flex-shrink-0 text-sm">call</span>
+            +34 927 123 456
+          </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-red flex-shrink-0 text-sm">schedule</span>
+            Lunes - Viernes: 9:00 - 19:00
+          </li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-brand-dark mb-6">SERVICIOS DESTACADOS</h4>
+<ul class="space-y-3 text-sm text-gray-500">
+<li><a class="hover:text-brand-red font-semibold text-brand-red" href="#">Nacionalidad EspaÃ±ola</a></li>
+<li><a class="hover:text-brand-red" href="#">Arraigo Social y Laboral</a></li>
+<li><a class="hover:text-brand-red" href="#">Visados de Estudiante</a></li>
+<li><a class="hover:text-brand-red" href="#">RenovaciÃ³n de Tarjetas</a></li>
+<li><a class="hover:text-brand-red" href="#">Recursos de DenegaciÃ³n</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-brand-dark mb-6">LEGAL &amp; PRIVACIDAD</h4>
+<ul class="space-y-3 text-sm text-gray-500 mb-8">
+<li><a class="hover:text-brand-red" href="#">Aviso Legal</a></li>
+<li><a class="hover:text-brand-red" href="#">PolÃ­tica de Privacidad</a></li>
+<li><a class="hover:text-brand-red" href="#">PolÃ­tica de Cookies</a></li>
+<li><a class="hover:text-brand-red" href="#">TÃ©rminos y Condiciones</a></li>
+</ul>
+<div class="pt-4 border-t border-gray-200">
+<p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Miembros de:</p>
+<div class="flex gap-4 grayscale opacity-50">
+<span class="text-xs font-bold">ICAM</span>
+<span class="text-xs font-bold">AEA</span>
+</div>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-4 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-400 uppercase tracking-widest font-semibold">
+<p>Â© 2024 EXTRANJERÃA EXPERTOS by Grupo RG Asesores. Todos los derechos reservados.</p>
+<p class="mt-4 md:mt-0">DiseÃ±ado con precisiÃ³n en Madrid</p>
+</div>
+</footer>
+</body></html>
