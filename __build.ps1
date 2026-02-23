@@ -463,7 +463,7 @@ $faqHtml
 <div class="w-12 h-12 rounded-full flex items-center justify-center mr-5 border border-gray-700/50 bg-gray-800/30">
 <span class="material-symbols-outlined text-primary text-[20px]">call</span>
 </div>
-<span class="text-sm font-bold tracking-wide">+34 912 345 678</span>
+<span class="text-sm font-bold tracking-wide">+34 604 80 43 80</span>
 </div>
 <div class="flex items-center">
 <div class="w-12 h-12 rounded-full flex items-center justify-center mr-5 border border-gray-700/50 bg-gray-800/30">
