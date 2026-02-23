@@ -295,7 +295,7 @@ $SCRIPTS
 
 # ─── SERVICE SUB-PAGE TEMPLATE ──────────────────────────────────────────────
 
-function Build-Service($slug, $title, $subtitle, $icon, $heroText, $reqItems, $includesItems, $faqItems, $errorsItems) {
+function Build-Service($slug, $title, $subtitle, $icon, $heroText, $reqItems, $includesItems, $faqItems, $errorsItems, $selectOptions) {
   $file = "C:\Users\Usuario\.gemini\antigravity\web rega\servicios\$slug.html"
   $root = "../"
 
@@ -491,8 +491,16 @@ $faqHtml
 </div>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción de tu situación</label>
-<textarea name="mensaje" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo 2 años y 1 mes, tengo oferta de empleo..." rows="3"></textarea>
+<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
+<select name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
+<option disabled selected value="">Selecciona la opción que mejor te describa...</option>
+$($selectOptions | ForEach-Object { "<option value='$_'>$_</option>" })
+<option value="Otra situación distinta">Otra situación distinta</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
+<textarea name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-lg uppercase tracking-widest text-xs hover:bg-primary-dark transition mt-4 flex items-center justify-center shadow-lg shadow-red-500/20" type="submit">
               ENVIAR CONSULTA <span class="ml-2 font-normal text-lg leading-none transform translate-y-[-1px]">&rarr;</span>
@@ -1080,7 +1088,8 @@ Build-Service "arraigo-social" "Arraigo" "Social" "handshake" "Convierte tu perm
   @{q = "¿Sirve cualquier oferta de trabajo?"; a = "Debe ser un contrato de al menos un año de duración y garantizar el Salario Mínimo Interprofesional (SMI). La empresa debe estar al corriente con Hacienda y Seguridad Social." },
   @{q = "¿Puedo solicitarlo si tengo familiares en España?"; a = "Sí, tener vínculos familiares (cónyuge, pareja de hecho registrada, ascendientes o descendientes en primer grado) que sean residentes legales puede eximirte de presentar el informe de inserción social." },
   @{q = "¿Cuánto tiempo tarda la resolución?"; a = "Legalmente el plazo es de 3 meses, aunque dependiendo de la oficina de extranjería este plazo puede variar ligeramente." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Llevo más de 3 años en España y tengo oferta de empleo", "Llevo 3 años en España pero no tengo oferta asegurada", "Llevo menos de 3 años en España", "Tengo estancia legal pero quiero modificar a arraigo")
 
 Build-Service "arraigo-sociolaboral" "Arraigo" "SocioLaboral" "engineering" "Para quienes llevan más de 2 años en España y ya tienen una relación laboral. La vía más directa si tienes vínculos laborales acreditados." `
 @("2 años de estancia continuada y acreditada en España", "Acreditar relación laboral previa: contrato, nóminas, o alta en SS", "Oferta de trabajo vigente o continuación del trabajo", "Carecer de antecedentes penales en España y país de origen", "No encontrarse en situación de estancia legal vigente") `
@@ -1089,7 +1098,8 @@ Build-Service "arraigo-sociolaboral" "Arraigo" "SocioLaboral" "engineering" "Par
   @{q = "¿Qué sirve como prueba de relación laboral?"; a = "Nóminas, contratos anteriores, altas y bajas en Seguridad Social, o cualquier documento que acredite haber trabajado en España. Nuestro equipo le asesorará sobre qué documentación tiene más peso." },
   @{q = "¿Tengo que tener contrato activo en el momento de la solicitud?"; a = "Sí, es necesario presentar una oferta de empleo vigente o acreditar la continuación de la actividad laboral en el momento de presentar la solicitud." },
   @{q = "¿Cuánto tiempo tiene de duración la autorización obtenida?"; a = "La autorización tiene una vigencia inicial de 2 años, renovable posteriormente por períodos más largos." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Llevo más de 2 años y he trabajado legalmente (con alta en SS)", "Llevo más de 2 años trabajando pero de forma irregular", "Tengo oferta de empleo nueva y cumplo el tiempo", "Llevo menos de 2 años en España")
 
 Build-Service "arraigo-socioformativo" "Arraigo" "Socioformativo" "school" "Para aquellos que se comprometen a realizar una formación reglada o profesional de al menos 12 meses. Una alternativa innovadora sin necesidad de acreditar 2 años previos." `
 @("Estancia en España (no se exige tiempo mínimo fijo)", "Compromiso de matriculación en formación oficial de mínimo 12 meses", "No haber sido expulsado del territorio español", "Carecer de antecedentes penales en España y país de origen", "Pasaporte vigente") `
@@ -1098,7 +1108,8 @@ Build-Service "arraigo-socioformativo" "Arraigo" "Socioformativo" "school" "Para
   @{q = "¿Necesito estar empadronado?"; a = "Sí, es necesario acreditar la estancia en España mediante el padrón municipal u otras pruebas admitidas en derecho." },
   @{q = "¿Puedo trabajar durante la formación?"; a = "El arraigo socioformativo se tramita en primera instancia sin autorización de trabajo, pero se puede solicitar autorización de trabajo por cuenta ajena una vez completada la formación." },
   @{q = "¿La matrícula debe estar formalizada al presentar la solicitud?"; a = "Generalmente se puede presentar el compromiso de matriculación, aunque es altamente recomendable tener al menos la pre-matrícula confirmada." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Ya estoy matriculado en una formación reglada de +12 meses", "Quiero matricularme pero no sé qué cursos son válidos", "Quiero información para poder pasar a trabajar después de formarme")
 
 Build-Service "arraigo-familiar" "Arraigo" "Familiar" "family_restroom" "Autorización de residencia temporal por circunstancias excepcionales para familiares de ciudadanos españoles (o de la UE). Concede un permiso de 5 años con derecho a trabajar." `
 @("Impreso de solicitud EX-10 y pago de tasas (Modelo 790 código 052)", "Ser cónyuge, pareja de hecho, descendiente o ascendiente dependiente de un ciudadano español", "Ser padre/madre/tutor de un menor de nacionalidad española o UE", "Carecer de antecedentes penales en España y el país de origen (últimos 5 años)", "Pasaporte completo en vigor (admitiéndose caducado en algunos supuestos)") `
@@ -1107,7 +1118,8 @@ Build-Service "arraigo-familiar" "Arraigo" "Familiar" "family_restroom" "Autoriz
   @{q = "¿Puedo trabajar con este permiso?"; a = "Sí, la autorización por arraigo familiar permite trabajar tanto por cuenta ajena como por cuenta propia sin ninguna limitación sectorial ni territorial desde su concesión." },
   @{q = "¿Qué familiares en concreto pueden aplicar?"; a = "Aplica al cónyuge o pareja registrada de español, hijos menores de 21 o mayores a cargo, ascendientes directos a cargo, y padres/tutores de menores españoles. También a cuidadores de españoles con discapacidad." },
   @{q = "¿Cuánto tiempo de residencia me otorgan y cómo se renueva?"; a = "Se otorga un permiso inmediato de 5 años. Una vez que caduque, al residir legalmente en España por 5 años de forma continuada, el siguiente paso será solicitar la Residencia de Larga Duración." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Soy familiar de Español o Comunitario (UE)", "Soy padre/madre de un menor español", "Quiero reagrupar a mis padres pero depende de mí económicamente")
 
 
 Build-Service "cuenta-ajena" "Permiso de Trabajo" "Cuenta Ajena" "work" "Permiso para trabajar en España por cuenta de un empleador. Gestionamos el expediente completo coordinando con tu empresa contratante." `
@@ -1117,7 +1129,8 @@ Build-Service "cuenta-ajena" "Permiso de Trabajo" "Cuenta Ajena" "work" "Permiso
   @{q = "¿Cuánto tiempo tarda el permiso?"; a = "El procedimiento puede tardar entre 1 y 3 meses desde la presentación. Si existe oficio de subsanación, el plazo puede extenderse." },
   @{q = "¿El trabajador debe pedir el visado?"; a = "Sí, una vez aprobado el permiso en España, el trabajador debe solicitar el visado de trabajo en el Consulado español de su país de origen." },
   @{q = "¿Qué pasa si la empresa quiebra o cierra?"; a = "El permiso de trabajo queda vinculado al empleador inicialmente, pero en ciertos supuestos se puede modificar el empleador. Consúltenos su caso concreto." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Soy EMPRESA y quiero contratar a un extranjero", "Tengo una OFERTA formal de contratación de una empresa de España", "Busco información porque quiero buscar empleo en España")
 
 Build-Service "cuenta-propia" "Permiso de Trabajo" "Cuenta Propia" "storefront" "Para emprendedores y autónomos que quieren iniciar una actividad empresarial en España. Tu proyecto de negocio como llave para residir legalmente." `
 @("Plan de negocio viable y detallado", "Inversión suficiente o solvencia acreditada para el proyecto", "Cualificación profesional o experiencia en el sector", "Carecer de antecedentes penales", "No encontrarse en situación irregular de larga duración sin posibilidad de regularización") `
@@ -1126,7 +1139,8 @@ Build-Service "cuenta-propia" "Permiso de Trabajo" "Cuenta Propia" "storefront" 
   @{q = "¿Dónde se tramita este permiso?"; a = "Este permiso se tramita en la Unidad de Grandes Empresas y Colectivos Especiales (UGE-CE) del Ministerio de Inclusión, Seguridad Social y Migraciones." },
   @{q = "¿Qué actividades se incluyen?"; a = "Cualquier actividad económica lícita: comercio, hostelería, servicios profesionales, tecnología, etc. También incluye profesiones liberales." },
   @{q = "¿Cuánto tiempo tarda?"; a = "El plazo legal de resolución es de 30 días hábiles desde la presentación completa de la solicitud." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Tengo un plan de negocio listo e inversión", "Trabajo como autónomo fuera y quiero venir a España", "Necesito apoyo para armar la documentación financiera")
 
 Build-Service "profesional-cualificado" "Profesional" "Altamente Cualificado" "diamond" "Para trabajadores extranjeros con alta cualificación profesional. Proceso ágil a través de la Tarjeta Azul UE o permiso de trabajador altamente cualificado." `
 @("Titulación universitaria superior reconocida o experiencia equivalente (mínimo 5 años)", "Contrato de trabajo con salario superior a 1,5 veces el salario medio en España (aprox. 45.000€/año)", "Empleador en España inscrito en la Seguridad Social", "Carecer de antecedentes penales", "Seguro médico o cobertura sanitaria") `
@@ -1135,7 +1149,8 @@ Build-Service "profesional-cualificado" "Profesional" "Altamente Cualificado" "d
   @{q = "¿Qué salario mínimo se requiere?"; a = "El salario bruto anual debe ser al menos 1,5 veces el salario medio anual en España. En 2024 este umbral se sitúa aproximadamente en 45.000€ anuales." },
   @{q = "¿Tengo que reconocer mi titulación?"; a = "No siempre es obligatorio el reconocimiento oficial, aunque puede ser necesario acreditar la equivalencia mediante documentos. Nuestro equipo le asesorará en cada caso." },
   @{q = "¿Puedo traer a mi familia?"; a = "Sí, los titulares de la Tarjeta Azul UE tienen facilidades adicionales para la reagrupación familiar respecto a los permisos ordinarios." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Tengo titulación superior + oferta sueldo mínimo aprox 45.000€/año", "Tengo +5 años de experiencia muy especializada y me quieren contratar", "Soy EMPRESA (UGE) y deseo contratar un perfil Key Account / Técnico")
 
 Build-Service "nacionalidad" "Nacionalidad" "Española" "flag" "El paso definitivo: convertirte en ciudadano español. Gestionamos todos los procedimientos: por residencia, por opción y carta de naturaleza. Incluye preparación de exámenes CCSE y DELE." `
 @("Residencia legal continuada en España (10 años general, 2 años iberoamericanos, 1 año para ciertos colectivos)", "Buena conducta cívica y no tener antecedentes penales", "Integración en la sociedad española (acreditable mediante exámenes CCSE y DELE A2)", "Renuncia a la nacionalidad anterior (salvo excepciones)", "Suficiencia económica acreditada") `
@@ -1144,7 +1159,8 @@ Build-Service "nacionalidad" "Nacionalidad" "Española" "flag" "El paso definiti
   @{q = "¿Tengo que renunciar a mi nacionalidad de origen?"; a = "Depende de tu país de origen. Los ciudadanos de países iberoamericanos, andorra, Filipinas, Guinea Ecuatorial y Portugal tienen derecho a la doble nacionalidad con España." },
   @{q = "¿Qué es el CCSE y para qué sirve?"; a = "El CCSE es el examen de conocimientos constitucionales y socioculturales de España, exigido para la solicitud de nacionalidad. Nuestro equipo te prepara para superarlo." },
   @{q = "¿Necesito el DELE A2?"; a = "El DELE A2 de español sólo es obligatorio para personas cuya lengua materna no sea el español. Si eres hispanohablante nativo, estás exento." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Llevo más de 10 años residiendo LEGAMENTE en España", "Llevo 2 años legales (tengo pasaporte de país de LATAM)", "Estoy casado/a con un ciudadano español (1 año requerimiento)", "Por opción (tengo padre/madre/abuelo español de origen)")
 
 Build-Service "reagrupacion-familiar" "Reagrupación" "Familiar" "diversity_3" "Reúne a tu familia en España: cónyuge, hijos y ascendientes. Analizamos tu situación para asegurar la resolución favorable y los requisitos económicos necesarios." `
 @("Residencia legal en España durante al menos 1 año", "Renovación de la autorización de residencia (mínimo 1 año adicional de vigencia)", "Vivienda adecuada para el número de familiares a reagrupar", "Medios económicos suficientes (varía según número de familiares)", "Los familiares en origen deben tener pasaporte vigente") `
@@ -1153,7 +1169,8 @@ Build-Service "reagrupacion-familiar" "Reagrupación" "Familiar" "diversity_3" "
   @{q = "¿Cuántos medios económicos necesito?"; a = "Para el reagrupante solo: el 150% del IPREM (aprox. 1.130€/mes). Por cada familiar adicional se suma el 50% del IPREM (aprox. 376€ más por persona)." },
   @{q = "¿Cómo acredito la vivienda adecuada?"; a = "Mediante informe municipal de habitabilidad, que verifica que la vivienda es suficiente en tamaño e higiene para el número de personas que van a residir." },
   @{q = "¿Pueden mis familiares trabajar una vez reagrupados?"; a = "El cónyuge e hijos reagrupados obtienen directamente autorización de trabajo. Los ascendientes no obtienen autorización laboral de forma automática." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Quiero traer a mi cónyuge / pareja a España", "Quiero traer a un hijo (menor de edad o dependiente incapacitado)", "Quiero reagrupar a mis padres mayores de edad pero a mi cargo")
 
 Build-Service "tarjeta-comunitaria" "Tarjeta" "Comunitaria" "euro_symbol" "Para ciudadanos de la Unión Europea y sus familiares que residan o trabajen en España. Trámite más ágil que los permisos de extranjería habituales." `
 @("Ser ciudadano de un estado miembro de la UE o familiar de un ciudadano comunitario", "Disponer de medios económicos suficientes o ejercer actividad laboral en España", "Seguro médico o cobertura sanitaria pública", "NIE (Número de Identificación de Extranjero)", "No estar incurso en prohibición de entrada en España") `
@@ -1162,7 +1179,8 @@ Build-Service "tarjeta-comunitaria" "Tarjeta" "Comunitaria" "euro_symbol" "Para 
   @{q = "¿Qué plazo tiene la Tarjeta Comunitaria?"; a = "El Certificado de Registro de Ciudadano de la UE es de duración indefinida. La Tarjeta de Familiar (no comunitario) tiene validez de 5 años renovables." },
   @{q = "¿Qué prueba de actividad laboral necesito?"; a = "Nóminas, contrato de trabajo, alta en autónomos o en su defecto acreditar medios económicos suficientes y seguro médico privado." },
   @{q = "¿Tengo que estar en España para solicitarla?"; a = "Para el Certificado de Registro sí, ya que se tramita en la Oficina de Extranjeros de la provincia donde resides. Para la Tarjeta de Familiar también habitualmente." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Soy ciudadano de la UE y voy a trabajar (o trabajaré) en España", "Soy dependiente / familiar directo de un Comunitario con residencia española", "Quiero traer a mi pareja no-comunitaria a España legalmente")
 
 Build-Service "regularizacion-2026" "Regularización Extraordinaria" "España 2026" "star" "La oportunidad única del año 2026. Un proceso extraordinario de regularización masiva que permitirá a miles de personas en situación irregular obtener su residencia legal en España." `
 @("Permanencia continuada en España desde antes del 1 de noviembre de 2021", "Padrón municipal que acredite la estancia (historial continuo)", "Carecer de antecedentes penales en España y en el país de origen", "No encontrarse en situación de expulsión", "Documento nacional de identidad o pasaporte (puede estar caducado en algunos supuestos)", "No haber sido condenado por delitos contra la seguridad pública o el orden público") `
@@ -1171,7 +1189,8 @@ Build-Service "regularizacion-2026" "Regularización Extraordinaria" "España 20
   @{q = "¿Qué pasa si tengo lagunas en el padrón?"; a = "Existen medios alternativos para acreditar la permanencia: declaraciones de testigos, contratos de arrendamiento, facturas, registros hospitalarios, etc. Nuestro equipo sabe cómo cubrir esos vacíos." },
   @{q = "¿Puedo solicitarlo si tengo una expulsión previa?"; a = "Depende del tipo y fecha de expulsión. Algunas expulsiones anteriores al período de referencia pueden no ser obstáculo. Consúltenos su caso específico." },
   @{q = "¿Cuánto tiempo tardará la resolución?"; a = "Dado que es un proceso masivo, se estima que las resoluciones pueden tardar varios meses. Es fundamental presentar el expediente correctamente desde el inicio para evitar retrasos por subsanaciones." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." })
+@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
+@("Llevo continuadamente en España desde ANTES de noviembre 2021", "Tengo empadronamiento continuo y sin cortes relevantes", "Llegué después de Noviembre de 2021 (no aplico a esto)")
 
 Write-Host ""
 Write-Host "ALL PAGES BUILT SUCCESSFULLY"

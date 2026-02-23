@@ -260,8 +260,16 @@
 </div>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción de tu situación</label>
-<textarea name="mensaje" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo 2 años y 1 mes, tengo oferta de empleo..." rows="3"></textarea>
+<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
+<select name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
+<option disabled selected value="">Selecciona la opción que mejor te describa...</option>
+<option value='Tengo titulación superior + oferta sueldo mínimo aprox 45.000€/año'>Tengo titulación superior + oferta sueldo mínimo aprox 45.000€/año</option> <option value='Tengo +5 años de experiencia muy especializada y me quieren contratar'>Tengo +5 años de experiencia muy especializada y me quieren contratar</option> <option value='Soy EMPRESA (UGE) y deseo contratar un perfil Key Account / Técnico'>Soy EMPRESA (UGE) y deseo contratar un perfil Key Account / Técnico</option>
+<option value="Otra situación distinta">Otra situación distinta</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
+<textarea name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-lg uppercase tracking-widest text-xs hover:bg-primary-dark transition mt-4 flex items-center justify-center shadow-lg shadow-red-500/20" type="submit">
               ENVIAR CONSULTA <span class="ml-2 font-normal text-lg leading-none transform translate-y-[-1px]">&rarr;</span>

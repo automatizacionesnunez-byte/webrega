@@ -260,8 +260,16 @@
 </div>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción de tu situación</label>
-<textarea name="mensaje" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo 2 años y 1 mes, tengo oferta de empleo..." rows="3"></textarea>
+<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
+<select name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
+<option disabled selected value="">Selecciona la opción que mejor te describa...</option>
+<option value='Llevo más de 10 años residiendo LEGAMENTE en España'>Llevo más de 10 años residiendo LEGAMENTE en España</option> <option value='Llevo 2 años legales (tengo pasaporte de país de LATAM)'>Llevo 2 años legales (tengo pasaporte de país de LATAM)</option> <option value='Estoy casado/a con un ciudadano español (1 año requerimiento)'>Estoy casado/a con un ciudadano español (1 año requerimiento)</option> <option value='Por opción (tengo padre/madre/abuelo español de origen)'>Por opción (tengo padre/madre/abuelo español de origen)</option>
+<option value="Otra situación distinta">Otra situación distinta</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
+<textarea name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-lg uppercase tracking-widest text-xs hover:bg-primary-dark transition mt-4 flex items-center justify-center shadow-lg shadow-red-500/20" type="submit">
               ENVIAR CONSULTA <span class="ml-2 font-normal text-lg leading-none transform translate-y-[-1px]">&rarr;</span>
