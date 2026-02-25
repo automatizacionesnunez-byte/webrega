@@ -3,6 +3,40 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Convierte tu permanencia en España en residencia legal. Si llevas 2 años en España y tienes oferta de trabajo, este es tu camino."/>
+<meta property="og:title" content="Extranjería Expertos"/>
+<meta property="og:description" content="Convierte tu permanencia en España en residencia legal. Si llevas 2 años en España y tienes oferta de trabajo, este es tu camino."/>
+<meta property="og:type" content="website"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://extranjeriaexpertos.com"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Extranjería Expertos",
+  "image": "https://extranjeriaexpertos.com/logo.png",
+  "url": "https://extranjeriaexpertos.com/",
+  "telephone": "+34604804380",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. de España, 9, 1º 4",
+    "addressLocality": "Cáceres",
+    "postalCode": "10002",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "19:30"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Grupo RG Asesores"
+  }
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -23,25 +57,16 @@
         <a class="text-gray-600 hover:text-primary transition nav-link" href="../contacto.html" data-page="contacto">Contacto</a>
         <a class="bg-primary text-white px-5 py-2.5 rounded hover:bg-primary-dark transition shadow-lg font-semibold" href="../contacto.html">Llámanos</a>
       </div>
-      <button id="btn-mobile-menu" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+      <button id="btn-mobile-menu" class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobile-menu-dropdown">
         <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
     </div>
-  </div>
-  <!-- Mobile Drawer Backdrop -->
-  <div id="drawer-backdrop" class="drawer-backdrop fixed inset-0 bg-black/50 z-[60] md:hidden"></div>
-  <!-- Mobile Drawer -->
-  <div id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-[70] flex flex-col pt-20 px-6 pb-6 overflow-y-auto md:hidden">
-    <button id="btn-close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-primary focus:outline-none transition-colors">
-      <span class="material-symbols-outlined text-3xl">close</span>
-    </button>
-    <div class="flex flex-col space-y-6 flex-grow">
-        <a class="text-gray-800 hover:text-primary font-bold text-lg border-b border-gray-100 pb-2" href="../index.html">Inicio</a>
-        <a class="text-gray-800 hover:text-primary font-bold text-lg border-b border-gray-100 pb-2" href="../servicios.html">Servicios</a>
-        <a class="text-gray-800 hover:text-primary font-bold text-lg border-b border-gray-100 pb-2" href="../contacto.html">Contacto</a>
-    </div>
-    <div class="mt-8">
-        <a class="block w-full bg-primary text-white text-center py-4 rounded-md font-bold hover:bg-primary-dark transition tracking-wider shadow-lg" href="../contacto.html">Llámanos sin compromiso</a>
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu-dropdown" class="hidden md:hidden flex-col space-y-2 pb-4 mt-2">
+      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="../index.html" data-page="inicio">Inicio</a>
+      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="../servicios.html" data-page="servicios">Servicios</a>
+      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="../contacto.html" data-page="contacto">Contacto</a>
+      <a class="bg-primary text-white text-center py-3 rounded-md font-bold mt-2 shadow-sm uppercase tracking-wider text-sm mx-2" href="../contacto.html">Llámanos sin compromiso</a>
     </div>
   </div>
 </nav>
@@ -246,30 +271,30 @@
 <h3 class="text-xl font-bold font-display mb-8 text-[#0b132b]">Solicita tu Evaluación Gratuita</h3>
 <form class="space-y-5 js-whatsapp-form" data-service="Arraigo Social">
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Nombre Completo</label>
-<input name="nombre" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="Tu nombre" type="text"/>
+<label for="svc-nombre" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Nombre Completo</label>
+<input id="svc-nombre" name="nombre" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="Tu nombre" type="text"/>
 </div>
 <div class="grid grid-cols-2 gap-5">
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">WhatsApp</label>
-<input name="whatsapp" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="+34 600..." type="tel"/>
+<label for="svc-whatsapp" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">WhatsApp</label>
+<input id="svc-whatsapp" name="whatsapp" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="+34 600..." type="tel"/>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Email</label>
-<input name="email" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="tu@email.com" type="email"/>
+<label for="svc-email" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Email</label>
+<input id="svc-email" name="email" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="tu@email.com" type="email"/>
 </div>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
-<select name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
+<label for="svc-situacion" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
+<select id="svc-situacion" name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
 <option disabled selected value="">Selecciona la opción que mejor te describa...</option>
 <option value='Llevo más de 3 años en España y tengo oferta de empleo'>Llevo más de 3 años en España y tengo oferta de empleo</option> <option value='Llevo 3 años en España pero no tengo oferta asegurada'>Llevo 3 años en España pero no tengo oferta asegurada</option> <option value='Llevo menos de 3 años en España'>Llevo menos de 3 años en España</option> <option value='Tengo estancia legal pero quiero modificar a arraigo'>Tengo estancia legal pero quiero modificar a arraigo</option>
 <option value="Otra situación distinta">Otra situación distinta</option>
 </select>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
-<textarea name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
+<label for="svc-mensaje" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
+<textarea id="svc-mensaje" name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-lg uppercase tracking-widest text-xs hover:bg-primary-dark transition mt-4 flex items-center justify-center shadow-lg shadow-red-500/20" type="submit">
               ENVIAR CONSULTA <span class="ml-2 font-normal text-lg leading-none transform translate-y-[-1px]">&rarr;</span>
@@ -323,71 +348,62 @@
   </div>
 
   <!-- PROMO MODAL REGULARIZACION 2026 -->
-  <div id="promo-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+  <div id="promo-modal" class="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6 opacity-0 pointer-events-none transition-opacity duration-500">
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="promo-backdrop"></div>
-    <div class="relative w-full max-w-[500px] bg-white shadow-2xl overflow-hidden transform scale-95 transition-transform duration-500 rounded-sm border-2 border-gray-100" id="promo-content">
-      <button id="promo-close" class="absolute top-3 right-3 z-30 bg-gray-900/40 hover:bg-gray-900/80 text-white rounded w-8 h-8 flex items-center justify-center transition focus:outline-none backdrop-blur-sm">
+    <div class="relative w-full md:max-w-[500px] bg-white shadow-[0_-10px_40px_rgba(0,0,0,0.3)] md:shadow-2xl overflow-hidden transform translate-y-full md:translate-y-0 md:scale-95 transition-transform duration-500 rounded-t-3xl md:rounded-sm border-t-2 md:border-2 border-gray-100" id="promo-content">
+      <button id="promo-close" class="absolute top-4 right-4 md:top-3 md:right-3 z-30 bg-gray-900/40 hover:bg-gray-900/80 text-white rounded w-8 h-8 flex items-center justify-center transition focus:outline-none backdrop-blur-sm">
         <span class="material-symbols-outlined text-lg">close</span>
       </button>
-      <div class="relative bg-[#f8f9fa] flex flex-col items-center text-center p-10 overflow-hidden" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.02\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');">
+      <div class="relative bg-[#f8f9fa] flex flex-col items-center text-center p-6 sm:p-8 md:p-10 overflow-hidden" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.02\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');">
         <!-- Decorative background waves (matching screenshot) -->
-        <div class="absolute -bottom-20 -right-20 w-[120%] h-[200px] rounded-tl-[100%] bg-gradient-to-tr from-[#690000] via-[#c81e1e] to-[#ffc107] opacity-100 z-0"></div>
-        <div class="absolute -bottom-10 -right-10 w-[120%] h-[150px] rounded-tl-[100%] bg-gradient-to-r from-[#8b0000] to-[#500000] opacity-100 z-0 border-t-4 border-[#c81e1e]"></div>
+        <div class="absolute -bottom-16 -right-16 md:-bottom-20 md:-right-20 w-[120%] h-[150px] md:h-[200px] rounded-tl-[100%] bg-gradient-to-tr from-[#690000] via-[#c81e1e] to-[#ffc107] opacity-100 z-0"></div>
+        <div class="absolute -bottom-8 -right-8 md:-bottom-10 md:-right-10 w-[120%] h-[100px] md:h-[150px] rounded-tl-[100%] bg-gradient-to-r from-[#8b0000] to-[#500000] opacity-100 z-0 border-t-4 border-[#c81e1e]"></div>
         
         <!-- Logo stand-in -->
-        <div class="relative z-10 flex flex-col items-center mb-6">
+        <div class="relative z-10 flex flex-col items-center mb-4 md:mb-6">
           <div class="flex gap-2 items-center mb-1">
             <div class="flex flex-col gap-1 items-end">
-                <div class="w-4 h-1.5 bg-[#8b0000] rounded-l-full"></div>
-                <div class="w-6 h-1 bg-[#ffc107] rounded-l-full"></div>
-                <div class="w-8 h-1.5 bg-[#8b0000] rounded-l-full rounded-tr-full transform rotate-12"></div>
+                <div class="w-3 h-1 md:w-4 md:h-1.5 bg-[#8b0000] rounded-l-full"></div>
+                <div class="w-4 h-1 md:w-6 md:h-1 bg-[#ffc107] rounded-l-full"></div>
+                <div class="w-6 h-1 md:w-8 md:h-1.5 bg-[#8b0000] rounded-l-full rounded-tr-full transform rotate-12"></div>
             </div>
             <div class="flex flex-col text-left">
-                <span class="font-display font-black text-sm text-[#333] leading-none tracking-tight">Extranjería</span>
-                <span class="font-display font-medium text-xs text-[#555] leading-none mb-0.5 tracking-tight">Expertos</span>
+                <span class="font-display font-black text-[11px] md:text-sm text-[#333] leading-none tracking-tight">Extranjería</span>
+                <span class="font-display font-medium text-[9px] md:text-xs text-[#555] leading-none mb-0.5 tracking-tight">Expertos</span>
             </div>
           </div>
         </div>
 
         <!-- Main Copy -->
-        <h2 class="relative z-10 text-3xl font-display font-light text-[#0b132b] mb-1 leading-tight tracking-tight">Regularización <br/> masiva</h2>
-        <h3 class="relative z-10 text-5xl font-display font-extrabold text-[#0b132b] mb-4 tracking-tighter">España <span class="text-primary relative inline-block">2026<svg class="absolute w-[120%] h-5 -bottom-1 -left-[10%] text-[#8b0000]" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2"><path d="M0,15 Q30,25 100,5" stroke-opacity="0.5"></path><path d="M5,10 Q50,-5 90,15"></path></svg></span></h3>
+        <h2 class="relative z-10 text-2xl md:text-3xl font-display font-light text-[#0b132b] mb-1 leading-tight tracking-tight">Regularización <br/> masiva</h2>
+        <h3 class="relative z-10 text-4xl md:text-5xl font-display font-extrabold text-[#0b132b] mb-3 md:mb-4 tracking-tighter">España <span class="text-primary relative inline-block">2026<svg class="absolute w-[120%] h-4 md:h-5 -bottom-1 -left-[10%] text-[#8b0000]" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2"><path d="M0,15 Q30,25 100,5" stroke-opacity="0.5"></path><path d="M5,10 Q50,-5 90,15"></path></svg></span></h3>
         
-        <p class="relative z-10 text-gray-500 text-[17px] font-medium mb-10 pb-4 tracking-tight">Información legal actualizada</p>
+        <p class="relative z-10 text-gray-500 text-sm md:text-[17px] font-medium mb-6 md:mb-10 pb-2 md:pb-4 tracking-tight">Información legal actualizada</p>
         
-        <a href="../servicios/regularizacion-2026.html" class="relative z-20 w-[90%] flex justify-center items-center gap-2 bg-gradient-to-b from-[#bd1515] to-[#730000] text-white px-8 py-3 rounded-full border border-[#d63b3b] shadow-2xl hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform hover:scale-[1.03] transition-all">
-          <span class="material-symbols-outlined font-light text-[24px]">calendar_today</span>
-          <span class="font-display font-extrabold uppercase tracking-widest text-[20px] drop-shadow-md">AGENDA AQUÍ</span>
+        <a href="../servicios/regularizacion-2026.html" class="relative z-20 w-full sm:w-[90%] flex justify-center items-center gap-2 bg-gradient-to-b from-[#bd1515] to-[#730000] text-white px-5 sm:px-8 py-3 rounded-full border border-[#d63b3b] shadow-2xl hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform hover:scale-[1.03] transition-all">
+          <span class="material-symbols-outlined font-light text-xl md:text-[24px]">calendar_today</span>
+          <span class="font-display font-extrabold uppercase tracking-widest text-base md:text-[20px] drop-shadow-md">AGENDA AQUÍ</span>
         </a>
       </div>
     </div>
   </div>
 
 </footer>
-<a href="https://wa.me/34604804380" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#1ebe5d] hover:scale-110 transition-all duration-300" aria-label="WhatsApp">
+<a href="https://wa.me/34604804380" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[90] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#1ebe5d] hover:scale-110 transition-all duration-300" aria-label="WhatsApp">
   <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.167 1.594 5.975L.234 23.518l5.655-1.482a12.008 12.008 0 006.142 1.684c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM12.031 22A9.974 9.974 0 016.92 20.6l-.367-.218-3.793.996.993-3.7-.24-.38A9.917 9.917 0 012.031 12.03 c0-5.518 4.482-10 10-10 5.517 0 10 4.482 10 10s-4.483 10-10 10zm5.494-7.514c-.302-.151-1.783-.881-2.062-.982-.279-.101-.482-.151-.684.151-.202.302-.782.982-.958 1.183-.176.202-.352.227-.654.076-1.551-.776-2.697-1.472-3.75-3.32-.105-.183-.012-.284.14-.436.136-.137.302-.352.453-.529.151-.176.202-.302.302-.503.1-.202.05-.378-.025-.529-.076-.151-.684-1.651-.938-2.261-.247-.597-.497-.516-.684-.526-.176-.009-.378-.009-.58-.009-.202 0-.529.076-.806.378-.277.302-1.058 1.033-1.058 2.518s1.083 2.92 1.234 3.121c.151.202 2.131 3.253 5.161 4.561 2.378 1.026 3.193.921 3.793.776.657-.156 2.062-.843 2.352-1.657.29-.815.29-1.516.204-1.662-.086-.146-.312-.232-.614-.383z"/></svg>
 </a>
 <script>
-  // Mobile menu drawer
+<script>
+  // Mobile menu toggle
   const btnOpen = document.getElementById('btn-mobile-menu');
-  const btnClose = document.getElementById('btn-close-menu');
-  const drawer = document.getElementById('mobile-drawer');
-  const backdrop = document.getElementById('drawer-backdrop');
+  const mobileMenu = document.getElementById('mobile-menu-dropdown');
 
-  function openDrawer() {
-    drawer.classList.add('open');
-    backdrop.classList.add('open');
-    document.body.style.overflow = 'hidden';
+  if(btnOpen && mobileMenu) {
+    btnOpen.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
   }
-  function closeDrawer() {
-    drawer.classList.remove('open');
-    backdrop.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  if(btnOpen) btnOpen.addEventListener('click', openDrawer);
-  if(btnClose) btnClose.addEventListener('click', closeDrawer);
-  if(backdrop) backdrop.addEventListener('click', closeDrawer);
 
   // Accordion
   document.querySelectorAll('.js-accordion').forEach(item => {
@@ -416,15 +432,16 @@
   if(promoModal && page === 'inicio' && !localStorage.getItem('promo_2026_closed')) {
     setTimeout(() => {
       promoModal.classList.remove('opacity-0', 'pointer-events-none');
-      promoContent.classList.remove('scale-95');
-      promoContent.classList.add('scale-100');
+      // For mobile we remove translate-y-full, for desktop we remove scale-95
+      promoContent.classList.remove('translate-y-full', 'md:scale-95');
+      promoContent.classList.add('translate-y-0', 'md:scale-100');
     }, 1500); // Popup aparece tras 1.5s
   }
 
   function closePromo() {
     promoModal.classList.add('opacity-0', 'pointer-events-none');
-    promoContent.classList.remove('scale-100');
-    promoContent.classList.add('scale-95');
+    promoContent.classList.remove('translate-y-0', 'md:scale-100');
+    promoContent.classList.add('translate-y-full', 'md:scale-95');
     localStorage.setItem('promo_2026_closed', 'true');
   }
 
@@ -440,9 +457,6 @@
     }
   }
 
-  if(promoClose) promoClose.addEventListener('click', closePromo);
-  if(promoBackdrop) promoBackdrop.addEventListener('click', closePromo);
-
   // Formulario a WhatsApp y redirección temporal para feedback visual
   document.querySelectorAll('.js-whatsapp-form').forEach(form => {
     form.addEventListener('submit', function(e) {
@@ -457,8 +471,8 @@
       const texto = `¡Hola! Me gustaría hacer una consulta:\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${whatsapp}\n*Situación/Servicio:* ${situacion}\n\n*Mensaje:* ${mensaje}`;
       const url = `https://wa.me/34604804380?text=${encodeURIComponent(texto)}`;
       
-      // Abrir WhatsApp en nueva pestaña
-      window.open(url, '_blank');
+      // Guardar URL en localStorage para que la página de gracias pueda abrir WhatsApp
+      try { localStorage.setItem('wa_pending_url', url); } catch (err) {}
       
       // Mostrar página de gracias en la actual
       window.location.href = 'gracias.html';

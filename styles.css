@@ -1565,34 +1565,7 @@ input:where([type='file']):focus {
 
 /* New smooth Mobile Drawer styles */
 
-.mobile-drawer {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-}
 
-.mobile-drawer.open {
-  transform: translateX(0);
-}
-
-.mobile-drawer.\!open {
-  transform: translateX(0) !important;
-}
-
-.drawer-backdrop {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.drawer-backdrop.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.drawer-backdrop.\!open {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
 
 /* Fade-up animation styles */
 

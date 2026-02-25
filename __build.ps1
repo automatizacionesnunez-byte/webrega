@@ -1,11 +1,47 @@
 ﻿
 # ─── SHARED SNIPPETS ──────────────────────────────────────────────────────────
 
-function Get-Head($root) {
+function Get-Head($root, $desc, $url) {
   if (!$root) { $root = "./" }
+  if (!$desc) { $desc = "Despacho especializado en derecho de extranjería en España: Arraigo, Nacionalidad y Regularización." }
+  if (!$url) { $url = "" }
   return @"
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="$desc"/>
+<meta property="og:title" content="Extranjería Expertos"/>
+<meta property="og:description" content="$desc"/>
+<meta property="og:type" content="website"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://extranjeriaexpertos.com$url"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Extranjería Expertos",
+  "image": "https://extranjeriaexpertos.com/logo.png",
+  "url": "https://extranjeriaexpertos.com/",
+  "telephone": "+34604804380",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. de España, 9, 1º 4",
+    "addressLocality": "Cáceres",
+    "postalCode": "10002",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "19:30"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Grupo RG Asesores"
+  }
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -31,25 +67,16 @@ function Get-Nav($root) {
         <a class="text-gray-600 hover:text-primary transition nav-link" href="$cto" data-page="contacto">Contacto</a>
         <a class="bg-primary text-white px-5 py-2.5 rounded hover:bg-primary-dark transition shadow-lg font-semibold" href="$cto">Llámanos</a>
       </div>
-      <button id="btn-mobile-menu" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+      <button id="btn-mobile-menu" class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobile-menu-dropdown">
         <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
     </div>
-  </div>
-  <!-- Mobile Drawer Backdrop -->
-  <div id="drawer-backdrop" class="drawer-backdrop fixed inset-0 bg-black/50 z-[60] md:hidden"></div>
-  <!-- Mobile Drawer -->
-  <div id="mobile-drawer" class="mobile-drawer fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white shadow-2xl z-[70] flex flex-col pt-20 px-6 pb-6 overflow-y-auto md:hidden">
-    <button id="btn-close-menu" class="absolute top-6 right-6 text-gray-400 hover:text-primary focus:outline-none transition-colors">
-      <span class="material-symbols-outlined text-3xl">close</span>
-    </button>
-    <div class="flex flex-col space-y-6 flex-grow">
-        <a class="text-gray-800 hover:text-primary font-bold text-lg border-b border-gray-100 pb-2" href="$idx">Inicio</a>
-        <a class="text-gray-800 hover:text-primary font-bold text-lg border-b border-gray-100 pb-2" href="$srv">Servicios</a>
-        <a class="text-gray-800 hover:text-primary font-bold text-lg border-b border-gray-100 pb-2" href="$cto">Contacto</a>
-    </div>
-    <div class="mt-8">
-        <a class="block w-full bg-primary text-white text-center py-4 rounded-md font-bold hover:bg-primary-dark transition tracking-wider shadow-lg" href="$cto">Llámanos sin compromiso</a>
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu-dropdown" class="hidden md:hidden flex-col space-y-2 pb-4 mt-2">
+      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="$idx" data-page="inicio">Inicio</a>
+      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="$srv" data-page="servicios">Servicios</a>
+      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="$cto" data-page="contacto">Contacto</a>
+      <a class="bg-primary text-white text-center py-3 rounded-md font-bold mt-2 shadow-sm uppercase tracking-wider text-sm mx-2" href="$cto">Llámanos sin compromiso</a>
     </div>
   </div>
 </nav>
@@ -62,9 +89,6 @@ function Get-Footer($root) {
   $legalA = $root + "aviso-legal.html"
   $legalP = $root + "politica-privacidad.html"
   $legalC = $root + "politica-cookies.html"
-  $idx = $root + "index.html"
-  $srv = $root + "servicios.html"
-  $cto = $root + "contacto.html"
 
   return @"
 <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
@@ -110,41 +134,41 @@ function Get-Footer($root) {
   </div>
 
   <!-- PROMO MODAL REGULARIZACION 2026 -->
-  <div id="promo-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+  <div id="promo-modal" class="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6 opacity-0 pointer-events-none transition-opacity duration-500">
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="promo-backdrop"></div>
-    <div class="relative w-full max-w-[500px] bg-white shadow-2xl overflow-hidden transform scale-95 transition-transform duration-500 rounded-sm border-2 border-gray-100" id="promo-content">
-      <button id="promo-close" class="absolute top-3 right-3 z-30 bg-gray-900/40 hover:bg-gray-900/80 text-white rounded w-8 h-8 flex items-center justify-center transition focus:outline-none backdrop-blur-sm">
+    <div class="relative w-full md:max-w-[500px] bg-white shadow-[0_-10px_40px_rgba(0,0,0,0.3)] md:shadow-2xl overflow-hidden transform translate-y-full md:translate-y-0 md:scale-95 transition-transform duration-500 rounded-t-3xl md:rounded-sm border-t-2 md:border-2 border-gray-100" id="promo-content">
+      <button id="promo-close" class="absolute top-4 right-4 md:top-3 md:right-3 z-30 bg-gray-900/40 hover:bg-gray-900/80 text-white rounded w-8 h-8 flex items-center justify-center transition focus:outline-none backdrop-blur-sm">
         <span class="material-symbols-outlined text-lg">close</span>
       </button>
-      <div class="relative bg-[#f8f9fa] flex flex-col items-center text-center p-10 overflow-hidden" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.02\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');">
+      <div class="relative bg-[#f8f9fa] flex flex-col items-center text-center p-6 sm:p-8 md:p-10 overflow-hidden" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.02\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');">
         <!-- Decorative background waves (matching screenshot) -->
-        <div class="absolute -bottom-20 -right-20 w-[120%] h-[200px] rounded-tl-[100%] bg-gradient-to-tr from-[#690000] via-[#c81e1e] to-[#ffc107] opacity-100 z-0"></div>
-        <div class="absolute -bottom-10 -right-10 w-[120%] h-[150px] rounded-tl-[100%] bg-gradient-to-r from-[#8b0000] to-[#500000] opacity-100 z-0 border-t-4 border-[#c81e1e]"></div>
+        <div class="absolute -bottom-16 -right-16 md:-bottom-20 md:-right-20 w-[120%] h-[150px] md:h-[200px] rounded-tl-[100%] bg-gradient-to-tr from-[#690000] via-[#c81e1e] to-[#ffc107] opacity-100 z-0"></div>
+        <div class="absolute -bottom-8 -right-8 md:-bottom-10 md:-right-10 w-[120%] h-[100px] md:h-[150px] rounded-tl-[100%] bg-gradient-to-r from-[#8b0000] to-[#500000] opacity-100 z-0 border-t-4 border-[#c81e1e]"></div>
         
         <!-- Logo stand-in -->
-        <div class="relative z-10 flex flex-col items-center mb-6">
+        <div class="relative z-10 flex flex-col items-center mb-4 md:mb-6">
           <div class="flex gap-2 items-center mb-1">
             <div class="flex flex-col gap-1 items-end">
-                <div class="w-4 h-1.5 bg-[#8b0000] rounded-l-full"></div>
-                <div class="w-6 h-1 bg-[#ffc107] rounded-l-full"></div>
-                <div class="w-8 h-1.5 bg-[#8b0000] rounded-l-full rounded-tr-full transform rotate-12"></div>
+                <div class="w-3 h-1 md:w-4 md:h-1.5 bg-[#8b0000] rounded-l-full"></div>
+                <div class="w-4 h-1 md:w-6 md:h-1 bg-[#ffc107] rounded-l-full"></div>
+                <div class="w-6 h-1 md:w-8 md:h-1.5 bg-[#8b0000] rounded-l-full rounded-tr-full transform rotate-12"></div>
             </div>
             <div class="flex flex-col text-left">
-                <span class="font-display font-black text-sm text-[#333] leading-none tracking-tight">Extranjería</span>
-                <span class="font-display font-medium text-xs text-[#555] leading-none mb-0.5 tracking-tight">Expertos</span>
+                <span class="font-display font-black text-[11px] md:text-sm text-[#333] leading-none tracking-tight">Extranjería</span>
+                <span class="font-display font-medium text-[9px] md:text-xs text-[#555] leading-none mb-0.5 tracking-tight">Expertos</span>
             </div>
           </div>
         </div>
 
         <!-- Main Copy -->
-        <h2 class="relative z-10 text-3xl font-display font-light text-[#0b132b] mb-1 leading-tight tracking-tight">Regularización <br/> masiva</h2>
-        <h3 class="relative z-10 text-5xl font-display font-extrabold text-[#0b132b] mb-4 tracking-tighter">España <span class="text-primary relative inline-block">2026<svg class="absolute w-[120%] h-5 -bottom-1 -left-[10%] text-[#8b0000]" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2"><path d="M0,15 Q30,25 100,5" stroke-opacity="0.5"></path><path d="M5,10 Q50,-5 90,15"></path></svg></span></h3>
+        <h2 class="relative z-10 text-2xl md:text-3xl font-display font-light text-[#0b132b] mb-1 leading-tight tracking-tight">Regularización <br/> masiva</h2>
+        <h3 class="relative z-10 text-4xl md:text-5xl font-display font-extrabold text-[#0b132b] mb-3 md:mb-4 tracking-tighter">España <span class="text-primary relative inline-block">2026<svg class="absolute w-[120%] h-4 md:h-5 -bottom-1 -left-[10%] text-[#8b0000]" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2"><path d="M0,15 Q30,25 100,5" stroke-opacity="0.5"></path><path d="M5,10 Q50,-5 90,15"></path></svg></span></h3>
         
-        <p class="relative z-10 text-gray-500 text-[17px] font-medium mb-10 pb-4 tracking-tight">Información legal actualizada</p>
+        <p class="relative z-10 text-gray-500 text-sm md:text-[17px] font-medium mb-6 md:mb-10 pb-2 md:pb-4 tracking-tight">Información legal actualizada</p>
         
-        <a href="$($root)servicios/regularizacion-2026.html" class="relative z-20 w-[90%] flex justify-center items-center gap-2 bg-gradient-to-b from-[#bd1515] to-[#730000] text-white px-8 py-3 rounded-full border border-[#d63b3b] shadow-2xl hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform hover:scale-[1.03] transition-all">
-          <span class="material-symbols-outlined font-light text-[24px]">calendar_today</span>
-          <span class="font-display font-extrabold uppercase tracking-widest text-[20px] drop-shadow-md">AGENDA AQUÍ</span>
+        <a href="$($root)servicios/regularizacion-2026.html" class="relative z-20 w-full sm:w-[90%] flex justify-center items-center gap-2 bg-gradient-to-b from-[#bd1515] to-[#730000] text-white px-5 sm:px-8 py-3 rounded-full border border-[#d63b3b] shadow-2xl hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform hover:scale-[1.03] transition-all">
+          <span class="material-symbols-outlined font-light text-xl md:text-[24px]">calendar_today</span>
+          <span class="font-display font-extrabold uppercase tracking-widest text-base md:text-[20px] drop-shadow-md">AGENDA AQUÍ</span>
         </a>
       </div>
     </div>
@@ -155,26 +179,17 @@ function Get-Footer($root) {
 }
 $SCRIPTS = @'
 <script>
-  // Mobile menu drawer
+<script>
+  // Mobile menu toggle
   const btnOpen = document.getElementById('btn-mobile-menu');
-  const btnClose = document.getElementById('btn-close-menu');
-  const drawer = document.getElementById('mobile-drawer');
-  const backdrop = document.getElementById('drawer-backdrop');
+  const mobileMenu = document.getElementById('mobile-menu-dropdown');
 
-  function openDrawer() {
-    drawer.classList.add('open');
-    backdrop.classList.add('open');
-    document.body.style.overflow = 'hidden';
+  if(btnOpen && mobileMenu) {
+    btnOpen.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
   }
-  function closeDrawer() {
-    drawer.classList.remove('open');
-    backdrop.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  if(btnOpen) btnOpen.addEventListener('click', openDrawer);
-  if(btnClose) btnClose.addEventListener('click', closeDrawer);
-  if(backdrop) backdrop.addEventListener('click', closeDrawer);
 
   // Accordion
   document.querySelectorAll('.js-accordion').forEach(item => {
@@ -203,15 +218,16 @@ $SCRIPTS = @'
   if(promoModal && page === 'inicio' && !localStorage.getItem('promo_2026_closed')) {
     setTimeout(() => {
       promoModal.classList.remove('opacity-0', 'pointer-events-none');
-      promoContent.classList.remove('scale-95');
-      promoContent.classList.add('scale-100');
+      // For mobile we remove translate-y-full, for desktop we remove scale-95
+      promoContent.classList.remove('translate-y-full', 'md:scale-95');
+      promoContent.classList.add('translate-y-0', 'md:scale-100');
     }, 1500); // Popup aparece tras 1.5s
   }
 
   function closePromo() {
     promoModal.classList.add('opacity-0', 'pointer-events-none');
-    promoContent.classList.remove('scale-100');
-    promoContent.classList.add('scale-95');
+    promoContent.classList.remove('translate-y-0', 'md:scale-100');
+    promoContent.classList.add('translate-y-full', 'md:scale-95');
     localStorage.setItem('promo_2026_closed', 'true');
   }
 
@@ -227,9 +243,6 @@ $SCRIPTS = @'
     }
   }
 
-  if(promoClose) promoClose.addEventListener('click', closePromo);
-  if(promoBackdrop) promoBackdrop.addEventListener('click', closePromo);
-
   // Formulario a WhatsApp y redirección temporal para feedback visual
   document.querySelectorAll('.js-whatsapp-form').forEach(form => {
     form.addEventListener('submit', function(e) {
@@ -244,8 +257,8 @@ $SCRIPTS = @'
       const texto = `¡Hola! Me gustaría hacer una consulta:\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${whatsapp}\n*Situación/Servicio:* ${situacion}\n\n*Mensaje:* ${mensaje}`;
       const url = `https://wa.me/34604804380?text=${encodeURIComponent(texto)}`;
       
-      // Abrir WhatsApp en nueva pestaña
-      window.open(url, '_blank');
+      // Guardar URL en localStorage para que la página de gracias pueda abrir WhatsApp
+      try { localStorage.setItem('wa_pending_url', url); } catch (err) {}
       
       // Mostrar página de gracias en la actual
       window.location.href = 'gracias.html';
@@ -268,21 +281,21 @@ $SCRIPTS = @'
 
 # ─── PAGE BUILDER ───────────────────────────────────────────────────────────
 
-function Build-Page($file, $title, $pageId, $root, $body) {
+function Build-Page($file, $title, $pageId, $root, $body, $desc = "") {
   $nav = Get-Nav $root
   $foot = Get-Footer $root
   $html = @"
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-$(Get-Head $root)
+$(Get-Head $root $desc)
 <title>$title - Extranjería Expertos</title>
 </head>
 <body class="bg-white text-text-light font-body antialiased selection:bg-primary selection:text-white" data-page="$pageId">
 $nav
 $body
 $foot
-<a href="https://wa.me/34604804380" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#1ebe5d] hover:scale-110 transition-all duration-300" aria-label="WhatsApp">
+<a href="https://wa.me/34604804380" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[90] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#1ebe5d] hover:scale-110 transition-all duration-300" aria-label="WhatsApp">
   <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.167 1.594 5.975L.234 23.518l5.655-1.482a12.008 12.008 0 006.142 1.684c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM12.031 22A9.974 9.974 0 016.92 20.6l-.367-.218-3.793.996.993-3.7-.24-.38A9.917 9.917 0 012.031 12.03 c0-5.518 4.482-10 10-10 5.517 0 10 4.482 10 10s-4.483 10-10 10zm5.494-7.514c-.302-.151-1.783-.881-2.062-.982-.279-.101-.482-.151-.684.151-.202.302-.782.982-.958 1.183-.176.202-.352.227-.654.076-1.551-.776-2.697-1.472-3.75-3.32-.105-.183-.012-.284.14-.436.136-.137.302-.352.453-.529.151-.176.202-.302.302-.503.1-.202.05-.378-.025-.529-.076-.151-.684-1.651-.938-2.261-.247-.597-.497-.516-.684-.526-.176-.009-.378-.009-.58-.009-.202 0-.529.076-.806.378-.277.302-1.058 1.033-1.058 2.518s1.083 2.92 1.234 3.121c.151.202 2.131 3.253 5.161 4.561 2.378 1.026 3.193.921 3.793.776.657-.156 2.062-.843 2.352-1.657.29-.815.29-1.516.204-1.662-.086-.146-.312-.232-.614-.383z"/></svg>
 </a>
 $SCRIPTS
@@ -477,30 +490,30 @@ $faqHtml
 <h3 class="text-xl font-bold font-display mb-8 text-[#0b132b]">Solicita tu Evaluación Gratuita</h3>
 <form class="space-y-5 js-whatsapp-form" data-service="$title $subtitle">
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Nombre Completo</label>
-<input name="nombre" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="Tu nombre" type="text"/>
+<label for="svc-nombre" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Nombre Completo</label>
+<input id="svc-nombre" name="nombre" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="Tu nombre" type="text"/>
 </div>
 <div class="grid grid-cols-2 gap-5">
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">WhatsApp</label>
-<input name="whatsapp" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="+34 600..." type="tel"/>
+<label for="svc-whatsapp" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">WhatsApp</label>
+<input id="svc-whatsapp" name="whatsapp" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="+34 600..." type="tel"/>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Email</label>
-<input name="email" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="tu@email.com" type="email"/>
+<label for="svc-email" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Email</label>
+<input id="svc-email" name="email" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm" placeholder="tu@email.com" type="email"/>
 </div>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
-<select name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
+<label for="svc-situacion" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Tu situación actual</label>
+<select id="svc-situacion" name="situacion" required class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm py-3 px-4 shadow-sm bg-white">
 <option disabled selected value="">Selecciona la opción que mejor te describa...</option>
 $($selectOptions | ForEach-Object { "<option value='$_'>$_</option>" })
 <option value="Otra situación distinta">Otra situación distinta</option>
 </select>
 </div>
 <div>
-<label class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
-<textarea name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
+<label for="svc-mensaje" class="block text-[10px] font-bold uppercase text-gray-500 mb-2">Breve descripción extra (Opcional)</label>
+<textarea id="svc-mensaje" name="mensaje" class="w-full border-gray-200 rounded-lg focus:ring-primary focus:border-primary text-sm px-4 py-3 shadow-sm" placeholder="Ej: Llevo X años, trabajo en..." rows="3"></textarea>
 </div>
 <button class="w-full bg-primary text-white font-bold py-4 rounded-lg uppercase tracking-widest text-xs hover:bg-primary-dark transition mt-4 flex items-center justify-center shadow-lg shadow-red-500/20" type="submit">
               ENVIAR CONSULTA <span class="ml-2 font-normal text-lg leading-none transform translate-y-[-1px]">&rarr;</span>
@@ -513,7 +526,7 @@ $($selectOptions | ForEach-Object { "<option value='$_'>$_</option>" })
 </section>
 "@
 
-  Build-Page $file "$title" "servicios" $root $body
+  Build-Page $file "$title" "servicios" $root $body $heroText
 }
 
 
@@ -523,7 +536,7 @@ $indexBody = @'
 <!-- HERO -->
 <section class="relative bg-[#050505] text-white py-24 lg:py-32 overflow-hidden" id="inicio">
   <div class="absolute inset-0 z-0">
-    <img alt="Legal documents and gavel background" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIqem-ACD86E2VdpmxEi7yYWSV0Qmzzju3gvbtHJR3KlM1isqItRz2_s9Mc3Bsg0Hg_-xtiQWYlv_H9kyqIf-L9vgUUMJhEnpsJcmQE24jpOdyt2ZZezL1ZJyNPeqRCQTHDVINhApF5u6QhgLt4s4VBaaOKpehF8vA0mZ0tJVp-efRgofd4UFlG6fox6WE-Drwr6dI49k0tsBmUSzx7PpqKjYDz4BlNYWoTvjy1DLG21PBVFYRN-dxnDS8yFZadZCmoRO-C6D22E"/>
+    <img alt="Documentos legales y mazo" class="w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIqem-ACD86E2VdpmxEi7yYWSV0Qmzzju3gvbtHJR3KlM1isqItRz2_s9Mc3Bsg0Hg_-xtiQWYlv_H9kyqIf-L9vgUUMJhEnpsJcmQE24jpOdyt2ZZezL1ZJyNPeqRCQTHDVINhApF5u6QhgLt4s4VBaaOKpehF8vA0mZ0tJVp-efRgofd4UFlG6fox6WE-Drwr6dI49k0tsBmUSzx7PpqKjYDz4BlNYWoTvjy1DLG21PBVFYRN-dxnDS8yFZadZCmoRO-C6D22E"/>
     <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/95 to-[#0b132b]/80"></div>
   </div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -741,7 +754,7 @@ $indexBody = @'
 
 '@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\index.html" "Extranjería Expertos - Regularización en España" "inicio" "" $indexBody
+Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\index.html" "Extranjería Expertos - Regularización en España" "inicio" "" $indexBody "Despacho especializado en trámites de extranjería: Arraigo Social, Nacionalidad Española, Reagrupación Familiar y Regularización 2026. Revisamos tu caso gratis."
 
 Write-Host "✓ index.html built"
 
@@ -753,7 +766,7 @@ $serviciosBody = @"
 <!-- HERO -->
 <section class="relative h-[70vh] flex items-center justify-center overflow-hidden bg-gray-900">
   <div class="absolute inset-0 z-0">
-    <img alt="Law office background" class="w-full h-full object-cover opacity-25" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIqem-ACD86E2VdpmxEi7yYWSV0Qmzzju3gvbtHJR3KlM1isqItRz2_s9Mc3Bsg0Hg_-xtiQWYlv_H9kyqIf-L9vgUUMJhEnpsJcmQE24jpOdyt2ZZezL1ZJyNPeqRCQTHDVINhApF5u6QhgLt4s4VBaaOKpehF8vA0mZ0tJVp-efRgofd4UFlG6fox6WE-Drwr6dI49k0tsBmUSzx7PpqKjYDz4BlNYWoTvjy1DLG21PBVFYRN-dxnDS8yFZadZCmoRO-C6D22E"/>
+    <img alt="Fondo de despacho de abogados" class="w-full h-full object-cover opacity-25" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIqem-ACD86E2VdpmxEi7yYWSV0Qmzzju3gvbtHJR3KlM1isqItRz2_s9Mc3Bsg0Hg_-xtiQWYlv_H9kyqIf-L9vgUUMJhEnpsJcmQE24jpOdyt2ZZezL1ZJyNPeqRCQTHDVINhApF5u6QhgLt4s4VBaaOKpehF8vA0mZ0tJVp-efRgofd4UFlG6fox6WE-Drwr6dI49k0tsBmUSzx7PpqKjYDz4BlNYWoTvjy1DLG21PBVFYRN-dxnDS8yFZadZCmoRO-C6D22E"/>
     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
   </div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -925,7 +938,7 @@ $serviciosBody = @"
 </section>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\servicios.html" "Servicios de Extranjería" "servicios" "" $serviciosBody
+Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\servicios.html" "Servicios de Extranjería" "servicios" "" $serviciosBody "Conoce todos los servicios legales de Extranjería que ofrecemos en España. Expertos en Arraigo, Cuentas Ajenas y Propias, y Nacionalidad Española."
 
 Write-Host "✓ servicios.html built"
 
@@ -1073,7 +1086,7 @@ $contactoBody = @"
 </section>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\contacto.html" "Contacto - Solicitar Consulta" "contacto" "" $contactoBody
+Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\contacto.html" "Contacto - Solicitar Consulta" "contacto" "" $contactoBody "Contacta con nuestro equipo de abogados de extranjería en Cáceres. Solicita tu valoración gratuita para iniciar trámites de residencia en España."
 
 Write-Host "✓ contacto.html built"
 
@@ -1235,18 +1248,96 @@ Build-LegalPage "C:\Users\Usuario\.gemini\antigravity\web rega\politica-privacid
 Build-LegalPage "C:\Users\Usuario\.gemini\antigravity\web rega\politica-cookies.html" "Política de Cookies" "./" $cookiesText
 
 $graciasBody = @"
-<section class="h-[70vh] flex flex-col items-center justify-center bg-gray-50 px-4 text-center mt-20">
+<section class="min-h-[70vh] flex flex-col items-center justify-center bg-gray-50 px-4 text-center py-20">
   <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 shadow-sm mx-auto">
     <span class="material-symbols-outlined text-4xl text-green-600">check_circle</span>
   </div>
-  <h1 class="text-4xl md:text-5xl font-extrabold font-display text-gray-900 mb-4">¡Mensaje Enviado!</h1>
-  <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto">Hemos recibido tu consulta correctamente. Nuestro equipo de abogados analizará tu caso y se pondrá en contacto contigo a la mayor brevedad posible.</p>
-  <a href="index.html" class="bg-primary text-white mx-auto px-8 py-4 rounded font-bold uppercase tracking-widest text-sm hover:bg-primary-dark transition shadow-lg inline-flex items-center gap-2">
-    <span class="material-symbols-outlined">arrow_back</span>
-    Volver al Inicio
-  </a>
+  <h1 class="text-4xl md:text-5xl font-extrabold font-display text-gray-900 mb-4">¡Un paso más!</h1>
+  <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto">Para completar tu solicitud, vamos a abrir WhatsApp y enviar los detalles al despacho automáticamente.</p>
+  
+  <div class="flex flex-col gap-4 w-full max-w-xs mx-auto">
+    <a id="btn-wa-redirect" href="https://wa.me/34604804380" class="bg-[#25D366] text-white w-full px-8 py-4 rounded font-bold uppercase tracking-widest text-[13px] hover:bg-[#1ebe5d] transition shadow-xl inline-flex items-center justify-center gap-2 transform hover:-translate-y-1">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.167 1.594 5.975L.234 23.518l5.655-1.482a12.008 12.008 0 006.142 1.684c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM12.031 22A9.974 9.974 0 016.92 20.6l-.367-.218-3.793.996.993-3.7-.24-.38A9.917 9.917 0 012.031 12.03 c0-5.518 4.482-10 10-10 5.517 0 10 4.482 10 10s-4.483 10-10 10zm5.494-7.514c-.302-.151-1.783-.881-2.062-.982-.279-.101-.482-.151-.684.151-.202.302-.782.982-.958 1.183-.176.202-.352.227-.654.076-1.551-.776-2.697-1.472-3.75-3.32-.105-.183-.012-.284.14-.436.136-.137.302-.352.453-.529.151-.176.202-.302.302-.503.1-.202.05-.378-.025-.529-.076-.151-.684-1.651-.938-2.261-.247-.597-.497-.516-.684-.526-.176-.009-.378-.009-.58-.009-.202 0-.529.076-.806.378-.277.302-1.058 1.033-1.058 2.518s1.083 2.92 1.234 3.121c.151.202 2.131 3.253 5.161 4.561 2.378 1.026 3.193.921 3.793.776.657-.156 2.062-.843 2.352-1.657.29-.815.29-1.516.204-1.662-.086-.146-.312-.232-.614-.383z"/></svg>
+      Abrir WhatsApp
+    </a>
+    <a href="index.html" class="bg-white border border-gray-200 text-gray-700 w-full px-8 py-4 rounded font-bold uppercase tracking-widest text-[11px] hover:bg-gray-50 hover:border-gray-300 transition shadow-sm inline-flex items-center justify-center gap-2">
+      Volver al Inicio
+    </a>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    try {
+      const pendingUrl = localStorage.getItem('wa_pending_url');
+      if (pendingUrl) {
+        const btnWa = document.getElementById('btn-wa-redirect');
+        if (btnWa) {
+          btnWa.href = pendingUrl;
+          // Opcional: auto-redireccionamiento tras 1 segundo
+          setTimeout(() => {
+            window.location.href = pendingUrl;
+            localStorage.removeItem('wa_pending_url');
+          }, 1500);
+        }
+      }
+    } catch(e) {}
+  });
+</script>
+"@
+
+Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\gracias.html" "Consulta Enviada" "gracias" "./" $graciasBody "Gracias por contactar con Extranjería Expertos. Nos comunicaremos contigo en breve." "/gracias.html"
+Write-Host "✓ gracias.html built"
+
+$error404Body = @"
+<section class="h-[70vh] flex flex-col items-center justify-center bg-gray-50 px-4 text-center mt-20">
+  <div class="w-24 h-24 mb-6 shadow-sm mx-auto text-primary opacity-50 flex items-center justify-center">
+    <span class="material-symbols-outlined text-8xl">search_off</span>
+  </div>
+  <h1 class="text-6xl md:text-8xl font-extrabold font-display text-gray-900 mb-4 tracking-tighter">404</h1>
+  <p class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Página no encontrada</p>
+  <p class="text-sm text-gray-500 mb-10 max-w-md mx-auto">Lo sentimos, la página que estás buscando no existe, ha sido movida o la dirección es incorrecta.</p>
+  <div class="flex flex-col sm:flex-row gap-4">
+    <a href="index.html" class="bg-primary text-white border border-primary w-full sm:w-auto px-8 py-3 rounded font-bold uppercase tracking-widest text-xs hover:bg-primary-dark transition shadow-lg inline-flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-[18px]">home</span> Inicio
+    </a>
+    <a href="contacto.html" class="bg-white border text-gray-700 border-gray-200 w-full sm:w-auto px-8 py-3 rounded font-bold uppercase tracking-widest text-xs hover:bg-gray-50 transition shadow-sm inline-flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-[18px]">mail</span> Contacto
+    </a>
+  </div>
 </section>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\gracias.html" "Consulta Enviada" "gracias" "./" $graciasBody
-Write-Host "✓ gracias.html built"
+Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\404.html" "Página no encontrada" "404" "./" $error404Body "Página no encontrada en Extranjería Expertos." "/404.html"
+Write-Host "✓ 404.html built"
+
+$sitemap = @"
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://extranjeriaexpertos.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios.html</loc><priority>0.9</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/contacto.html</loc><priority>0.9</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/arraigo-social.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/arraigo-sociolaboral.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/arraigo-socioformativo.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/arraigo-familiar.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/nacionalidad.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/reagrupacion-familiar.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/cuenta-ajena.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/cuenta-propia.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/profesional-cualificado.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/tarjeta-comunitaria.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/regularizacion-2026.html</loc><priority>0.9</priority></url>
+</urlset>
+"@
+$sitemap | Out-File -FilePath "C:\Users\Usuario\.gemini\antigravity\web rega\sitemap.xml" -Encoding utf8 -Force
+Write-Host "✓ sitemap.xml built"
+
+$robots = @"
+User-agent: *
+Allow: /
+
+Sitemap: https://extranjeriaexpertos.com/sitemap.xml
+"@
+$robots | Out-File -FilePath "C:\Users\Usuario\.gemini\antigravity\web rega\robots.txt" -Encoding utf8 -Force
+Write-Host "✓ robots.txt built"
+
