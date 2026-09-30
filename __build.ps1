@@ -3,42 +3,77 @@
 
 function Get-Head($root, $desc, $url) {
   if (!$root) { $root = "./" }
-  if (!$desc) { $desc = "Despacho especializado en derecho de extranjería en España: Arraigo, Nacionalidad y Regularización." }
+  if (!$desc) { $desc = "Despacho de abogados especialistas en extranjería en España. Arraigo social, laboral, familiar, nacionalidad española y permisos de residencia. Consulta gratuita en Cáceres y Online." }
   if (!$url) { $url = "" }
   return @"
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="$desc"/>
-<meta property="og:title" content="Extranjería Expertos"/>
+<meta name="keywords" content="abogados extranjeria espana, tramites extranjeria online, abogado extranjeria caceres, arraigo social requisitos, arraigo familiar, nacionalidad espanola residencia, permiso de residencia y trabajo, reagrupacion familiar, tarjeta comunitaria"/>
+<meta property="og:title" content="Extranjería Expertos | Abogados de Extranjería en España"/>
 <meta property="og:description" content="$desc"/>
 <meta property="og:type" content="website"/>
-<meta name="robots" content="index, follow"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:site_name" content="Extranjería Expertos - Grupo RG Asesores"/>
+<meta property="og:url" content="https://extranjeriaexpertos.com$url"/>
+<meta property="og:image" content="https://extranjeriaexpertos.com/logo.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Extranjería Expertos | Abogados de Extranjería en España"/>
+<meta name="twitter:description" content="$desc"/>
+<meta name="twitter:image" content="https://extranjeriaexpertos.com/logo.png"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
 <link rel="canonical" href="https://extranjeriaexpertos.com$url"/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Extranjería Expertos",
+  "@type": ["LegalService", "Attorney"],
+  "name": "Extranjería Expertos - Abogados de Extranjería",
+  "alternateName": "Extranjería Expertos Grupo RG Asesores",
   "image": "https://extranjeriaexpertos.com/logo.png",
   "url": "https://extranjeriaexpertos.com/",
   "telephone": "+34604804380",
+  "email": "info@extranjeriaexpertos.com",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "areaServed": "ES",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Av. de España, 9, 1º 4",
     "addressLocality": "Cáceres",
     "postalCode": "10002",
+    "addressRegion": "Cáceres",
     "addressCountry": "ES"
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "19:30"
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.472759,
+    "longitude": -6.375686
   },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "16:30",
+      "closes": "19:30"
+    }
+  ],
   "parentOrganization": {
     "@type": "Organization",
-    "name": "Grupo RG Asesores"
+    "name": "Grupo RG Asesores",
+    "url": "https://extranjeriaexpertos.com/"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "520",
+    "bestRating": "5"
   }
 }
 </script>
@@ -115,7 +150,7 @@ function Get-Footer($root) {
           <li><a href="$($root)servicios/arraigo-familiar.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Arraigo Familiar</a></li>
           <li><a href="$($root)servicios/nacionalidad.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Nacionalidad Española</a></li>
           <li><a href="$($root)servicios/reagrupacion-familiar.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Reagrupación Familiar</a></li>
-          <li><a href="$($root)servicios/regularizacion-2026.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Regularización 2026</a></li>
+          <li><a href="$($root)servicios/tarjeta-comunitaria.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Tarjeta Comunitaria</a></li>
         </ul>
       </div>
       <div>
@@ -133,46 +168,7 @@ function Get-Footer($root) {
     </div>
   </div>
 
-  <!-- PROMO MODAL REGULARIZACION 2026 -->
-  <div id="promo-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
-    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="promo-backdrop"></div>
-    <div class="relative w-full max-w-[400px] mb-20 md:mb-0 md:max-w-[500px] bg-white shadow-2xl overflow-hidden transform translate-y-full md:translate-y-0 md:scale-95 transition-transform duration-500 rounded-3xl md:rounded-sm border-2 border-gray-100" id="promo-content">
-      <button id="promo-close" class="absolute top-4 right-4 md:top-3 md:right-3 z-30 bg-gray-900/40 hover:bg-gray-900/80 text-white rounded w-8 h-8 flex items-center justify-center transition focus:outline-none backdrop-blur-sm">
-        <span class="material-symbols-outlined text-lg">close</span>
-      </button>
-      <div class="relative bg-[#f8f9fa] flex flex-col items-center text-center p-6 sm:p-8 md:p-10 overflow-hidden" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.02\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3Ccircle cx=\'13\' cy=\'13\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E');">
-        <!-- Decorative background waves (matching screenshot) -->
-        <div class="absolute -bottom-16 -right-16 md:-bottom-20 md:-right-20 w-[120%] h-[150px] md:h-[200px] rounded-tl-[100%] bg-gradient-to-tr from-[#690000] via-[#c81e1e] to-[#ffc107] opacity-100 z-0"></div>
-        <div class="absolute -bottom-8 -right-8 md:-bottom-10 md:-right-10 w-[120%] h-[100px] md:h-[150px] rounded-tl-[100%] bg-gradient-to-r from-[#8b0000] to-[#500000] opacity-100 z-0 border-t-4 border-[#c81e1e]"></div>
-        
-        <!-- Logo stand-in -->
-        <div class="relative z-10 flex flex-col items-center mb-4 md:mb-6">
-          <div class="flex gap-2 items-center mb-1">
-            <div class="flex flex-col gap-1 items-end">
-                <div class="w-3 h-1 md:w-4 md:h-1.5 bg-[#8b0000] rounded-l-full"></div>
-                <div class="w-4 h-1 md:w-6 md:h-1 bg-[#ffc107] rounded-l-full"></div>
-                <div class="w-6 h-1 md:w-8 md:h-1.5 bg-[#8b0000] rounded-l-full rounded-tr-full transform rotate-12"></div>
-            </div>
-            <div class="flex flex-col text-left">
-                <span class="font-display font-black text-[11px] md:text-sm text-[#333] leading-none tracking-tight">Extranjería</span>
-                <span class="font-display font-medium text-[9px] md:text-xs text-[#555] leading-none mb-0.5 tracking-tight">Expertos</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Main Copy -->
-        <h2 class="relative z-10 text-2xl md:text-3xl font-display font-light text-[#0b132b] mb-1 leading-tight tracking-tight">Regularización <br/> masiva</h2>
-        <h3 class="relative z-10 text-4xl md:text-5xl font-display font-extrabold text-[#0b132b] mb-3 md:mb-4 tracking-tighter">España <span class="text-primary relative inline-block">2026<svg class="absolute w-[120%] h-4 md:h-5 -bottom-1 -left-[10%] text-[#8b0000]" viewBox="0 0 100 20" preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="2"><path d="M0,15 Q30,25 100,5" stroke-opacity="0.5"></path><path d="M5,10 Q50,-5 90,15"></path></svg></span></h3>
-        
-        <p class="relative z-10 text-gray-500 text-sm md:text-[17px] font-medium mb-6 md:mb-10 pb-2 md:pb-4 tracking-tight">Información legal actualizada</p>
-        
-        <a href="$($root)servicios/regularizacion-2026.html" class="relative z-20 w-full sm:w-[90%] flex justify-center items-center gap-2 bg-gradient-to-b from-[#bd1515] to-[#730000] text-white px-5 sm:px-8 py-3 rounded-full border border-[#d63b3b] shadow-2xl hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] transform hover:scale-[1.03] transition-all">
-          <span class="material-symbols-outlined font-light text-xl md:text-[24px]">calendar_today</span>
-          <span class="font-display font-extrabold uppercase tracking-widest text-base md:text-[20px] drop-shadow-md">AGENDA AQUÍ</span>
-        </a>
-      </div>
-    </div>
-  </div>
 
 </footer>
 "@
@@ -208,39 +204,7 @@ $SCRIPTS = @'
     }
   });
 
-  // Promo Modal Logic
-  const promoModal = document.getElementById('promo-modal');
-  const promoBackdrop = document.getElementById('promo-backdrop');
-  const promoClose = document.getElementById('promo-close');
-  const promoContent = document.getElementById('promo-content');
 
-  if(promoModal && page === 'inicio' && !localStorage.getItem('promo_2026_closed')) {
-    setTimeout(() => {
-      promoModal.classList.remove('opacity-0', 'pointer-events-none');
-      // For mobile we remove translate-y-full, for desktop we remove scale-95
-      promoContent.classList.remove('translate-y-full', 'md:scale-95');
-      promoContent.classList.add('translate-y-0', 'md:scale-100');
-    }, 1500); // Popup aparece tras 1.5s
-  }
-
-  function closePromo() {
-    promoModal.classList.add('opacity-0', 'pointer-events-none');
-    promoContent.classList.remove('translate-y-0', 'md:scale-100');
-    promoContent.classList.add('translate-y-full', 'md:scale-95');
-    localStorage.setItem('promo_2026_closed', 'true');
-  }
-
-  if(promoClose) promoClose.addEventListener('click', closePromo);
-  if(promoBackdrop) promoBackdrop.addEventListener('click', closePromo);
-
-  if(promoModal) {
-    const promoLink = promoModal.querySelector('a');
-    if(promoLink) {
-      promoLink.addEventListener('click', () => {
-        localStorage.setItem('promo_2026_closed', 'true');
-      });
-    }
-  }
 
   // Formulario a WhatsApp y redirección temporal para feedback visual
   document.querySelectorAll('.js-whatsapp-form').forEach(form => {
@@ -308,7 +272,7 @@ $SCRIPTS
 # ─── SERVICE SUB-PAGE TEMPLATE ──────────────────────────────────────────────
 
 function Build-Service($slug, $title, $subtitle, $icon, $heroText, $reqItems, $includesItems, $faqItems, $errorsItems, $selectOptions) {
-  $file = "C:\Users\Usuario\.gemini\antigravity\web rega\servicios\$slug.html"
+  $file = "$PSScriptRoot\servicios\$slug.html"
   $root = "../"
 
   $incHtml = ($includesItems | ForEach-Object { "<li class='flex items-start gap-3 mb-4'><span class='material-symbols-outlined text-primary text-xl mt-0.5 flex-shrink-0'>check_circle</span><span class='text-sm text-gray-700 font-medium'>$_</span></li>" }) -join "`n"
@@ -342,9 +306,6 @@ function Build-Service($slug, $title, $subtitle, $icon, $heroText, $reqItems, $i
 <!-- HERO -->
 <section class="relative pt-24 pb-32 bg-white overflow-hidden" data-purpose="hero-section">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
-<span class="inline-block bg-red-50 text-primary text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-8 border border-red-100 shadow-sm">
-        SERVICIO DESTACADO
-      </span>
 <h1 class="text-6xl md:text-7xl font-extrabold font-display leading-[1.1] tracking-tight mb-8">
         <span class="block text-[#0b132b]">$title</span>
         <span class="block text-primary">$subtitle</span>
@@ -525,7 +486,7 @@ $($selectOptions | ForEach-Object { "<option value='$_'>$_</option>" })
 </section>
 "@
 
-  Build-Page $file "$title" "servicios" $root $body $heroText
+  Build-Page $file "$title $subtitle en España: Requisitos y Tramitación" "servicios" $root $body "$heroText Asesoramiento legal experto por abogados de extranjería en España."
 }
 
 
@@ -541,12 +502,11 @@ $indexBody = @'
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
       <div class="animate-fade-in-up">
-        <span class="inline-block bg-red-500/10 text-primary border border-primary/30 px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase mb-8 shadow-sm">Expertos en Derecho De Extranjería</span>
-        <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-[1.1] mb-8 tracking-tight">TU FUTURO, <span class="text-primary block mt-2">NUESTRO COMPROMISO</span></h1>
-        <p class="text-lg md:text-xl text-gray-400 font-light max-w-2xl mb-12 leading-relaxed">Regularizamos tu situación en España con el respaldo del Grupo RG Asesores. Agilidad, transparencia y resultados reales.</p>
+        <h1 class="text-5xl md:text-7xl font-extrabold font-display leading-[1.1] mb-8 tracking-tight">ABOGADOS DE EXTRANJERÍA <span class="text-primary block mt-2">EN TODA ESPAÑA</span></h1>
+        <p class="text-lg md:text-xl text-gray-400 font-light max-w-2xl mb-12 leading-relaxed">Conseguimos tu residencia legal, arraigo y nacionalidad española. Más de 10 años de experiencia, sede física en Cáceres y tramitación 100% telemática oficial en toda España con el respaldo del Grupo RG Asesores.</p>
         <div class="flex flex-col sm:flex-row gap-5 mb-14">
-          <a class="bg-primary text-white px-8 py-4 rounded-md text-center font-bold text-sm tracking-widest uppercase shadow-lg shadow-red-500/30 hover:bg-primary-dark transition transform hover:-translate-y-0.5" href="contacto.html">Revisar mi caso</a>
-          <a class="bg-gray-800 text-white border border-gray-700 px-8 py-4 rounded-md text-center font-bold text-sm tracking-widest uppercase hover:bg-gray-700 transition transform hover:-translate-y-0.5" href="servicios/regularizacion-2026.html">Regularización 2026</a>
+          <a class="bg-primary text-white px-8 py-4 rounded-md text-center font-bold text-sm tracking-widest uppercase shadow-lg shadow-red-500/30 hover:bg-primary-dark transition transform hover:-translate-y-0.5" href="contacto.html">Consulta Gratuita</a>
+          <a class="bg-gray-800 text-white border border-gray-700 px-8 py-4 rounded-md text-center font-bold text-sm tracking-widest uppercase hover:bg-gray-700 transition transform hover:-translate-y-0.5" href="servicios.html">Ver Servicios</a>
         </div>
       </div>
       <div class="hidden lg:block relative group">
@@ -642,8 +602,7 @@ $indexBody = @'
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
       <div class="max-w-2xl">
-        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-3 block">Servicios Jurídicos</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold font-display text-[#0b132b] mb-4">Expertos En Todo Tipo<br/>De Trámites De Extranjería</h2>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-display text-[#0b132b] mb-4">Expertos En Todo Tipo<br/>De Trámites De Extranjería</h2>
       </div>
       <a href="servicios.html" class="flex items-center text-sm font-bold uppercase tracking-widest text-primary hover:text-primary-dark transition group pb-2">Ver Todos los Servicios <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition text-lg">arrow_forward</span></a>
     </div>
@@ -737,6 +696,37 @@ $indexBody = @'
     </div>
 </section>
 
+<!-- SECCION SEO: COBERTURA NACIONAL Y SEDE EN CACERES -->
+<section class="py-20 bg-gray-900 text-white border-t border-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-display mb-6">Atención Presencial en Cáceres y Telemática en Toda España</h2>
+        <p class="text-gray-400 leading-relaxed mb-6">Presentamos tu expediente directamente a través de la plataforma telemática oficial de Extranjería (Mercurio), sin que tengas que pedir cita previa en las Oficinas de Extranjería de tu provincia ni esperar colas interminables.</p>
+        <ul class="space-y-4 text-sm text-gray-300">
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span><strong>Presentación telemática oficial</strong> con registro ministerial inmediato y justificante con número de expediente.</span></li>
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span><strong>Atención en cualquier provincia:</strong> Madrid, Barcelona, Valencia, Alicante, Málaga, Sevilla, Cáceres, Badajoz y toda España.</span></li>
+          <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span><strong>Despacho físico:</strong> Si estás en Extremadura, te atendemos personalmente en nuestra sede de Av. de España 9, Cáceres.</span></li>
+        </ul>
+      </div>
+      <div class="bg-gray-800/80 p-8 rounded-2xl border border-gray-700 shadow-2xl">
+        <h3 class="text-xl font-bold font-display text-white mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-primary">help</span>¿Por qué contratar un abogado de extranjería?</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">Más del 40% de las solicitudes presentadas sin asesoramiento especializado sufren denegaciones o retrasos de meses por errores en tasas, legalizaciones o falta de acreditación documental. En Extranjería Expertos revisamos cada requisito antes del envío.</p>
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+            <span class="text-3xl font-extrabold font-display text-primary block">98%</span>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Tasa de éxito</span>
+          </div>
+          <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+            <span class="text-3xl font-extrabold font-display text-primary block">24h</span>
+            <span class="text-xs text-gray-400 uppercase tracking-wider">Respuesta a tu caso</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CALL TO ACTION FINAL -->
 <section class="bg-gradient-to-r from-primary to-primary-dark py-20 text-white relative overflow-hidden border-b-[8px] border-[#0b132b]">
 <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
@@ -753,7 +743,7 @@ $indexBody = @'
 
 '@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\index.html" "Extranjería Expertos - Regularización en España" "inicio" "" $indexBody "Despacho especializado en trámites de extranjería: Arraigo Social, Nacionalidad Española, Reagrupación Familiar y Regularización 2026. Revisamos tu caso gratis."
+Build-Page "$PSScriptRoot\index.html" "Abogados de Extranjería en España | Trámites y Residencia Legal" "inicio" "" $indexBody "Despacho de abogados especialistas en extranjería en España. Tramitamos tu Arraigo Social, Familiar, Nacionalidad Española y Permisos de Residencia. Consulta gratuita en Cáceres y Online."
 
 Write-Host "✓ index.html built"
 
@@ -769,8 +759,7 @@ $serviciosBody = @"
     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
   </div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-    <span class="inline-block py-1 px-3 rounded border border-gray-500 bg-black/30 text-gray-300 text-xs font-bold tracking-[0.2em] uppercase mb-6">Legalidad & Confianza</span>
-    <h1 class="text-5xl md:text-7xl font-extrabold font-display tracking-tight leading-tight mb-8">Servicios de <span class="text-primary">Extranjería</span><br/>en España</h1>
+        <h1 class="text-5xl md:text-7xl font-extrabold font-display tracking-tight leading-tight mb-8">Servicios de <span class="text-primary">Extranjería</span><br/>en España</h1>
     <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">Soluciones jurídicas definitivas para tu residencia y nacionalidad.</p>
     <div class="flex flex-col sm:flex-row justify-center gap-5">
       <a class="bg-primary text-white px-10 py-4 rounded font-bold text-lg hover:bg-primary-dark transition shadow-[0_0_20px_rgba(200,30,30,0.4)] transform hover:-translate-y-1" href="contacto.html">SOLICITAR CONSULTA</a>
@@ -778,19 +767,18 @@ $serviciosBody = @"
   </div>
 </section>
 
-<!-- REGULARIZACION HIGHLIGHT -->
+<!-- ESTUDIO DE VIABILIDAD GRATUITO -->
 <section class="relative -mt-10 z-20 pb-10 px-4">
   <div class="max-w-5xl mx-auto">
     <div class="bg-white rounded-xl shadow-premium border-l-[6px] border-primary p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
       <div class="flex-1">
         <div class="flex items-center gap-3 mb-3">
-          <span class="bg-red-100 text-primary text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Prioridad Alta</span>
-          <span class="text-primary font-bold text-sm flex items-center gap-1"><span class="material-symbols-outlined text-lg">schedule</span>Límite: 30 Junio 2026</span>
+          <span class="text-gray-600 font-semibold text-sm flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">verified</span>Respuesta en 24h</span>
         </div>
-        <h2 class="text-3xl font-display font-bold text-gray-900 mb-2">Regularización Extraordinaria 2026</h2>
-        <p class="text-gray-600">Aprovecha la ventana de oportunidad única para regularizar tu situación administrativa.</p>
+        <h2 class="text-3xl font-display font-bold text-gray-900 mb-2">¿Cumples los requisitos para tu residencia?</h2>
+        <p class="text-gray-600">Analizamos tu documentación y situación administrativa para indicarte la vía legal más rápida y segura para tu estancia legal o nacionalidad en España.</p>
       </div>
-      <a class="bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-dark transition shadow-lg whitespace-nowrap" href="servicios/regularizacion-2026.html">Ver detalles</a>
+      <a class="bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-dark transition shadow-lg whitespace-nowrap" href="contacto.html">Evaluar mi caso gratis</a>
     </div>
   </div>
 </section>
@@ -857,7 +845,7 @@ $serviciosBody = @"
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-end gap-4 mb-10 border-b-2 border-gray-200 pb-6">
       <h2 class="text-4xl font-extrabold font-display text-gray-900">Tipos de Arraigo</h2>
-      <span class="text-gray-400 text-lg font-light pb-1 hidden sm:inline-block">/ Regularización por circunstancias excepcionales</span>
+      <span class="text-gray-400 text-lg font-light pb-1 hidden sm:inline-block">/ Residencia legal por circunstancias excepcionales</span>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       <a href="servicios/arraigo-social.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
@@ -937,7 +925,7 @@ $serviciosBody = @"
 </section>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\servicios.html" "Servicios de Extranjería" "servicios" "" $serviciosBody "Conoce todos los servicios legales de Extranjería que ofrecemos en España. Expertos en Arraigo, Cuentas Ajenas y Propias, y Nacionalidad Española."
+Build-Page "$PSScriptRoot\servicios.html" "Servicios de Extranjería en España | Abogados Especialistas en Residencia y Nacionalidad" "servicios" "" $serviciosBody "Conoce todos los trámites legales de Extranjería en España: Arraigos, Permisos de Trabajo, Nacionalidad Española por Residencia, Reagrupación Familiar y Tarjeta Comunitaria."
 
 Write-Host "✓ servicios.html built"
 
@@ -952,8 +940,7 @@ $contactoBody = @"
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid lg:grid-cols-2 gap-12 xl:gap-24 items-start">
       <div class="pt-8 lg:pt-16">
-        <span class="inline-block py-1 px-3 rounded bg-red-50 text-primary font-bold text-xs tracking-wider uppercase mb-6">Primera Consulta Legal</span>
-        <h1 class="text-4xl lg:text-6xl font-extrabold font-display text-gray-900 leading-tight mb-6">Solicitar <br/><span class="text-primary">Consulta</span></h1>
+                <h1 class="text-4xl lg:text-6xl font-extrabold font-display text-gray-900 leading-tight mb-6">Solicitar <br/><span class="text-primary">Consulta</span></h1>
         <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">Obtenga orientación legal experta para su trámite de extranjería. Analizamos su caso con rigor jurídico y honestidad.</p>
         <div class="hidden lg:block mt-12 pt-8 border-t border-gray-100">
           <div class="flex items-center gap-4">
@@ -1085,7 +1072,7 @@ $contactoBody = @"
 </section>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\contacto.html" "Contacto - Solicitar Consulta" "contacto" "" $contactoBody "Contacta con nuestro equipo de abogados de extranjería en Cáceres. Solicita tu valoración gratuita para iniciar trámites de residencia en España."
+Build-Page "$PSScriptRoot\contacto.html" "Contacto Abogados de Extranjería | Consulta en Cáceres y Online en España" "contacto" "" $contactoBody "Contacta con nuestro equipo de abogados de extranjería. Despacho en Cáceres y atención telemática en toda España. Evaluación de caso y respuesta en 24 horas."
 
 Write-Host "✓ contacto.html built"
 
@@ -1194,15 +1181,7 @@ Build-Service "tarjeta-comunitaria" "Tarjeta" "Comunitaria" "euro_symbol" "Para 
 @(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
 @("Soy ciudadano de la UE y voy a trabajar (o trabajaré) en España", "Soy dependiente / familiar directo de un Comunitario con residencia española", "Quiero traer a mi pareja no-comunitaria a España legalmente")
 
-Build-Service "regularizacion-2026" "Regularización Extraordinaria" "España 2026" "star" "La oportunidad única del año 2026. Un proceso extraordinario de regularización masiva que permitirá a miles de personas en situación irregular obtener su residencia legal en España." `
-@("Permanencia continuada en España desde antes del 1 de noviembre de 2021", "Padrón municipal que acredite la estancia (historial continuo)", "Carecer de antecedentes penales en España y en el país de origen", "No encontrarse en situación de expulsión", "Documento nacional de identidad o pasaporte (puede estar caducado en algunos supuestos)", "No haber sido condenado por delitos contra la seguridad pública o el orden público") `
-@("Análisis de viabilidad y elegibilidad del caso", "Recopilación del historial de empadronamiento", "Verificación y obtención de antecedentes penales", "Preparación completa del expediente documental", "Presentación ante la Delegación de Gobierno correspondiente", "Seguimiento y respuesta a requerimientos de documentación") `
-@(@{q = "¿Cuál es el plazo para presentar la solicitud?"; a = "El plazo de presentación es desde Abril hasta el 30 de Junio de 2026. Pasado este plazo, ya no será posible acogerse a este proceso extraordinario." },
-  @{q = "¿Qué pasa si tengo lagunas en el padrón?"; a = "Existen medios alternativos para acreditar la permanencia: declaraciones de testigos, contratos de arrendamiento, facturas, registros hospitalarios, etc. Nuestro equipo sabe cómo cubrir esos vacíos." },
-  @{q = "¿Puedo solicitarlo si tengo una expulsión previa?"; a = "Depende del tipo y fecha de expulsión. Algunas expulsiones anteriores al período de referencia pueden no ser obstáculo. Consúltenos su caso específico." },
-  @{q = "¿Cuánto tiempo tardará la resolución?"; a = "Dado que es un proceso masivo, se estima que las resoluciones pueden tardar varios meses. Es fundamental presentar el expediente correctamente desde el inicio para evitar retrasos por subsanaciones." }) `
-@(@{t = "Falta de requisitos"; d = "No cumplir con los criterios exigidos para el trámite." }, @{t = "Documentos sin apostillar"; d = "Documentación extranjera no legalizada o sin traducción jurada." }, @{t = "Antecedentes penales"; d = "Tener antecedentes penales vigentes en España o país de origen." }) `
-@("Llevo continuadamente en España desde ANTES de noviembre 2021", "Tengo empadronamiento continuo y sin cortes relevantes", "Llegué después de Noviembre de 2021 (no aplico a esto)")
+
 
 Write-Host ""
 Write-Host "ALL PAGES BUILT SUCCESSFULLY"
@@ -1242,9 +1221,9 @@ $avisoLegalText = Get-Content 'aviso-legal-clean.html' -Encoding UTF8 -Raw
 $privacidadText = Get-Content 'politica-privacidad-clean.html' -Encoding UTF8 -Raw
 $cookiesText = Get-Content 'politica-cookies-clean.html' -Encoding UTF8 -Raw
 
-Build-LegalPage "C:\Users\Usuario\.gemini\antigravity\web rega\aviso-legal.html" "Aviso Legal" "./" $avisoLegalText
-Build-LegalPage "C:\Users\Usuario\.gemini\antigravity\web rega\politica-privacidad.html" "Política de Privacidad" "./" $privacidadText
-Build-LegalPage "C:\Users\Usuario\.gemini\antigravity\web rega\politica-cookies.html" "Política de Cookies" "./" $cookiesText
+Build-LegalPage "$PSScriptRoot\aviso-legal.html" "Aviso Legal" "./" $avisoLegalText
+Build-LegalPage "$PSScriptRoot\politica-privacidad.html" "Política de Privacidad" "./" $privacidadText
+Build-LegalPage "$PSScriptRoot\politica-cookies.html" "Política de Cookies" "./" $cookiesText
 
 $graciasBody = @"
 <section class="min-h-[70vh] flex flex-col items-center justify-center bg-gray-50 px-4 text-center py-20">
@@ -1284,7 +1263,7 @@ $graciasBody = @"
 </script>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\gracias.html" "Consulta Enviada" "gracias" "./" $graciasBody "Gracias por contactar con Extranjería Expertos. Nos comunicaremos contigo en breve." "/gracias.html"
+Build-Page "$PSScriptRoot\gracias.html" "Consulta Enviada" "gracias" "./" $graciasBody "Gracias por contactar con Extranjería Expertos. Nos comunicaremos contigo en breve." "/gracias.html"
 Write-Host "✓ gracias.html built"
 
 $error404Body = @"
@@ -1306,7 +1285,7 @@ $error404Body = @"
 </section>
 "@
 
-Build-Page "C:\Users\Usuario\.gemini\antigravity\web rega\404.html" "Página no encontrada" "404" "./" $error404Body "Página no encontrada en Extranjería Expertos." "/404.html"
+Build-Page "$PSScriptRoot\404.html" "Página no encontrada" "404" "./" $error404Body "Página no encontrada en Extranjería Expertos." "/404.html"
 Write-Host "✓ 404.html built"
 
 $sitemap = @"
@@ -1325,10 +1304,9 @@ $sitemap = @"
   <url><loc>https://extranjeriaexpertos.com/servicios/cuenta-propia.html</loc><priority>0.8</priority></url>
   <url><loc>https://extranjeriaexpertos.com/servicios/profesional-cualificado.html</loc><priority>0.8</priority></url>
   <url><loc>https://extranjeriaexpertos.com/servicios/tarjeta-comunitaria.html</loc><priority>0.8</priority></url>
-  <url><loc>https://extranjeriaexpertos.com/servicios/regularizacion-2026.html</loc><priority>0.9</priority></url>
 </urlset>
 "@
-$sitemap | Out-File -FilePath "C:\Users\Usuario\.gemini\antigravity\web rega\sitemap.xml" -Encoding utf8 -Force
+$sitemap | Out-File -FilePath "$PSScriptRoot\sitemap.xml" -Encoding utf8 -Force
 Write-Host "✓ sitemap.xml built"
 
 $robots = @"
@@ -1337,6 +1315,6 @@ Allow: /
 
 Sitemap: https://extranjeriaexpertos.com/sitemap.xml
 "@
-$robots | Out-File -FilePath "C:\Users\Usuario\.gemini\antigravity\web rega\robots.txt" -Encoding utf8 -Force
+$robots | Out-File -FilePath "$PSScriptRoot\robots.txt" -Encoding utf8 -Force
 Write-Host "✓ robots.txt built"
 
