@@ -55,4 +55,60 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Header Glassmorphism states */
+  .header-transparent {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+  }
+  
+  .header-scrolled {
+    background-color: rgba(7, 11, 20, 0.88) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  /* Hero Carousel Transitions */
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.9s;
+    z-index: 1;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+  }
+
+  /* Slide indicator pill bar */
+  .slide-indicator {
+    height: 4px;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .slide-indicator.active {
+    background-color: #C81E1E;
+    width: 32px;
+  }
+
+  /* Horizontal hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

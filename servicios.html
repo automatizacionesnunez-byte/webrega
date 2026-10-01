@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
 <meta charset="utf-8"/>
@@ -79,188 +79,282 @@
 <title>Servicios de Extranjería en España | Abogados Especialistas en Residencia y Nacionalidad - Extranjería Expertos</title>
 </head>
 <body class="bg-white text-text-light font-body antialiased selection:bg-primary selection:text-white" data-page="servicios">
-<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100" id="top-nav">
+<nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-transparent" id="top-nav">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-20 items-center">
+    <div class="flex justify-between h-20 items-center transition-all duration-300" id="nav-inner-container">
       <a href="index.html" class="flex-shrink-0 flex flex-col font-display">
-        <span class="font-extrabold text-xl tracking-tight text-gray-900 uppercase leading-none">EXTRANJERÍA <span class="text-primary">EXPERTOS</span></span>
-        <span class="text-[0.65rem] tracking-widest text-gray-500 font-semibold mt-0.5">BY GRUPO RG ASESORES</span>
+        <span class="font-extrabold text-xl tracking-tight text-white uppercase leading-none">EXTRANJERÍA <span class="text-primary">EXPERTOS</span></span>
+        <span class="text-[0.65rem] tracking-widest text-gray-300 font-semibold mt-0.5">BY GRUPO RG ASESORES</span>
       </a>
       <div class="hidden md:flex space-x-8 items-center font-display text-sm font-semibold tracking-wide uppercase">
-        <a class="text-gray-600 hover:text-primary transition nav-link" href="index.html" data-page="inicio">Inicio</a>
-        <a class="text-gray-600 hover:text-primary transition nav-link" href="servicios.html" data-page="servicios">Servicios</a>
-        <a class="text-gray-600 hover:text-primary transition nav-link" href="contacto.html" data-page="contacto">Contacto</a>
-        <a class="bg-primary text-white px-5 py-2.5 rounded hover:bg-primary-dark transition shadow-lg font-semibold" href="contacto.html">Llámanos</a>
+        <a class="text-gray-200 hover:text-white transition nav-link" href="index.html" data-page="inicio">Inicio</a>
+        <a class="text-gray-200 hover:text-white transition nav-link" href="servicios.html" data-page="servicios">Servicios</a>
+        <a class="text-gray-200 hover:text-white transition nav-link" href="contacto.html" data-page="contacto">Contacto</a>
+        <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg font-bold text-xs tracking-wider" href="contacto.html">Llámanos</a>
       </div>
-      <button id="btn-mobile-menu" class="md:hidden text-gray-600 hover:text-primary focus:outline-none" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobile-menu-dropdown">
+      <button id="btn-mobile-menu" class="md:hidden text-white hover:text-primary focus:outline-none" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobile-menu-dropdown">
         <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
     </div>
     <!-- Mobile dropdown menu -->
-    <div id="mobile-menu-dropdown" class="hidden md:hidden flex-col space-y-2 pb-4 mt-2">
-      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="index.html" data-page="inicio">Inicio</a>
-      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="servicios.html" data-page="servicios">Servicios</a>
-      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="contacto.html" data-page="contacto">Contacto</a>
-      <a class="bg-primary text-white text-center py-3 rounded-md font-bold mt-2 shadow-sm uppercase tracking-wider text-sm mx-2" href="contacto.html">Llámanos sin compromiso</a>
+    <div id="mobile-menu-dropdown" class="hidden md:hidden flex-col space-y-2 pb-4 pt-2 bg-[#070b14]/95 backdrop-blur-xl border border-gray-800 rounded-2xl px-4 shadow-2xl mt-2">
+      <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="index.html" data-page="inicio">Inicio</a>
+      <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="servicios.html" data-page="servicios">Servicios</a>
+      <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="contacto.html" data-page="contacto">Contacto</a>
+      <a class="bg-primary text-white text-center py-3 rounded-full font-bold mt-2 shadow-sm uppercase tracking-wider text-xs" href="contacto.html">Llámanos sin compromiso</a>
     </div>
   </div>
 </nav>
-<!-- HERO -->
-<section class="relative h-[70vh] flex items-center justify-center overflow-hidden bg-gray-900">
+
+<!-- HERO SERVICIOS -->
+<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#050505] text-white pt-28 pb-16">
   <div class="absolute inset-0 z-0">
-    <img alt="Fondo de despacho de abogados" class="w-full h-full object-cover opacity-25" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFIqem-ACD86E2VdpmxEi7yYWSV0Qmzzju3gvbtHJR3KlM1isqItRz2_s9Mc3Bsg0Hg_-xtiQWYlv_H9kyqIf-L9vgUUMJhEnpsJcmQE24jpOdyt2ZZezL1ZJyNPeqRCQTHDVINhApF5u6QhgLt4s4VBaaOKpehF8vA0mZ0tJVp-efRgofd4UFlG6fox6WE-Drwr6dI49k0tsBmUSzx7PpqKjYDz4BlNYWoTvjy1DLG21PBVFYRN-dxnDS8yFZadZCmoRO-C6D22E"/>
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+    <img alt="Despacho de abogados de extranjería" class="w-full h-full object-cover opacity-25" src="assets/img/hero/hero-slide-trabajo.jpg"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-[#070b14]/90"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 class="text-5xl md:text-7xl font-extrabold font-display tracking-tight leading-tight mb-8">Servicios de <span class="text-primary">Extranjería</span><br/>en España</h1>
-    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">Soluciones jurídicas definitivas para tu residencia y nacionalidad.</p>
-    <div class="flex flex-col sm:flex-row justify-center gap-5">
-      <a class="bg-primary text-white px-10 py-4 rounded font-bold text-lg hover:bg-primary-dark transition shadow-[0_0_20px_rgba(200,30,30,0.4)] transform hover:-translate-y-1" href="contacto.html">SOLICITAR CONSULTA</a>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-primary/20 text-red-400 border border-primary/30 mb-6">
+      <span>⚖️ Especialistas en Derecho de Extranjería</span>
+    </div>
+    <h1 class="text-4xl sm:text-6xl font-extrabold font-display tracking-tight leading-tight mb-6">
+      Servicios Jurídicos de <span class="text-primary">Extranjería</span><br/>en Toda España
+    </h1>
+    <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+      Acompañamiento legal riguroso y tramitación telemática directa para tu residencia, permisos laborales y nacionalidad española.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a class="bg-primary text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-dark transition shadow-lg shadow-red-600/30 transform hover:-translate-y-0.5" href="contacto.html">Solicitar Consulta Gratuita</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK NAVIGATION PILLS (Inspirado en Tu Abogado en Canarias) -->
+<section class="bg-[#0b132b] border-y border-gray-800 py-3.5 px-4 shadow-inner relative z-20">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 overflow-x-auto no-scrollbar py-1">
+    <span class="text-xs font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5 flex-shrink-0 mr-2">
+      <span class="material-symbols-outlined text-primary text-base">filter_alt</span> Categorías:
+    </span>
+    <div class="flex items-center gap-2.5 flex-nowrap">
+      <a href="#permisos-trabajo" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
+        <span>💼</span> Permisos de Trabajo
+      </a>
+      <a href="#arraigos" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
+        <span>⚖️</span> Tipos de Arraigo
+      </a>
+      <a href="#ciudadania-familia" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
+        <span>🇪🇸</span> Nacionalidad y Familia
+      </a>
+      <a href="contacto.html" class="flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-bold bg-primary text-white hover:bg-primary-dark transition-all duration-200 shadow flex items-center gap-1.5">
+        <span>📅</span> Evaluación Gratuita 24h
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ESTUDIO DE VIABILIDAD GRATUITO -->
-<section class="relative -mt-10 z-20 pb-10 px-4">
+<section class="py-12 px-4 bg-white border-b border-gray-100">
   <div class="max-w-5xl mx-auto">
-    <div class="bg-white rounded-xl shadow-premium border-l-[6px] border-primary p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="bg-gradient-to-r from-gray-900 via-gray-800 to-[#0b132b] text-white rounded-2xl shadow-xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border border-gray-700">
       <div class="flex-1">
-        <div class="flex items-center gap-3 mb-3">
-          <span class="text-gray-600 font-semibold text-sm flex items-center gap-1"><span class="material-symbols-outlined text-primary text-lg">verified</span>Respuesta en 24h</span>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-red-400 font-bold text-xs uppercase tracking-wider flex items-center gap-1">
+            <span class="material-symbols-outlined text-primary text-base">verified</span> Respuesta en 24 Horas
+          </span>
         </div>
-        <h2 class="text-3xl font-display font-bold text-gray-900 mb-2">¿Cumples los requisitos para tu residencia?</h2>
-        <p class="text-gray-600">Analizamos tu documentación y situación administrativa para indicarte la vía legal más rápida y segura para tu estancia legal o nacionalidad en España.</p>
+        <h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-2">¿Cumples los requisitos para tu residencia?</h2>
+        <p class="text-gray-300 text-sm leading-relaxed">Analizamos tu documentación y tu situación administrativa para indicarte la vía legal más rápida y segura para tu estancia legal o nacionalidad en España.</p>
       </div>
-      <a class="bg-primary text-white px-8 py-3 rounded font-bold hover:bg-primary-dark transition shadow-lg whitespace-nowrap" href="contacto.html">Evaluar mi caso gratis</a>
+      <a class="bg-primary text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider hover:bg-primary-dark transition shadow-lg shadow-red-600/30 whitespace-nowrap" href="contacto.html">Evaluar mi caso gratis</a>
     </div>
   </div>
 </section>
 
-<!-- CONFIANZA STRIP -->
-<section class="py-16 bg-surface-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 text-center md:text-left items-center">
-    <div class="md:col-span-1"><h3 class="text-2xl font-bold font-display text-gray-900">¿Por qué elegirnos?</h3><p class="text-sm text-gray-500 mt-2">Resultados comprobados y transparencia total.</p></div>
-    <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-6">
-      <div class="flex flex-col items-center md:items-start p-4 bg-white rounded-lg shadow-sm">
-        <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-yellow-500">star</span><span class="font-bold text-gray-900">4.9/5</span></div>
-        <p class="text-xs text-gray-500 uppercase tracking-wide font-semibold">Google Reviews</p>
-        <p class="text-sm text-gray-600 mt-1">Más de 500 reseñas positivas.</p>
-      </div>
-      <div class="flex flex-col items-center md:items-start p-4 bg-white rounded-lg shadow-sm">
-        <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary">verified</span><span class="font-bold text-gray-900">Certificados</span></div>
-        <p class="text-xs text-gray-500 uppercase tracking-wide font-semibold">Equipo Especializado</p>
-        <p class="text-sm text-gray-600 mt-1">Abogados con experiencia en extranjería.</p>
-      </div>
-      <div class="flex flex-col items-center md:items-start p-4 bg-white rounded-lg shadow-sm">
-        <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary">task_alt</span><span class="font-bold text-gray-900">98% Éxito</span></div>
-        <p class="text-xs text-gray-500 uppercase tracking-wide font-semibold">Tasa de Aprobación</p>
-        <p class="text-sm text-gray-600 mt-1">Análisis previo riguroso de cada caso.</p>
-      </div>
+<!-- CONFIANZA STRIP (Métricas) -->
+<section class="py-10 bg-surface-light border-b border-gray-200/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+      <span class="text-3xl font-extrabold font-display text-primary block mb-1">4.9 / 5</span>
+      <p class="text-xs uppercase font-bold text-gray-800">Google Reviews</p>
+      <p class="text-[11px] text-gray-500 mt-1">+500 valoraciones positivas</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+      <span class="text-3xl font-extrabold font-display text-primary block mb-1">100%</span>
+      <p class="text-xs uppercase font-bold text-gray-800">Oficial y Telemático</p>
+      <p class="text-[11px] text-gray-500 mt-1">Plataforma Mercurio directa</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+      <span class="text-3xl font-extrabold font-display text-primary block mb-1">+10</span>
+      <p class="text-xs uppercase font-bold text-gray-800">Años de Trayectoria</p>
+      <p class="text-[11px] text-gray-500 mt-1">Grupo RG Asesores</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+      <span class="text-3xl font-extrabold font-display text-primary block mb-1">98%</span>
+      <p class="text-xs uppercase font-bold text-gray-800">Tasa de Aprobación</p>
+      <p class="text-[11px] text-gray-500 mt-1">Filtro de viabilidad previo</p>
     </div>
   </div>
 </section>
 
-<!-- PERMISOS DE TRABAJO -->
-<section class="py-20 bg-white">
+<!-- SECCIÓN 1: PERMISOS DE TRABAJO (Inspiración Cohen & Aguirre Screenshot 4) -->
+<section class="py-20 bg-white" id="permisos-trabajo">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end gap-4 mb-10 border-b-2 border-gray-100 pb-6">
-      <h2 class="text-4xl font-extrabold font-display text-gray-900">Permisos de Trabajo</h2>
-      <span class="text-gray-400 text-lg font-light pb-1 hidden sm:inline-block">/ Desarrolla tu carrera profesional</span>
+    <div class="flex items-end gap-4 mb-12 border-b-2 border-gray-100 pb-6">
+      <div>
+        <span class="text-primary font-bold text-xs uppercase tracking-widest block mb-1">Carrera Laboral</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-display text-gray-900">Permisos de Trabajo y Actividad Económica</h2>
+      </div>
+      <span class="text-gray-400 text-sm font-light pb-1 hidden sm:inline-block">/ Desarrolla tu profesión legalmente en España</span>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <a href="servicios/cuenta-ajena.html" class="fade-up group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl text-gray-800">work</span></div>
-        <h3 class="text-xl font-bold font-display text-gray-900 mb-3">Cuenta Ajena</h3>
-        <p class="text-gray-600 text-sm mb-8 flex-grow">Gestión integral para contrataciones. Verificamos la situación nacional de empleo.</p>
-        <span class="w-full bg-primary text-white py-3 rounded font-bold text-sm text-center hover:bg-primary-dark transition shadow-md block">VER DETALLES</span>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Cuenta Ajena -->
+      <a href="servicios/cuenta-ajena.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-contrato-trabajo.jpg" alt="Cuenta Ajena" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2">Cuenta Ajena</h3>
+          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Gestión integral para contrataciones en España. Verificación previa de situación nacional de empleo y tramitación de autorizaciones.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Ver Requisitos y Detalles &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/cuenta-propia.html" class="fade-up group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl text-gray-800">storefront</span></div>
-        <h3 class="text-xl font-bold font-display text-gray-900 mb-3">Cuenta Propia</h3>
-        <p class="text-gray-600 text-sm mb-8 flex-grow">Plan de viabilidad y trámites para emprendedores que quieren residir en España.</p>
-        <span class="w-full bg-primary text-white py-3 rounded font-bold text-sm text-center hover:bg-primary-dark transition shadow-md block">VER DETALLES</span>
+
+      <!-- Cuenta Propia -->
+      <a href="servicios/cuenta-propia.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-cuenta-empresa.jpg" alt="Cuenta Propia y Emprendedores" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2">Cuenta Propia y Autónomos</h3>
+          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Plan de viabilidad económica, registro empresarial y tramitación de residencia para profesionales independientes.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Ver Requisitos y Detalles &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/profesional-cualificado.html" class="fade-up group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl text-gray-800">diamond</span></div>
-        <h3 class="text-xl font-bold font-display text-gray-900 mb-3">Altamente Cualificado</h3>
-        <p class="text-gray-600 text-sm mb-8 flex-grow">Tramitación para perfiles profesionales de alta cualificación.</p>
-        <span class="w-full bg-primary text-white py-3 rounded font-bold text-sm text-center hover:bg-primary-dark transition shadow-md block">VER DETALLES</span>
+
+      <!-- Altamente Cualificado -->
+      <a href="servicios/profesional-cualificado.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-titulo-estudios.jpg" alt="Profesional Altamente Cualificado" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2">Altamente Cualificado (PAC)</h3>
+          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Autorización bajo la Ley de Emprendedores para directivos, perfiles técnicos y graduados universitarios con contrato cualificado.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Ver Requisitos y Detalles &raquo;</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- TIPOS DE ARRAIGO -->
-<section class="py-20 bg-surface-light">
+<!-- SECCIÓN 2: TIPOS DE ARRAIGO (Inspiración Cohen & Aguirre Screenshot 4) -->
+<section class="py-20 bg-surface-light" id="arraigos">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end gap-4 mb-10 border-b-2 border-gray-200 pb-6">
-      <h2 class="text-4xl font-extrabold font-display text-gray-900">Tipos de Arraigo</h2>
-      <span class="text-gray-400 text-lg font-light pb-1 hidden sm:inline-block">/ Residencia legal por circunstancias excepcionales</span>
+    <div class="flex items-end gap-4 mb-12 border-b-2 border-gray-200 pb-6">
+      <div>
+        <span class="text-primary font-bold text-xs uppercase tracking-widest block mb-1">Circunstancias Excepcionales</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-display text-gray-900">Modalidades de Arraigo en España</h2>
+      </div>
+      <span class="text-gray-400 text-sm font-light pb-1 hidden sm:inline-block">/ Regulariza tu residencia legal</span>
     </div>
+
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="servicios/arraigo-social.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-5 bg-gray-50 w-14 h-14 rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-gray-800">handshake</span></div>
-        <h3 class="text-lg font-bold font-display text-gray-900 mb-2">Arraigo Social</h3>
-        <p class="text-gray-600 text-xs mb-6 flex-grow">Si llevas 2 años en España.</p>
-        <span class="w-full bg-primary text-white py-2.5 rounded font-bold text-xs text-center hover:bg-primary-dark transition block">VER DETALLES</span>
+      <!-- Arraigo Social -->
+      <a href="servicios/arraigo-social.html" class="group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-40 bg-gray-50 flex items-center justify-center p-3 border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-pasaporte-tie.jpg" alt="Arraigo Social" class="max-h-full w-auto object-contain rounded"/>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="text-base font-bold font-display text-gray-900 mb-2">Arraigo Social</h3>
+          <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">Permanencia continuada en España e integración social acreditada con contrato de trabajo.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider group-hover:underline">Más información &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/arraigo-sociolaboral.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-5 bg-gray-50 w-14 h-14 rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-gray-800">engineering</span></div>
-        <h3 class="text-lg font-bold font-display text-gray-900 mb-2">Arraigo SocioLaboral</h3>
-        <p class="text-gray-600 text-xs mb-6 flex-grow">2 años de estancia y contrato de trabajo.</p>
-        <span class="w-full bg-primary text-white py-2.5 rounded font-bold text-xs text-center hover:bg-primary-dark transition block">VER DETALLES</span>
+
+      <!-- Arraigo Sociolaboral -->
+      <a href="servicios/arraigo-sociolaboral.html" class="group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-40 bg-gray-50 flex items-center justify-center p-3 border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-contrato-trabajo.jpg" alt="Arraigo Sociolaboral" class="max-h-full w-auto object-contain rounded"/>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="text-base font-bold font-display text-gray-900 mb-2">Arraigo Sociolaboral</h3>
+          <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">Para quienes cuenten con relaciones laborales demostrables de al menos 6 meses.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider group-hover:underline">Más información &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/arraigo-socioformativo.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-5 bg-gray-50 w-14 h-14 rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-gray-800">school</span></div>
-        <h3 class="text-lg font-bold font-display text-gray-900 mb-2">Arraigo Socioformativo</h3>
-        <p class="text-gray-600 text-xs mb-6 flex-grow">Compromiso de formación reglada o profesional de 12 meses.</p>
-        <span class="w-full bg-primary text-white py-2.5 rounded font-bold text-xs text-center hover:bg-primary-dark transition block">VER DETALLES</span>
+
+      <!-- Arraigo Socioformativo -->
+      <a href="servicios/arraigo-socioformativo.html" class="group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-40 bg-gray-50 flex items-center justify-center p-3 border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-titulo-estudios.jpg" alt="Arraigo Socioformativo" class="max-h-full w-auto object-contain rounded"/>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="text-base font-bold font-display text-gray-900 mb-2">Arraigo Socioformativo</h3>
+          <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">Compromiso formal de formación profesional o reglada para acceder al mercado laboral.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider group-hover:underline">Más información &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/arraigo-familiar.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-5 bg-gray-50 w-14 h-14 rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-2xl text-gray-800">family_restroom</span></div>
-        <h3 class="text-lg font-bold font-display text-gray-900 mb-2">Arraigo Familiar</h3>
-        <p class="text-gray-600 text-xs mb-6 flex-grow">Para familiares de españoles. Derecho a trabajo inmediato.</p>
-        <span class="w-full bg-primary text-white py-2.5 rounded font-bold text-xs text-center hover:bg-primary-dark transition block">VER DETALLES</span>
+
+      <!-- Arraigo Familiar -->
+      <a href="servicios/arraigo-familiar.html" class="group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-40 bg-gray-50 flex items-center justify-center p-3 border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-pasaporte-tie.jpg" alt="Arraigo Familiar" class="max-h-full w-auto object-contain rounded"/>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="text-base font-bold font-display text-gray-900 mb-2">Arraigo Familiar</h3>
+          <p class="text-gray-500 text-xs mb-4 flex-grow leading-relaxed">Para familiares o progenitores de menor con nacionalidad española o comunitaria.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider group-hover:underline">Más información &raquo;</span>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- CIUDADANÍA Y FAMILIA -->
-<section class="py-20 bg-white">
+<!-- SECCIÓN 3: CIUDADANÍA Y FAMILIA -->
+<section class="py-20 bg-white" id="ciudadania-familia">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-end gap-4 mb-10 border-b-2 border-gray-100 pb-6">
-      <h2 class="text-4xl font-extrabold font-display text-gray-900">Ciudadanía y Familia</h2>
-      <span class="text-gray-400 text-lg font-light pb-1 hidden sm:inline-block">/ Une a tu familia y obtén el DNI</span>
+    <div class="flex items-end gap-4 mb-12 border-b-2 border-gray-100 pb-6">
+      <div>
+        <span class="text-primary font-bold text-xs uppercase tracking-widest block mb-1">Nacionalidad y Vínculos</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-display text-gray-900">Ciudadanía Española y Familia</h2>
+      </div>
+      <span class="text-gray-400 text-sm font-light pb-1 hidden sm:inline-block">/ Consolida tu futuro y el de tus seres queridos</span>
     </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <a href="servicios/nacionalidad.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl text-gray-800">flag</span></div>
-        <h3 class="text-xl font-bold font-display text-gray-900 mb-3">Nacionalidad Española</h3>
-        <p class="text-gray-600 text-sm mb-8 flex-grow">Por residencia, opción o carta de naturaleza. Preparación de exámenes CCSE y DELE.</p>
-        <span class="w-full bg-primary text-white py-3 rounded font-bold text-sm text-center hover:bg-primary-dark transition shadow-md block">VER DETALLES</span>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Nacionalidad -->
+      <a href="servicios/nacionalidad.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-titulo-estudios.jpg" alt="Nacionalidad Española" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2">Nacionalidad Española</h3>
+          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Por residencia continuada, opción o Ley de Memoria Democrática. Exámenes CCSE y DELE y agilización telemática oficial.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Ver Requisitos y Detalles &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/reagrupacion-familiar.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl text-gray-800">diversity_3</span></div>
-        <h3 class="text-xl font-bold font-display text-gray-900 mb-3">Reagrupación Familiar</h3>
-        <p class="text-gray-600 text-sm mb-8 flex-grow">Trae a tus hijos, cónyuge o ascendientes. Aseguramos la resolución favorable.</p>
-        <span class="w-full bg-primary text-white py-3 rounded font-bold text-sm text-center hover:bg-primary-dark transition shadow-md block">VER DETALLES</span>
+
+      <!-- Reagrupación Familiar -->
+      <a href="servicios/reagrupacion-familiar.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-pasaporte-tie.jpg" alt="Reagrupación Familiar" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2">Reagrupación Familiar</h3>
+          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Acompañamiento integral para traer a tus hijos, cónyuge o ascendientes a España con plenas garantías jurídicas.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Ver Requisitos y Detalles &raquo;</span>
+        </div>
       </a>
-      <a href="servicios/tarjeta-comunitaria.html" class="group bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover:shadow-xl transition duration-300 flex flex-col relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gray-200 group-hover:bg-primary transition-colors duration-300"></div>
-        <div class="mb-6 bg-gray-50 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl text-gray-800">euro_symbol</span></div>
-        <h3 class="text-xl font-bold font-display text-gray-900 mb-3">Tarjeta Comunitaria</h3>
-        <p class="text-gray-600 text-sm mb-8 flex-grow">Para ciudadanos de la UE que trabajen y residan en España.</p>
-        <span class="w-full bg-primary text-white py-3 rounded font-bold text-sm text-center hover:bg-primary-dark transition shadow-md block">VER DETALLES</span>
+
+      <!-- Tarjeta Comunitaria -->
+      <a href="servicios/tarjeta-comunitaria.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
+        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
+          <img src="assets/img/servicios/servicio-cuenta-empresa.jpg" alt="Tarjeta Comunitaria" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2">Tarjeta Comunitaria</h3>
+          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Para familiares de ciudadanos de la Unión Europea residentes en España, con derecho a trabajo y residencia por 5 años.</p>
+          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Ver Requisitos y Detalles &raquo;</span>
+        </div>
       </a>
     </div>
   </div>
@@ -377,6 +471,30 @@
       window.location.href = 'gracias.html';
     });
   });
+
+  // Transparent-to-Glassmorphism Header on scroll
+  const topNav = document.getElementById('top-nav');
+  const navContainer = document.getElementById('nav-inner-container');
+  function handleNavScroll() {
+    if (!topNav) return;
+    if (window.scrollY > 40) {
+      topNav.classList.remove('header-transparent');
+      topNav.classList.add('header-scrolled');
+      if (navContainer) {
+        navContainer.classList.remove('h-20');
+        navContainer.classList.add('h-16');
+      }
+    } else {
+      topNav.classList.add('header-transparent');
+      topNav.classList.remove('header-scrolled');
+      if (navContainer) {
+        navContainer.classList.remove('h-16');
+        navContainer.classList.add('h-20');
+      }
+    }
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
 
   // Animaciones Fade-Up
   const observer = new IntersectionObserver((entries) => {
