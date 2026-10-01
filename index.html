@@ -72,9 +72,7 @@
   }
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="./styles.css" rel="stylesheet"/>
 <title>Abogados de Extranjería en España | Trámites y Residencia Legal - Extranjería Expertos</title>
 </head>
@@ -330,68 +328,81 @@
 </div>
 </section>
 
-<!-- SERVICES GRID (Inspirado en Captura 4 de Cohen & Aguirre con imágenes fotográficas de producto) -->
-<section class="py-24 bg-surface-light relative z-0">
+<!-- SERVICES GRID (Inspirado en Captura 4 de Cohen & Aguirre con imágenes fotográficas de producto y estilo editorial) -->
+<section class="py-24 bg-white border-t border-gray-100 relative z-0">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-      <div class="max-w-2xl">
-        <span class="text-primary font-bold text-xs uppercase tracking-widest block mb-2">Servicios Destacados</span>
-        <h2 class="text-3xl md:text-5xl font-extrabold font-display text-[#0b132b]">Trámites de Extranjería<br/>y Residencia en España</h2>
-      </div>
-      <a href="servicios.html" class="flex items-center text-sm font-bold uppercase tracking-widest text-primary hover:text-primary-dark transition group pb-2">Ver Todos los Servicios <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition text-lg">arrow_forward</span></a>
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-primary font-bold text-xs uppercase tracking-widest block mb-2 font-display">Servicios Jurídicos Especializados</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold font-serif text-[#0b1a30] tracking-tight">
+        Trámites de Extranjería y Residencia Legal
+      </h2>
+      <p class="text-gray-500 text-sm sm:text-base mt-3 font-light leading-relaxed">
+        Acompañamiento integral y tramitación telemática oficial directa ante la Administración.
+      </p>
     </div>
 
-    <!-- CARDS CON FOTOGRAFÍAS REALISTAS ESTILO COHEN & AGUIRRE -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- CARDS CON FOTOGRAFÍAS REALISTAS ESTILO COHEN & AGUIRRE (CAPTURA 4) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 xl:gap-12">
       
-      <!-- Card 1: Arraigo y Residencia -->
-      <a href="servicios/arraigo-social.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
-        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
-          <img src="assets/img/servicios/servicio-pasaporte-tie.jpg" alt="Arraigo y Residencia en España" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+      <!-- Card 1: Renovaciones y Arraigo -->
+      <a href="servicios/arraigo-social.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-pasaporte-tie.jpg" alt="Renovaciones Y Modificaciones De Residencia" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2.5">Arraigo Social y Familiar</h3>
-          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Regularización por circunstancias excepcionales tras estancia continuada o vínculos familiares directos.</p>
-          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Más información &raquo;</span>
-        </div>
+        <h3 class="font-serif text-xl font-bold text-[#0b1a30] leading-snug group-hover:text-primary transition-colors">
+          Renovaciones Y Modificaciones De Residencia
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
+          Garantizamos la continuidad de tu estatus legal en España sin interrupciones administrativas.
+        </p>
       </a>
 
-      <!-- Card 2: Permisos de Trabajo -->
-      <a href="servicios/cuenta-ajena.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
-        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
-          <img src="assets/img/servicios/servicio-contrato-trabajo.jpg" alt="Permisos de Trabajo y Contratación" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+      <!-- Card 2: Permisos de Trabajo y Contratos -->
+      <a href="servicios/cuenta-ajena.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-contrato-trabajo.jpg" alt="Permisos De Trabajo Y Contratación" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2.5">Permisos de Trabajo</h3>
-          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Autorización de residencia y trabajo por cuenta ajena, iniciales, renovaciones y modificaciones de estatus.</p>
-          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Más información &raquo;</span>
-        </div>
+        <h3 class="font-serif text-xl font-bold text-[#0b1a30] leading-snug group-hover:text-primary transition-colors">
+          Permisos De Trabajo Y Contratación
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
+          Autorizaciones iniciales, cuenta ajena y cambios de situación laboral con rigor jurídico.
+        </p>
       </a>
 
-      <!-- Card 3: Cuenta Propia & Empresas -->
-      <a href="servicios/cuenta-propia.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
-        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
-          <img src="assets/img/servicios/servicio-cuenta-empresa.jpg" alt="Emprendedores y Cuenta Propia" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+      <!-- Card 3: Cuenta Bancaria con IBAN & Autónomos -->
+      <a href="servicios/cuenta-propia.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-cuenta-empresa.jpg" alt="Cuenta Bancaria Con IBAN De España" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2.5">Cuenta Propia y Autónomos</h3>
-          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Elaboración de plan de negocio y viabilidad económica para desarrollar tu actividad empresarial en España.</p>
-          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Más información &raquo;</span>
-        </div>
+        <h3 class="font-serif text-xl font-bold text-[#0b1a30] leading-snug group-hover:text-primary transition-colors">
+          Cuenta Bancaria Con IBAN De España
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
+          Superamos las trabas de cumplimiento bancario para que gestiones tus finanzas desde el primer día.
+        </p>
       </a>
 
-      <!-- Card 4: Nacionalidad & Homologación -->
-      <a href="servicios/nacionalidad.html" class="fade-up group bg-white rounded-2xl overflow-hidden hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full text-center">
-        <div class="w-full h-48 bg-gray-50 flex items-center justify-center p-4 overflow-hidden border-b border-gray-100">
-          <img src="assets/img/servicios/servicio-titulo-estudios.jpg" alt="Nacionalidad y Estudios" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition duration-500 rounded-lg shadow-sm"/>
+      <!-- Card 4: Nacionalidad & Homologación de Títulos -->
+      <a href="servicios/nacionalidad.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
+        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-titulo-estudios.jpg" alt="Homologación De Títulos Y Nacionalidad" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
         </div>
-        <div class="p-6 flex flex-col flex-grow">
-          <h3 class="text-lg font-bold font-display text-[#0b132b] mb-2.5">Nacionalidad Española</h3>
-          <p class="text-gray-500 text-xs mb-6 flex-grow leading-relaxed">Por residencia legal, ascendencia y LMD. Tramitación telemática con seguimiento y agilización de expediente.</p>
-          <span class="font-bold text-xs text-primary uppercase tracking-wider flex items-center justify-center group-hover:underline">Más información &raquo;</span>
-        </div>
+        <h3 class="font-serif text-xl font-bold text-[#0b1a30] leading-snug group-hover:text-primary transition-colors">
+          Homologación De Títulos Y Nacionalidad
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
+          Validamos tu formación y tramitamos tu pasaporte español con máxima celeridad.
+        </p>
       </a>
 
+    </div>
+
+    <div class="text-center mt-16">
+      <a href="servicios.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-dark transition shadow-lg shadow-red-600/20 transform hover:-translate-y-0.5">
+        <span>Explorar Catálogo Completo de Servicios</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
     </div>
   </div>
 </section>

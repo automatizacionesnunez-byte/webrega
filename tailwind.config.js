@@ -17,6 +17,7 @@ module.exports = {
             fontFamily: {
                 display: ["Montserrat", "sans-serif"],
                 body: ["Poppins", "sans-serif"],
+                serif: ['"Playfair Display"', "Georgia", "serif"],
             },
             boxShadow: { premium: "0 10px 40px -10px rgba(0,0,0,0.1)" },
         },
