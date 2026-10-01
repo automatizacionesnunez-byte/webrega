@@ -119,10 +119,6 @@
       <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
         <!-- Text Column -->
         <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-primary/20 text-red-400 border border-primary/30 mb-6">
-            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            <span>Despacho Especializado en Extranjería</span>
-          </div>
           <h1 class="text-4xl sm:text-6xl font-extrabold font-display leading-[1.1] mb-6 tracking-tight">
             ABOGADOS DE EXTRANJERÍA <span class="text-primary block mt-1">EN TODA ESPAÑA</span>
           </h1>
@@ -146,7 +142,7 @@
                 <h4 class="font-bold text-white text-xs font-display">Grupo RG Asesores</h4>
                 <p class="text-[10px] text-gray-400">Atención Directa y Personalizada</p>
               </div>
-              <span class="bg-primary/20 text-red-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-primary/30">★ 4.9/5 Reseñas</span>
+              <span class="text-yellow-400 text-xs font-bold flex items-center gap-1">★ 4.9/5 <span class="text-gray-400 font-normal text-[10px]">Google</span></span>
             </div>
           </div>
         </div>
@@ -162,10 +158,6 @@
     </div>
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 sm:pt-10">
       <div class="max-w-2xl">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-red-950/80 text-red-300 border border-red-800/50 mb-6">
-          <span>🇪🇸</span>
-          <span>Nacionalidad Española & Ley de Memoria</span>
-        </div>
         <h2 class="text-4xl sm:text-6xl font-extrabold font-display leading-[1.1] mb-6 tracking-tight">
           TU PASAPORTE ESPAÑOL <span class="text-primary block mt-1">MÁS CERCA QUE NUNCA</span>
         </h2>
@@ -192,10 +184,6 @@
     </div>
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-6 sm:pt-10">
       <div class="max-w-2xl">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-950/80 text-blue-300 border border-blue-800/50 mb-6">
-          <span>💼</span>
-          <span>Permisos de Residencia y Trabajo</span>
-        </div>
         <h2 class="text-4xl sm:text-6xl font-extrabold font-display leading-[1.1] mb-6 tracking-tight">
           ARRAIGOS Y PERMISOS <span class="text-primary block mt-1">SIN RIESGOS DE DENEGACIÓN</span>
         </h2>
@@ -222,30 +210,37 @@
   </div>
 </section>
 
-<!-- QUICK ACCESS PILLS (Inspiración Tu Abogado en Canarias) -->
-<section class="bg-[#0b132b] border-y border-gray-800 py-3.5 px-4 shadow-inner relative z-20">
-  <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 overflow-x-auto no-scrollbar py-1">
-    <span class="text-xs font-bold uppercase tracking-wider text-gray-400 flex items-center gap-1.5 flex-shrink-0 mr-2">
-      <span class="material-symbols-outlined text-primary text-base">bolt</span> Trámites Directos:
-    </span>
-    <div class="flex items-center gap-2.5 flex-nowrap">
-      <a href="servicios/arraigo-social.html" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
-        <span>⚖️</span> Arraigo Social
+<!-- TRÁMITES FRECUENTES / ACCESO RÁPIDO (Elegante y sin emojis) -->
+<section class="bg-[#070b14] border-y border-white/[0.08] py-3.5 px-4 relative z-20">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+      <span class="text-[11px] font-bold uppercase tracking-widest text-gray-400 font-display">Trámites Frecuentes</span>
+    </div>
+    <div class="flex items-center gap-2 flex-nowrap">
+      <a href="servicios/arraigo-social.html" class="group flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-primary/50 hover:text-white transition-all duration-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px] text-gray-400 group-hover:text-primary transition-colors">balance</span>
+        <span>Arraigo Social</span>
       </a>
-      <a href="servicios/arraigo-sociolaboral.html" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
-        <span>💼</span> Arraigo Laboral
+      <a href="servicios/arraigo-sociolaboral.html" class="group flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-primary/50 hover:text-white transition-all duration-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px] text-gray-400 group-hover:text-primary transition-colors">badge</span>
+        <span>Arraigo Laboral</span>
       </a>
-      <a href="servicios/arraigo-familiar.html" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
-        <span>👨‍👩‍👧</span> Arraigo Familiar
+      <a href="servicios/arraigo-familiar.html" class="group flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-primary/50 hover:text-white transition-all duration-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px] text-gray-400 group-hover:text-primary transition-colors">family_restroom</span>
+        <span>Arraigo Familiar</span>
       </a>
-      <a href="servicios/nacionalidad.html" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
-        <span>🇪🇸</span> Nacionalidad Española
+      <a href="servicios/nacionalidad.html" class="group flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-primary/50 hover:text-white transition-all duration-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px] text-gray-400 group-hover:text-primary transition-colors">verified_user</span>
+        <span>Nacionalidad Española</span>
       </a>
-      <a href="servicios/reagrupacion-familiar.html" class="flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900/90 text-gray-200 border border-gray-700/60 hover:border-primary hover:text-white hover:bg-primary/20 transition-all duration-200 flex items-center gap-1.5">
-        <span>🏡</span> Reagrupación Familiar
+      <a href="servicios/reagrupacion-familiar.html" class="group flex-shrink-0 px-3.5 py-1.5 rounded-full text-xs font-medium text-gray-300 bg-white/[0.04] hover:bg-white/[0.1] border border-white/10 hover:border-primary/50 hover:text-white transition-all duration-200 flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px] text-gray-400 group-hover:text-primary transition-colors">group_add</span>
+        <span>Reagrupación Familiar</span>
       </a>
-      <a href="contacto.html" class="flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-bold bg-primary text-white hover:bg-primary-dark transition-all duration-200 shadow flex items-center gap-1.5">
-        <span>📅</span> Consulta Inmediata
+      <a href="contacto.html" class="flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-bold bg-primary text-white hover:bg-primary-dark transition-all duration-200 shadow-sm flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-[15px]">event</span>
+        <span>Consulta Inmediata</span>
       </a>
     </div>
   </div>
