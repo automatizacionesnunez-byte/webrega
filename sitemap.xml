@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://extranjeriaexpertos.com/</loc><priority>1.0</priority></url>
   <url><loc>https://extranjeriaexpertos.com/servicios.html</loc><priority>0.9</priority></url>
@@ -13,4 +13,8 @@
   <url><loc>https://extranjeriaexpertos.com/servicios/cuenta-propia.html</loc><priority>0.8</priority></url>
   <url><loc>https://extranjeriaexpertos.com/servicios/profesional-cualificado.html</loc><priority>0.8</priority></url>
   <url><loc>https://extranjeriaexpertos.com/servicios/tarjeta-comunitaria.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/renovaciones-modificaciones.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/cuenta-bancaria.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/creacion-empresas.html</loc><priority>0.8</priority></url>
+  <url><loc>https://extranjeriaexpertos.com/servicios/homologacion-titulos.html</loc><priority>0.8</priority></url>
 </urlset>
