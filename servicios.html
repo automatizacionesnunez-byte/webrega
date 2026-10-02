@@ -84,10 +84,16 @@
         <span class="font-extrabold text-xl tracking-tight text-white uppercase leading-none">EXTRANJERÍA <span class="text-primary">EXPERTOS</span></span>
         <span class="text-[0.65rem] tracking-widest text-gray-300 font-semibold mt-0.5">BY GRUPO RG ASESORES</span>
       </a>
-      <div class="hidden md:flex space-x-8 items-center font-display text-sm font-semibold tracking-wide uppercase">
+      <div class="hidden md:flex space-x-7 items-center font-display text-sm font-semibold tracking-wide uppercase">
         <a class="text-gray-200 hover:text-white transition nav-link" href="index.html" data-page="inicio">Inicio</a>
         <a class="text-gray-200 hover:text-white transition nav-link" href="servicios.html" data-page="servicios">Servicios</a>
+        <a class="text-gray-200 hover:text-white transition nav-link" href="index.html#herramientas-legales">Calculadora</a>
         <a class="text-gray-200 hover:text-white transition nav-link" href="contacto.html" data-page="contacto">Contacto</a>
+        <div class="flex items-center gap-1 text-[11px] text-gray-400 border border-white/15 px-2.5 py-1 rounded-full bg-white/[0.04]">
+          <span class="text-white font-bold">ES</span>
+          <span class="text-gray-500">|</span>
+          <a href="https://wa.me/34604804380?text=Hello,%20I%20would%20like%20to%20request%20legal%20consultation%20in%20English" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition text-gray-300 font-medium" title="English consultation via WhatsApp">EN</a>
+        </div>
         <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg font-bold text-xs tracking-wider" href="contacto.html">Llámanos</a>
       </div>
       <button id="btn-mobile-menu" class="md:hidden text-white hover:text-primary focus:outline-none" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobile-menu-dropdown">
@@ -99,6 +105,10 @@
       <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="index.html" data-page="inicio">Inicio</a>
       <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="servicios.html" data-page="servicios">Servicios</a>
       <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="contacto.html" data-page="contacto">Contacto</a>
+      <a class="text-gray-300 hover:text-primary font-semibold text-sm py-2 flex items-center justify-between border-b border-gray-800/80" href="https://wa.me/34604804380?text=Hello,%20I%20would%20like%20to%20request%20legal%20consultation%20in%20English" target="_blank" rel="noopener noreferrer">
+        <span class="flex items-center gap-2">🇬🇧 Legal assistance in English</span>
+        <span class="text-primary font-bold text-xs uppercase">WhatsApp &rarr;</span>
+      </a>
       <a class="bg-primary text-white text-center py-3 rounded-full font-bold mt-2 shadow-sm uppercase tracking-wider text-xs" href="contacto.html">Llámanos sin compromiso</a>
     </div>
   </div>
@@ -119,6 +129,10 @@
     </p>
     <div class="flex flex-col sm:flex-row justify-center gap-4">
       <a class="bg-primary text-white px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-dark transition shadow-lg shadow-red-600/30 transform hover:-translate-y-0.5" href="contacto.html">Solicitar Consulta Legal</a>
+      <a class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3.5 rounded-full font-bold text-xs tracking-widest uppercase backdrop-blur-sm transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2" href="index.html#asistente-tramites">
+        <span class="material-symbols-outlined text-sm">psychology</span>
+        <span>Asistente de Trámites</span>
+      </a>
     </div>
   </div>
 </section>
@@ -208,59 +222,88 @@
       </p>
     </div>
 
-    <!-- Grid de 4 Columnas Idéntica a Captura 4 -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 xl:gap-12">
-      <!-- Item 1: Renovaciones Y Modificaciones -->
-      <a href="servicios/renovaciones-modificaciones.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
-        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
+    <!-- Grid de 6 Elementos con Canje DGT y Regularización 2026 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:gap-12">
+      <!-- Item 1: Regularización Extraordinaria 2026 (Novedad Destacada) -->
+      <a href="servicios/regularizacion-2026.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 relative bg-surface-light/40 p-6 rounded-2xl border border-primary/20 hover:border-primary">
+        <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">Novedad 2026</span>
+        <div class="h-56 sm:h-60 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-regularizacion-2026.jpg" alt="Regularización Extraordinaria 2026 España" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
+          Regularización Extraordinaria 2026
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[280px]">
+          Nuevo Reglamento de Extranjería, nuevos arraigos de 2 años y preparación de expedientes anti-colapso.
+        </p>
+      </a>
+
+      <!-- Item 2: Canje de Carnet de Conducir (DGT) -->
+      <a href="servicios/canje-licencia.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 relative bg-surface-light/40 p-6 rounded-2xl border border-primary/20 hover:border-primary">
+        <span class="absolute top-4 right-4 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm">Convenios DGT</span>
+        <div class="h-56 sm:h-60 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-canje-conducir.jpg" alt="Canje de Carnet de Conducir Extranjero en España DGT" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
+          Canje de Licencia de Conducir DGT
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[280px]">
+          Homologación oficial de tu permiso extranjero por el carnet español por convenios bilaterales sin examen.
+        </p>
+      </a>
+
+      <!-- Item 3: Renovaciones Y Modificaciones -->
+      <a href="servicios/renovaciones-modificaciones.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 p-6 rounded-2xl border border-transparent hover:border-gray-200">
+        <div class="h-56 sm:h-60 flex items-center justify-center mb-6 overflow-hidden">
           <img src="assets/img/servicios/servicio-pasaporte-tie.jpg" alt="Renovaciones Y Modificaciones De Residencia" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
         </div>
         <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
-          Renovaciones Y Modificaciones De Residencia
+          Renovaciones Y Modificaciones
         </h3>
-        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[280px]">
           Garantizamos la continuidad de tu estatus legal en España sin interrupciones administrativas.
         </p>
       </a>
 
-      <!-- Item 2: Cuenta Bancaria Con IBAN De España -->
-      <a href="servicios/cuenta-bancaria.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
-        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="assets/img/servicios/servicio-cuenta-empresa.jpg" alt="Cuenta Bancaria Con IBAN De España" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
-        </div>
-        <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
-          Cuenta Bancaria Con IBAN De España
-        </h3>
-        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
-          Superamos las trabas de cumplimiento bancario para que gestiones tus finanzas desde el primer día.
-        </p>
-      </a>
-
-      <!-- Item 3: Creación De Empresas Y Registro De Marca -->
-      <a href="servicios/creacion-empresas.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
-        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
-          <img src="assets/img/servicios/servicio-contrato-trabajo.jpg" alt="Creación De Empresas Y Registro De Marca Española" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
-        </div>
-        <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
-          Creación De Empresas Y Registro De Marca Española
-        </h3>
-        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
-          Protegemos tu patrimonio e identidad comercial bajo la normativa mercantil española.
-        </p>
-      </a>
-
       <!-- Item 4: Homologación De Títulos Extranjeros -->
-      <a href="servicios/homologacion-titulos.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2">
-        <div class="h-60 sm:h-64 flex items-center justify-center mb-6 overflow-hidden">
+      <a href="servicios/homologacion-titulos.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 p-6 rounded-2xl border border-transparent hover:border-gray-200">
+        <div class="h-56 sm:h-60 flex items-center justify-center mb-6 overflow-hidden">
           <img src="assets/img/servicios/servicio-titulo-estudios.jpg" alt="Homologación De Títulos Extranjeros En España" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
         </div>
         <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
-          Homologación De Títulos Extranjeros En España
+          Homologación De Títulos
         </h3>
-        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[270px]">
-          Validamos tu formación académica para que puedas ejercer tu profesión legalmente.
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[280px]">
+          Validamos tu formación académica superior para que puedas ejercer tu profesión legalmente en España.
         </p>
       </a>
+
+      <!-- Item 5: Cuenta Bancaria Con IBAN De España -->
+      <a href="servicios/cuenta-bancaria.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 p-6 rounded-2xl border border-transparent hover:border-gray-200">
+        <div class="h-56 sm:h-60 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-cuenta-empresa.jpg" alt="Cuenta Bancaria Con IBAN De España" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
+          Cuenta Bancaria con IBAN Español
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[280px]">
+          Superamos las trabas de compliance bancario para que gestiones tus finanzas desde el primer día.
+        </p>
+      </a>
+
+      <!-- Item 6: Creación De Empresas Y Registro De Marca -->
+      <a href="servicios/creacion-empresas.html" class="fade-up group flex flex-col items-center text-center transition-all duration-300 transform hover:-translate-y-2 p-6 rounded-2xl border border-transparent hover:border-gray-200">
+        <div class="h-56 sm:h-60 flex items-center justify-center mb-6 overflow-hidden">
+          <img src="assets/img/servicios/servicio-contrato-trabajo.jpg" alt="Creación De Empresas Y Registro De Marca Española" class="max-h-full w-auto object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-500"/>
+        </div>
+        <h3 class="font-display font-bold text-lg sm:text-xl text-[#0b132b] leading-snug group-hover:text-primary transition-colors">
+          Creación De Empresas y Marcas
+        </h3>
+        <p class="text-gray-500 text-sm font-light mt-3 leading-relaxed max-w-[280px]">
+          Constitución mercantil y protección de activos comerciales bajo la normativa societaria española.
+        </p>
+      </a>
+    </div>
     </div>
   </div>
 </section>
@@ -433,6 +476,8 @@
       <div>
         <h4 class="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">Servicios</h4>
         <ul class="space-y-3 text-sm text-gray-600">
+          <li><a href="./servicios/regularizacion-2026.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Regularización 2026</a></li>
+          <li><a href="./servicios/canje-licencia.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Canje Carnet DGT</a></li>
           <li><a href="./servicios/arraigo-social.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Arraigo Social</a></li>
           <li><a href="./servicios/arraigo-sociolaboral.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Arraigo SocioLaboral</a></li>
           <li><a href="./servicios/arraigo-familiar.html" class="hover:text-primary flex items-center gap-2"><span class="w-1.5 h-1.5 bg-primary rounded-full inline-block"></span>Arraigo Familiar</a></li>
@@ -450,18 +495,79 @@
         </ul>
       </div>
     </div>
+
+    <!-- MALLA SEO DE COBERTURA EN TODA ESPAÑA (52 PROVINCIAS - INSPIRADO EN MANAGORA) -->
+    <div class="pt-10 pb-8 border-t border-gray-200">
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-gray-900 font-display block">Cobertura Telemática Oficial en las 52 Provincias</span>
+          <p class="text-xs text-gray-500 mt-0.5">Presentación electrónica directa ante cualquier Oficina de Extranjería de España sin necesidad de desplazarte.</p>
+        </div>
+        <span class="text-[11px] font-semibold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
+          Plataforma Mercurio Habilitada
+        </span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-3 gap-y-1.5 text-[11px] text-gray-500">
+        <a href="contacto.html" class="hover:text-primary transition-colors">Álava</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Albacete</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Alicante</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Almería</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Asturias</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Ávila</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Badajoz</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Barcelona</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Burgos</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Cáceres (Sede)</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Cádiz</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Cantabria</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Castellón</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Ciudad Real</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Córdoba</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Cuenca</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Girona</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Granada</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Guadalajara</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Guipúzcoa</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Huelva</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Huesca</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Illes Balears</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Jaén</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">La Rioja</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Las Palmas</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">León</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Lleida</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Lugo</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Madrid</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Málaga</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Murcia</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Navarra</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Ourense</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Palencia</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Pontevedra</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Salamanca</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">S.C. Tenerife</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Segovia</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Sevilla</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Soria</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Tarragona</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Teruel</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Toledo</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Valencia</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Valladolid</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Vizcaya</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Zamora</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Zaragoza</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Ceuta</a>
+        <a href="contacto.html" class="hover:text-primary transition-colors">Melilla</a>
+      </div>
+    </div>
+
     <div class="pt-8 border-t border-gray-200 text-center flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-gray-500 text-xs">© 2026 EXTRANJERÍA EXPERTOS by Grupo RG Asesores. Todos los derechos reservados.</p>
       <p class="text-gray-400 text-[10px] uppercase tracking-widest">Cáceres, España</p>
     </div>
   </div>
-
-
-
 </footer>
-<a href="https://wa.me/34604804380" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[999] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-[#1ebe5d] hover:scale-110 transition-all duration-300" aria-label="WhatsApp">
-  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.549 4.167 1.594 5.975L.234 23.518l5.655-1.482a12.008 12.008 0 006.142 1.684c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zM12.031 22A9.974 9.974 0 016.92 20.6l-.367-.218-3.793.996.993-3.7-.24-.38A9.917 9.917 0 012.031 12.03 c0-5.518 4.482-10 10-10 5.517 0 10 4.482 10 10s-4.483 10-10 10zm5.494-7.514c-.302-.151-1.783-.881-2.062-.982-.279-.101-.482-.151-.684.151-.202.302-.782.982-.958 1.183-.176.202-.352.227-.654.076-1.551-.776-2.697-1.472-3.75-3.32-.105-.183-.012-.284.14-.436.136-.137.302-.352.453-.529.151-.176.202-.302.302-.503.1-.202.05-.378-.025-.529-.076-.151-.684-1.651-.938-2.261-.247-.597-.497-.516-.684-.526-.176-.009-.378-.009-.58-.009-.202 0-.529.076-.806.378-.277.302-1.058 1.033-1.058 2.518s1.083 2.92 1.234 3.121c.151.202 2.131 3.253 5.161 4.561 2.378 1.026 3.193.921 3.793.776.657-.156 2.062-.843 2.352-1.657.29-.815.29-1.516.204-1.662-.086-.146-.312-.232-.614-.383z"/></svg>
-</a>
 <script>
   // Mobile menu toggle
   const btnOpen = document.getElementById('btn-mobile-menu');
@@ -552,5 +658,23 @@
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
+
+<!-- FLOATING WHATSAPP BUTTON (ESTILO EXTRANJERÍA EXPERTOS) -->
+<aside class="fixed bottom-6 right-6 z-50 flex items-center">
+  <a href="https://wa.me/34604804380?text=Hola%2C%20quisiera%20consultar%20mi%20tr%C3%A1mite%20de%20extranjer%C3%ADa%20con%20un%20abogado" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 bg-[#070b14]/95 text-white hover:bg-black border border-white/15 hover:border-primary/80 pl-4 pr-3 py-2.5 rounded-full shadow-2xl backdrop-blur-md transition-all duration-300 transform hover:scale-105" aria-label="Contactar por WhatsApp con Abogado de Extranjería">
+    <div class="hidden sm:flex flex-col text-left">
+      <span class="text-[10px] font-bold uppercase tracking-wider text-primary flex items-center gap-1.5 leading-none">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        En línea · D. Rubén Rega (ICAC nº 1709)
+      </span>
+      <span class="text-xs font-semibold text-gray-200 group-hover:text-white mt-1 leading-none">Consulta directa por WhatsApp</span>
+    </div>
+    <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-all shadow-sm">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.587 1.961.947 2.796.947 3.179 0 5.766-2.587 5.767-5.766.001-3.187-2.578-5.834-5.767-5.834zm0-2.172c4.418 0 8 3.582 8 8 0 4.419-3.582 8-8 8-1.378 0-2.673-.35-3.805-.964l-4.226 1.107 1.127-4.122c-.689-1.189-1.096-2.569-1.096-4.021 0-4.418 3.582-8 8-8z"/>
+      </svg>
+    </div>
+  </a>
+</aside>
 </body>
 </html>
