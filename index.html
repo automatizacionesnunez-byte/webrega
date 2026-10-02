@@ -74,6 +74,45 @@
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="./styles.css" rel="stylesheet"/>
+<style>
+  .header-nav-list {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 2.25rem !important;
+  }
+  @media (min-width: 1024px) {
+    .header-nav-list {
+      gap: 2.75rem !important;
+    }
+  }
+  @media (min-width: 1280px) {
+    .header-nav-list {
+      gap: 3.25rem !important;
+    }
+  }
+  .header-nav-list a {
+    display: inline-block !important;
+    padding: 0.35rem 0.25rem !important;
+    letter-spacing: 0.05em !important;
+    white-space: nowrap !important;
+  }
+  .header-actions-divider {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    margin-left: 2rem !important;
+    padding-left: 1.75rem !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+  }
+  .header-actions-divider.light {
+    border-left: 1px solid rgba(0, 0, 0, 0.12) !important;
+  }
+</style>
 <title>Abogados de Extranjería en España | Trámites y Residencia Legal - Extranjería Expertos</title>
 </head>
 <body class="bg-white text-text-light font-body antialiased selection:bg-primary selection:text-white" data-page="inicio">
@@ -84,17 +123,23 @@
         <span class="font-extrabold text-xl tracking-tight text-white uppercase leading-none">EXTRANJERÍA <span class="text-primary">EXPERTOS</span></span>
         <span class="text-[0.65rem] tracking-widest text-gray-300 font-semibold mt-0.5">BY GRUPO RG ASESORES</span>
       </a>
-      <div class="hidden md:flex space-x-7 items-center font-display text-sm font-semibold tracking-wide uppercase">
-        <a class="text-gray-200 hover:text-white transition nav-link" href="index.html" data-page="inicio">Inicio</a>
-        <a class="text-gray-200 hover:text-white transition nav-link" href="servicios.html" data-page="servicios">Servicios</a>
-        <a class="text-gray-200 hover:text-white transition nav-link" href="#herramientas-legales">Calculadora</a>
-        <a class="text-gray-200 hover:text-white transition nav-link" href="contacto.html" data-page="contacto">Contacto</a>
-        <div class="flex items-center gap-1 text-[11px] text-gray-400 border border-white/15 px-2.5 py-1 rounded-full bg-white/[0.04]">
-          <span class="text-white font-bold">ES</span>
-          <span class="text-gray-500">|</span>
-          <a href="https://wa.me/34604804380?text=Hello,%20I%20would%20like%20to%20request%20legal%20consultation%20in%20English" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition text-gray-300 font-medium" title="English consultation via WhatsApp">EN</a>
+      <div class="hidden md:flex items-center flex-nowrap font-display text-sm font-semibold tracking-wide uppercase">
+        <!-- Secciones de navegación con separación amplia garantizada -->
+        <div class="header-nav-list">
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="index.html" data-page="inicio">Inicio</a>
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="servicios.html" data-page="servicios">Servicios</a>
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="#herramientas-legales">Calculadora</a>
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="contacto.html" data-page="contacto">Contacto</a>
         </div>
-        <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg font-bold text-xs tracking-wider" href="contacto.html">Llámanos</a>
+        <!-- Acciones separadas con divisor independiente -->
+        <div class="header-actions-divider">
+          <div class="flex items-center gap-1 text-[11px] text-gray-400 border border-white/15 px-2.5 py-1 rounded-full bg-white/[0.04]">
+            <span class="text-white font-bold">ES</span>
+            <span class="text-gray-500">|</span>
+            <a href="https://wa.me/34604804380?text=Hello,%20I%20would%20like%20to%20request%20legal%20consultation%20in%20English" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition text-gray-300 font-medium" title="English consultation via WhatsApp">EN</a>
+          </div>
+          <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg font-bold text-xs tracking-wider" href="contacto.html">Llámanos</a>
+        </div>
       </div>
       <button id="btn-mobile-menu" class="md:hidden text-white hover:text-primary focus:outline-none" aria-label="Menú móvil" aria-expanded="false" aria-controls="mobile-menu-dropdown">
         <span class="material-symbols-outlined text-3xl">menu</span>
@@ -1088,71 +1133,7 @@
         </ul>
       </div>
     </div>
-    <!-- MALLA SEO DE COBERTURA EN TODA ESPAÑA (52 PROVINCIAS - INSPIRADO EN MANAGORA) -->
-    <div class="pt-10 pb-8 border-t border-gray-200">
-      <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-gray-900 font-display block">Cobertura Telemática Oficial en las 52 Provincias</span>
-          <p class="text-xs text-gray-500 mt-0.5">Presentación electrónica directa ante cualquier Oficina de Extranjería de España sin necesidad de desplazarte.</p>
-        </div>
-        <span class="text-[11px] font-semibold text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
-          Plataforma Mercurio Habilitada
-        </span>
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-3 gap-y-1.5 text-[11px] text-gray-500">
-        <a href="contacto.html" class="hover:text-primary transition-colors">Álava</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Albacete</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Alicante</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Almería</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Asturias</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Ávila</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Badajoz</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Barcelona</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Burgos</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Cáceres (Sede)</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Cádiz</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Cantabria</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Castellón</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Ciudad Real</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Córdoba</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Cuenca</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Girona</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Granada</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Guadalajara</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Guipúzcoa</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Huelva</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Huesca</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Illes Balears</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Jaén</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">La Rioja</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Las Palmas</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">León</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Lleida</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Lugo</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Madrid</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Málaga</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Murcia</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Navarra</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Ourense</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Palencia</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Pontevedra</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Salamanca</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">S.C. Tenerife</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Segovia</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Sevilla</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Soria</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Tarragona</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Teruel</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Toledo</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors font-bold text-gray-800">Valencia</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Valladolid</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Vizcaya</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Zamora</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Zaragoza</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Ceuta</a>
-        <a href="contacto.html" class="hover:text-primary transition-colors">Melilla</a>
-      </div>
-    </div>
+
 
     <div class="pt-8 border-t border-gray-200 text-center flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-gray-500 text-xs">© 2026 EXTRANJERÍA EXPERTOS by Grupo RG Asesores. Todos los derechos reservados.</p>
