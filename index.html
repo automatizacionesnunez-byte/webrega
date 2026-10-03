@@ -629,17 +629,23 @@
         <p class="text-xs text-gray-400 mb-6">La nacionalidad de origen determina los plazos legales y convenios aplicables en España.</p>
         <div class="grid sm:grid-cols-3 gap-4">
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="origen" data-val="iberoamerica">
-            <span class="text-2xl mb-3 block">🌎</span>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">public</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Iberoamérica / Filipinas / Guinea</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Vía abreviada de nacionalidad en solo 2 años.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="origen" data-val="comunitario">
-            <span class="text-2xl mb-3 block">🇪🇺</span>
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">euro_symbol</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Unión Europea o Familiar de Comunitario</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Régimen Comunitario directo (CUE / Tarjeta familiar).</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="origen" data-val="tercer_pais">
-            <span class="text-2xl mb-3 block">🌐</span>
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center justify-center mb-3 group-hover:bg-amber-600 group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">language</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Resto del Mundo (Tercer País)</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Régimen general de extranjería ordinario.</span>
           </button>
@@ -652,22 +658,42 @@
         <p class="text-xs text-gray-400 mb-6">El tiempo de permanencia continuada (empadronamiento) es clave para los arraigos.</p>
         <div class="grid sm:grid-cols-2 gap-4">
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="tiempo" data-val="menos_2">
-            <span class="text-primary font-bold text-xs uppercase tracking-wider block mb-1">Fase Inicial</span>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                <span class="material-symbols-outlined text-xl">schedule</span>
+              </div>
+              <span class="text-primary font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">Fase Inicial</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Menos de 2 años (o aún en origen)</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Visados iniciales, nómada digital o preparación previa.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="tiempo" data-val="dos_tres">
-            <span class="text-primary font-bold text-xs uppercase tracking-wider block mb-1">2 a 3 años</span>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                <span class="material-symbols-outlined text-xl">hourglass_bottom</span>
+              </div>
+              <span class="text-primary font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">2 a 3 años</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Entre 2 y 3 años continuados</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Candidato a Arraigo Formación o Arraigo Sociolaboral.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="tiempo" data-val="mas_tres">
-            <span class="text-primary font-bold text-xs uppercase tracking-wider block mb-1">3 años o más</span>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                <span class="material-symbols-outlined text-xl">verified</span>
+              </div>
+              <span class="text-primary font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">3 años o más</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">3 años o más en España</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Vía directa a Arraigo Social o Regularización 2026.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="tiempo" data-val="con_residencia">
-            <span class="text-primary font-bold text-xs uppercase tracking-wider block mb-1">Residencia Previa</span>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                <span class="material-symbols-outlined text-xl">badge</span>
+              </div>
+              <span class="text-primary font-bold text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20">Residencia Previa</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">2 o más años con residencia legal</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Apto para tramitar la Nacionalidad Española por Residencia.</span>
           </button>
@@ -680,22 +706,30 @@
         <p class="text-xs text-gray-400 mb-6">Selecciona el elemento principal que puedes acreditar en este momento.</p>
         <div class="grid sm:grid-cols-2 gap-4">
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="vinculo" data-val="trabajo">
-            <span class="material-symbols-outlined text-primary text-xl mb-2 block">work</span>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">work</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Tengo oferta laboral o soy autónomo</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Contrato de trabajo disponible o plan de negocio propio.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="vinculo" data-val="familiar">
-            <span class="material-symbols-outlined text-primary text-xl mb-2 block">family_restroom</span>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">family_restroom</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Tengo pareja, hijos o padres españoles/UE</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Vínculo con ciudadano español o de la Unión Europea.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="vinculo" data-val="estudios">
-            <span class="material-symbols-outlined text-primary text-xl mb-2 block">school</span>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">school</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Quiero formarme o realizar estudios oficiales</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Matrícula o compromiso en curso formativo del SEPE.</span>
           </button>
           <button type="button" class="wizard-opt group text-left p-5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-primary/80 transition-all duration-200" data-key="vinculo" data-val="renovacion">
-            <span class="material-symbols-outlined text-primary text-xl mb-2 block">autorenew</span>
+            <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary border border-primary/20 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+              <span class="material-symbols-outlined text-xl">autorenew</span>
+            </div>
             <span class="text-sm font-bold text-white block group-hover:text-primary transition-colors">Ya tengo permiso y quiero renovarlo o modificarlo</span>
             <span class="text-[11px] text-gray-400 mt-1 block leading-snug">Vencimiento próximo o cambio de cuenta ajena a propia.</span>
           </button>
@@ -913,7 +947,7 @@
               <label for="sch-entry" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">
                 Fecha de entrada en España / Espacio Schengen
               </label>
-              <input type="date" id="sch-entry" required class="w-full bg-white/[0.04] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"/>
+              <input type="date" id="sch-entry" required class="w-full bg-white/[0.04] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors [color-scheme:dark]"/>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-4">
@@ -927,7 +961,7 @@
                 <label for="sch-exit" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1.5">
                   Fecha estimada de salida o consulta
                 </label>
-                <input type="date" id="sch-exit" required class="w-full bg-white/[0.04] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors"/>
+                <input type="date" id="sch-exit" required class="w-full bg-white/[0.04] border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-primary transition-colors [color-scheme:dark]"/>
               </div>
             </div>
 
@@ -946,17 +980,29 @@
             <div class="grid grid-cols-2 gap-3 text-center mb-3">
               <div class="p-3 bg-black/40 rounded-xl border border-white/5">
                 <span class="text-2xl font-extrabold text-white font-display block" id="sch-used">0</span>
-                <span class="text-[10px] text-gray-400 uppercase">Días Consumidos</span>
+                <span class="text-[10px] text-gray-400 uppercase font-semibold">Días Consumidos</span>
               </div>
               <div class="p-3 bg-black/40 rounded-xl border border-white/5">
                 <span class="text-2xl font-extrabold text-primary font-display block" id="sch-remain">90</span>
-                <span class="text-[10px] text-gray-400 uppercase">Días Restantes</span>
+                <span class="text-[10px] text-gray-400 uppercase font-semibold">Días Restantes</span>
               </div>
             </div>
+
+            <!-- Barra visual de consumo 90 días -->
+            <div class="mb-4 bg-black/30 p-2.5 rounded-xl border border-white/5">
+              <div class="flex justify-between text-[11px] text-gray-300 mb-1.5 font-medium">
+                <span>Cupo máximo legal (90 días)</span>
+                <span id="sch-pct" class="font-bold text-white">0% consumido</span>
+              </div>
+              <div class="w-full bg-white/10 h-2 rounded-full overflow-hidden">
+                <div id="sch-bar" class="h-full bg-emerald-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+              </div>
+            </div>
+
             <p class="text-xs text-gray-300 leading-relaxed mb-4" id="sch-msg">
               Calculando tus plazos legales de estancia...
             </p>
-            <a href="contacto.html" id="sch-cta" class="inline-flex items-center justify-center gap-2 w-full text-center text-xs font-bold uppercase tracking-wider py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-all">
+            <a href="contacto.html" id="sch-cta" class="inline-flex items-center justify-center gap-2 w-full text-center text-xs font-bold uppercase tracking-wider py-3 px-4 rounded-xl bg-primary hover:bg-primary-dark text-white transition-all shadow-md font-display">
               <span>Consultar Vías de Residencia Antes de Vencer</span>
               <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
@@ -1347,7 +1393,7 @@
     } else if (v === 'renovacion') {
       title = "Renovación o Modificación de Residencia";
       desc = "Aseguramos la continuidad legal de tu autorización de residencia y trabajo sin interrupciones administrativas.";
-      page = "servicios/cuenta-ajena.html";
+      page = "servicios/renovaciones-modificaciones.html";
     } else if (v === 'estudios') {
       title = "Arraigo Socioformativo (Para la Formación)";
       desc = "Podrás obtener autorización de residencia temporal comprometiéndote a cursar una formación oficial reglada para el empleo.";
@@ -1454,9 +1500,24 @@
       const prevDays = parseInt(schPrev.value || 0, 10);
       const totalUsed = currentTripDays + prevDays;
       const remaining = 90 - totalUsed;
+      const pct = Math.min(100, Math.max(0, Math.round((totalUsed / 90) * 100)));
 
       schUsed.textContent = totalUsed;
       schRemain.textContent = remaining > 0 ? remaining : 0;
+
+      const schBar = document.getElementById('sch-bar');
+      const schPct = document.getElementById('sch-pct');
+      if (schPct) schPct.textContent = `${pct}% consumido (${totalUsed} de 90 días)`;
+      if (schBar) {
+        schBar.style.width = `${pct}%`;
+        if (pct < 67) {
+          schBar.className = 'h-full bg-emerald-500 rounded-full transition-all duration-500';
+        } else if (pct <= 100) {
+          schBar.className = 'h-full bg-amber-500 rounded-full transition-all duration-500';
+        } else {
+          schBar.className = 'h-full bg-primary rounded-full transition-all duration-500';
+        }
+      }
 
       schResult.classList.remove('hidden');
 

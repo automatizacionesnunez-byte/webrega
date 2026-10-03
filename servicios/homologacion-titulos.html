@@ -127,13 +127,21 @@
         <span class="font-extrabold text-xl tracking-tight text-gray-900 uppercase leading-none">EXTRANJERÍA <span class="text-primary">EXPERTOS</span></span>
         <span class="text-[0.65rem] tracking-widest text-gray-500 font-semibold mt-0.5">BY GRUPO RG ASESORES</span>
       </a>
-      <div class="hidden md:flex items-center font-display text-sm font-semibold tracking-wide uppercase">
-        <div class="flex items-center space-x-8 lg:space-x-10">
-          <a class="text-gray-600 hover:text-primary transition-colors py-1 nav-link" href="../index.html" data-page="inicio">Inicio</a>
-          <a class="text-gray-600 hover:text-primary transition-colors py-1 nav-link" href="../servicios.html" data-page="servicios">Servicios</a>
-          <a class="text-gray-600 hover:text-primary transition-colors py-1 nav-link" href="../contacto.html" data-page="contacto">Contacto</a>
+            <div class="hidden md:flex items-center flex-nowrap font-display text-sm font-semibold tracking-wide uppercase">
+        <!-- Secciones de navegación con separación amplia garantizada -->
+        <div class="header-nav-list">
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="../index.html" data-page="inicio">Inicio</a>
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link text-primary border-b-2 border-primary" href="../servicios.html" data-page="servicios">Servicios</a>
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="../index.html#herramientas-legales">Calculadora</a>
+          <a class="text-gray-200 hover:text-white transition-colors duration-200 py-1 nav-link" href="../contacto.html" data-page="contacto">Contacto</a>
         </div>
-        <div class="ml-8 pl-6 border-l border-gray-200">
+        <!-- Acciones separadas con divisor independiente -->
+        <div class="header-actions-divider">
+          <div class="flex items-center gap-1 text-[11px] text-gray-400 border border-white/15 px-2.5 py-1 rounded-full bg-white/[0.04]">
+            <span class="text-white font-bold">ES</span>
+            <span class="text-gray-500">|</span>
+            <a href="https://wa.me/34604804380?text=Hello,%20I%20would%20like%20to%20request%20legal%20consultation%20in%20English" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition text-gray-300 font-medium" title="English consultation via WhatsApp">EN</a>
+          </div>
           <a class="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition shadow-lg font-bold text-xs tracking-wider" href="../contacto.html">Llámanos</a>
         </div>
       </div>
@@ -142,11 +150,16 @@
       </button>
     </div>
     <!-- Mobile dropdown menu -->
-    <div id="mobile-menu-dropdown" class="hidden md:hidden flex-col space-y-2 pb-4 mt-2">
-      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="../index.html" data-page="inicio">Inicio</a>
-      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="../servicios.html" data-page="servicios">Servicios</a>
-      <a class="text-gray-800 hover:text-primary font-bold text-base px-2 py-2 border-b border-gray-100 nav-link" href="../contacto.html" data-page="contacto">Contacto</a>
-      <a class="bg-primary text-white text-center py-3 rounded-md font-bold mt-2 shadow-sm uppercase tracking-wider text-sm mx-2" href="../contacto.html">Llámanos sin compromiso</a>
+        <div id="mobile-menu-dropdown" class="hidden md:hidden flex-col space-y-2 pb-4 pt-2 bg-[#070b14]/95 backdrop-blur-xl border border-gray-800 rounded-2xl px-4 shadow-2xl mt-2">
+      <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="../index.html" data-page="inicio">Inicio</a>
+      <a class="text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="../servicios.html" data-page="servicios">Servicios</a>
+      <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="../index.html#herramientas-legales">Calculadora Schengen</a>
+      <a class="text-white hover:text-primary font-bold text-base py-2.5 border-b border-gray-800/80 nav-link" href="../contacto.html" data-page="contacto">Contacto</a>
+      <a class="text-gray-300 hover:text-primary font-semibold text-sm py-2 flex items-center justify-between border-b border-gray-800/80" href="https://wa.me/34604804380?text=Hello,%20I%20would%20like%20to%20request%20legal%20consultation%20in%20English" target="_blank" rel="noopener noreferrer">
+        <span class="flex items-center gap-2">🇬🇧 Legal assistance in English</span>
+        <span class="text-primary font-bold text-xs uppercase">WhatsApp &rarr;</span>
+      </a>
+      <a class="bg-primary text-white text-center py-3 rounded-full font-bold mt-2 shadow-sm uppercase tracking-wider text-xs" href="../contacto.html">Llámanos sin compromiso</a>
     </div>
   </div>
 </nav>
